@@ -5,10 +5,12 @@ import About from "./components/About";
 import ModalRegister from "./components/ModalRegister";
 import ModalLogin from "./components/ModalLogin";
 import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 
 function App() {
   return (
     <>
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about-us" element={<About />} />
