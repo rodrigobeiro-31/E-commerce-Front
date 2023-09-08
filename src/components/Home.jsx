@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import UsersList from "./UsersList";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import Contacto from "./Contacto";
 
 function Home() {
   const navigate = useNavigate();
@@ -14,6 +15,7 @@ function Home() {
   return (
     <div className="container">
       <UsersList />
+      <Contacto />
     </div>
   );
 }
