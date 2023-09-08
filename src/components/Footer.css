@@ -1,0 +1,13 @@
+footer {
+  background-color: #242424;
+  height: 12rem;
+  padding: 0 2rem;
+}
+
+.footer-links {
+  color: white;
+}
+
+.footer-links:hover {
+  color: rgb(226, 226, 226);
+}

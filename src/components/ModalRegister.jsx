@@ -1,23 +1,9 @@
-import { useState } from "react";
-import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 
-function ModalRegister() {
-  const [fullscreen, setFullscreen] = useState(true);
-  const [show, setShow] = useState(false);
-
-  function handleShow() {
-    setFullscreen(true);
-    setShow(true);
-  }
-
+function ModalRegister({fullscreen, show, handleClose}) {
   return (
     <>
-      <Button className="me-2 mb-2" onClick={handleShow}>
-        Full screen
-      </Button>
-
-      <Modal show={show} fullscreen={fullscreen} onHide={() => setShow(false)}>
+      <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
         <Modal.Header closeButton>
           <Modal.Title></Modal.Title>
         </Modal.Header>
