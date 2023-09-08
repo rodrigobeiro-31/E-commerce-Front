@@ -6,10 +6,11 @@ import Login from "./components/Login";
 import Products from "./components/Products";
 import Product from "./components/Product";
 import About from "./components/About";
-
 import ModalRegister from "./components/ModalRegister";
 import ModalLogin from "./components/ModalLogin";
+import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
+
 function App() {
   return (
     <>
@@ -24,6 +25,7 @@ function App() {
         <Route path="/registro" element={<ModalRegister />} />
         <Route path="/iniciar-sesion" element={<ModalLogin />} />
       </Routes>
+      <Footer />
     </>
   );
 }
