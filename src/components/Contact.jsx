@@ -1,12 +1,12 @@
 import React from "react";
-import "./Contacto.css";
-function Contacto() {
+import "./Contact.css";
+function Contact() {
   return (
     <div className="fluid">
       <div className="row ">
         <div className="column arriba border rounded">
           <div></div>
-          <h1 clasName="">Contáctate con nosotros</h1>
+          <h1 className="">Contáctate con nosotros</h1>
           <h3>
             Enviá un mensaje a nuestro equipo completando el siguiente
             formulario o comunícate a través de nuestros datos de contacto
@@ -22,25 +22,29 @@ function Contacto() {
                     respuesta al email proporcionado.
                   </h2>
                 </div>
-                <form class="row g-3">
-                  <div clasNames="col-5">
+                <form className="row g-3">
+                  <div className="col-5">
                     <label
-                      for="inputName"
+                      htmlFor="inputName"
                       name="firstName"
                       className="form-label"
                     >
                       Nombre :
                     </label>
-                    <input type="name" class="form-control" id="inputName" />
+                    <input
+                      type="name"
+                      className="form-control"
+                      id="inputName"
+                    />
                   </div>
                   <div className="col-5">
-                    <label for="inputPassword4" className="form-label">
+                    <label htmlFor="inputPassword4" className="form-label">
                       Apellido
                     </label>
-                    <input class="form-control" id="inputPassword4" />
+                    <input className="form-control" id="inputPassword4" />
                   </div>
                   <div className="col-12">
-                    <label for="inputAddress" className="form-label">
+                    <label htmlFor="inputAddress" className="form-label">
                       Telefono
                     </label>
                     <input
@@ -50,28 +54,32 @@ function Contacto() {
                       placeholder="1234 Main St"
                     />
                   </div>
-                  <div class="col-12">
-                    <label for="inputAddress2" class="form-label">
+                  <div className="col-12">
+                    <label htmlFor="inputAddress2" className="form-label">
                       Asunto:
                     </label>
                     <textarea
                       type="text"
-                      class="form-control"
+                      className="form-control"
                       id="inputAddress2"
                     />
                   </div>
-                  <div class="col-md-6">
-                    <label for="inputCity" class="form-label">
+                  <div className="col-md-6">
+                    <label htmlFor="inputCity" className="form-label">
                       Direccion
                     </label>
-                    <input type="text" class="form-control" id="inputCity" />
+                    <input
+                      type="text"
+                      className="form-control"
+                      id="inputCity"
+                    />
                   </div>
-                  <div class="col-md-4">
-                    <label for="inputCity" class="form-label">
+                  <div className="col-md-4">
+                    <label htmlFor="inputCity" className="form-label">
                       Opciones:
                     </label>
-                    <select id="inputState" class="form-select">
-                      <option selected>Golozo</option>
+                    <select id="inputState" className="form-select">
+                      <option>Golozo</option>
                       <option>catering</option>
                       <option>Cumpleaños del nene</option>
                     </select>
@@ -94,4 +102,4 @@ function Contacto() {
   );
 }
 
-export default Contacto;
+export default Contact;
