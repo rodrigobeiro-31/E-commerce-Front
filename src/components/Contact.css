@@ -1,0 +1,6 @@
+body{height:100vh;}
+
+.arriba{background-image:url("/imgs/contactofoto.webp") ;
+    background-size: cover;
+         height: 25rem;
+        color:white;}

@@ -1,18 +1,9 @@
-import { useState } from "react";
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 
-function ModalCart() {
-  const [show, setShow] = useState(false);
-
-  const handleClose = () => setShow(false);
-  const handleShow = () => setShow(true);
-
+function ModalCart({ show, handleClose }) {
   return (
     <>
-      <Button className="me-2 mb-2" onClick={handleShow}>
-        Cart
-      </Button>
       <Offcanvas show={show} onHide={handleClose} placement="end">
         <Offcanvas.Header closeButton>
           <div className="offcanvas-title h5"> Shopping Cart</div>
