@@ -17,7 +17,6 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/contacto" element={<Contacto />} />
         <Route path="/registro" element={<ModalRegister />} />
         <Route path="/iniciar-sesion" element={<ModalLogin />} />
         <Route path="/productos" element={<Products />} />
