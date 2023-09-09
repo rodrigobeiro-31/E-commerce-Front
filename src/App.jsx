@@ -19,9 +19,9 @@ function App() {
         <Route path="/registro" element={<ModalRegister />} />
         <Route path="/iniciar-sesion" element={<ModalLogin />} />
         <Route path="/productos" element={<Products />} />
+        <Route path="/productos/:slug" element={<Product />} />
         <Route path="/sobre-nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
-        <Route path="/producto" element={<Product />} />
       </Routes>
       <Footer />
     </>
