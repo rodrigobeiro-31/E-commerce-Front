@@ -3,6 +3,27 @@ import React from "react";
 function Products() {
   return (
     <>
+
+<div className="container mt-5">
+    <h2 className="text-center">Todos los productos</h2>
+  <div className="row">
+    <div className="col d-flex justify-content-end">
+      <h4 className="m-0">Filter by:</h4>
+      <div className="dropdown ms-2">
+        <button className="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+          Category
+        </button>
+        <ul className="dropdown-menu">
+          <li><button className="dropdown-item" type="button">Cafetería</button></li>
+          <li><button className="dropdown-item" type="button">Panadería</button></li>
+          <li><button className="dropdown-item" type="button">Something else here</button></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+
       <div className="container mt-5">
         <div className="row">
           <div className="col-3 mb-4">

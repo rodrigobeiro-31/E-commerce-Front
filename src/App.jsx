@@ -8,6 +8,7 @@ import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import About from "./components/About";
 import Contact from "./components/Contact";
+import Product from "./components/Product";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
         <Route path="/productos" element={<Products />} />
         <Route path="/sobre-nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
+        <Route path="/producto" element={<Product />} />
       </Routes>
       <Footer />
     </>
