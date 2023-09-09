@@ -1,14 +1,13 @@
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 import Home from "./components/Home";
-import Contacto from "./components/Contacto";
+import Contact from "./components/Contact";
 import ModalRegister from "./components/ModalRegister";
 import ModalLogin from "./components/ModalLogin";
 import Footer from "./components/Footer";
 import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import About from "./components/About";
-import Contact from "./components/Contact";
 import Product from "./components/Product";
 
 function App() {
