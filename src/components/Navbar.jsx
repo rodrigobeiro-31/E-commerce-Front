@@ -12,26 +12,17 @@ function Navbar() {
   const [showLogin, setShowLogin] = useState(false);
   const [showCart, setShowCart] = useState(false);
 
-  //Handle de registro
-  const handleShowRegister = () => {
-    setFullscreenRegister(true);
-    setShowRegister(true);
+  //Handle for register and login
+  const handleShowAll = (handleShow, handleShowScreen) => {
+    handleShow(true);
+    handleShowScreen(true);
   };
-  const handleCloseRegister = () => {
-    setFullscreenRegister(false);
-    setShowRegister(false);
-  };
-
-  //Handle de login
-  const handleShowLogin = () => {
-    setFullscreenLogin(true);
-    setShowLogin(true);
-  };
-  const handleCloseLogin = () => {
-    setShowLogin(false);
+  const handleCloseAll = (handleClose, handleCloseScreen) => {
+    handleClose(false);
+    handleCloseScreen(false);
   };
 
-  //Handle de cart
+  //Handle for cart
   const handleShowCart = () => {
     setShowCart(true);
   };
@@ -86,17 +77,29 @@ function Navbar() {
             <ModalRegister
               fullscreen={fullscreenRegister}
               show={showRegister}
-              handleClose={handleCloseRegister}
+              handleClose={handleCloseAll}
+              setShowRegister={setShowRegister}
+              setFullscreenRegister={setFullscreenRegister}
             />
-            <Button className="me-2 mb-2" onClick={handleShowRegister}>
+            <Button
+              className="me-2 mb-2"
+              onClick={() =>
+                handleShowAll(setShowRegister, setFullscreenRegister)
+              }
+            >
               Register
             </Button>
             <ModalLogin
               fullscreen={fullscreenLogin}
               show={showLogin}
-              handleClose={handleCloseLogin}
+              handleClose={handleCloseAll}
+              setShowLogin={setShowLogin}
+              setFullscreenLogin={setFullscreenLogin}
             />
-            <Button className="me-2 mb-2" onClick={handleShowLogin}>
+            <Button
+              className="me-2 mb-2"
+              onClick={() => handleShowAll(setShowLogin, setFullscreenLogin)}
+            >
               Login
             </Button>
             <ModalCart show={showCart} handleClose={handleCloseCart} />

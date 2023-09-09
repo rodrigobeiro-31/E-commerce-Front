@@ -1,9 +1,19 @@
 import Modal from "react-bootstrap/Modal";
 
-function ModalLogin({fullscreen, show, handleClose}) {
+function ModalLogin({
+  fullscreen,
+  show,
+  handleClose,
+  setShowLogin,
+  setFullscreenLogin,
+}) {
   return (
     <>
-      <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
+      <Modal
+        show={show}
+        fullscreen={fullscreen}
+        onHide={() => handleClose(setShowLogin, setFullscreenLogin)}
+      >
         <Modal.Header closeButton>
           <Modal.Title></Modal.Title>
         </Modal.Header>
