@@ -72,7 +72,7 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/about-us">
+              <NavLink className="nav-link" to="/sobre-nosotros">
                 About
               </NavLink>
             </li>

@@ -1,6 +1,6 @@
 import React from "react";
-import "./Contacto.css";
-function Contacto() {
+import "./Contact.css";
+function Contact() {
   return (
     <div className="fluid">
       <div className="row ">
@@ -94,4 +94,4 @@ function Contacto() {
   );
 }
 
-export default Contacto;
+export default Contact;

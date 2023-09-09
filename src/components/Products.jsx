@@ -5,7 +5,7 @@ function Products() {
     <div className="container mt-5">
       <div className="row">
         <div className="col-3 mb-4">
-          <div class="card">
+          <div className="card">
             <img
               src="https://unareceta.com/wp-content/uploads/2017/06/receta-de-muffins-con-pepitas-de-chocolate.jpg"
               className="card-img-top"
@@ -22,7 +22,7 @@ function Products() {
         </div>
 
         <div className="col-3 mb-4">
-          <div class="card">
+          <div className="card">
             <img
               src="https://assets.elgourmet.com/wp-content/uploads/2011/09/shutterstock_1366373012-1024x683.jpg.webp"
               alt="muffins"
@@ -38,7 +38,7 @@ function Products() {
         </div>
 
         <div className="col-3 mb-4">
-          <div class="card">
+          <div className="card">
             <img
               src="https://assets.unileversolutions.com/recipes-v2/38145.jpg?imwidth=2000"
               alt="muffins"
@@ -54,7 +54,7 @@ function Products() {
         </div>
 
         <div className="col-3 mb-4">
-          <div class="card">
+          <div className="card">
             <img
               src="https://www.elespectador.com/resizer/mwQ223VEU7Adp4Bb68ya3zAlpSg=/525x350/filters:quality(60):format(jpeg)/cloudfront-us-east-1.images.arcpublishing.com/elespectador/LY3ZTJZS5ZBUJL63BODAZ72L7U.png"
               className="card-img-top"
@@ -69,7 +69,6 @@ function Products() {
             </div>
           </div>
         </div>
-
       </div>
     </div>
   );
