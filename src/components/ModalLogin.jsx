@@ -1,4 +1,9 @@
 import Modal from "react-bootstrap/Modal";
+import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import { login } from "../redux/userSlice";
+import axios from "axios";
+import { useState } from "react";
 
 function ModalLogin({
   fullscreen,
@@ -7,6 +12,25 @@ function ModalLogin({
   setShowLogin,
   setFullscreenLogin,
 }) {
+  const [email, setEmail] = useState("")
+  const [password, setPassword] = useState("")
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const handleSubmit = async (e) => {
+e.preventDefault();
+    const response = await axios({
+      method: "post",
+      url: `http://localhost:3000/tokens`,
+      data: { password, email },
+    });
+    if (response.data.token) {
+      dispatch(login(response.data));
+      handleClose(setShowLogin,setFullscreenLogin)
+    } else {
+      console.log(response.data);
+    }
+  };
+
   return (
     <>
       <Modal
@@ -20,7 +44,7 @@ function ModalLogin({
         <Modal.Body className="bg-dark-subtle">
           <div className="mt-4 rounded shadow p-4 container bg-body">
             <h1>Login</h1>
-            <form action="">
+            <form action="/" method="post" onSubmit={handleSubmit}>
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
                   Email address
@@ -29,8 +53,10 @@ function ModalLogin({
                   type="text"
                   name="email"
                   id="email"
-                  placeholder="Email address.."
+                  placeholder="Email address..."
                   className="form-control"
+                  value={email}
+                  onChange={(e)=>setEmail(e.target.value)}
                 />
               </div>
               <div className="mb-3">
@@ -43,16 +69,18 @@ function ModalLogin({
                   id="password"
                   placeholder="Password.."
                   className="form-control"
+                  value={password}
+                  onChange={(e)=>setPassword(e.target.value)}
                 />
               </div>
               <div className="mb-3">
                 <input
-                  class="form-check-input me-1"
+                  className="form-check-input me-1"
                   type="checkbox"
                   value=""
                   id="firstCheckbox"
                 />
-                <label class="form-check-label" for="firstCheckbox">
+                <label className="form-check-label" htmlFor="firstCheckbox">
                   Remember me
                 </label>
               </div>
