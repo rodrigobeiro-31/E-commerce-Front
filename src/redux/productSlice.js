@@ -4,7 +4,7 @@ const productSlice = createSlice({
   name: "product",
   initialState: [],
   reducers: {
-    login(state, action) {
+    addProduct(state, action) {
       return action.payload;
     },
     logout(state, action) {
@@ -14,5 +14,5 @@ const productSlice = createSlice({
 });
 
 const { actions, reducer } = productSlice;
-export const { login, logout } = actions;
+export const { addProduct, logout } = actions;
 export default reducer;

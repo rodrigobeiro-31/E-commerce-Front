@@ -2,12 +2,9 @@ import React from "react";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { login } from "../redux/productSlice";
 
 function Products() {
-  const products = useSelector((state) => state.product);
-  const dispatch = useDispatch();
+  const [products, setProducts] = useState();
 
   useEffect(() => {
     const getProducts = async () => {
@@ -18,7 +15,7 @@ function Products() {
           Authorization: "Bearer " + (user && user.token),
         }, */
       });
-      response && dispatch(login(response.data));
+      response && setProducts(response.data);
     };
     getProducts();
   }, []);
