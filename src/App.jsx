@@ -9,7 +9,8 @@ import Navbar from "./components/Navbar";
 import Products from "./components/Products";
 import About from "./components/About";
 import Product from "./components/Product";
-
+import LoginAd from "./components/admin/loginAd";
+import ProductIn from "./components/admin/inProduct";
 function App() {
   return (
     <>
@@ -22,6 +23,8 @@ function App() {
         <Route path="/productos/:slug" element={<Product />} />
         <Route path="/sobre-nosotros" element={<About />} />
         <Route path="/contacto" element={<Contact />} />
+        <Route path="/loginAd" element={<LoginAd />} />
+        <Route path="/admin" element={<ProductIn />} />
       </Routes>
       <Footer />
     </>
