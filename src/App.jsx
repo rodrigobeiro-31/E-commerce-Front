@@ -16,12 +16,12 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/registro" element={<ModalRegister />} />
-        <Route path="/iniciar-sesion" element={<ModalLogin />} />
-        <Route path="/productos" element={<Products />} />
-        <Route path="/productos/:slug" element={<Product />} />
-        <Route path="/sobre-nosotros" element={<About />} />
-        <Route path="/contacto" element={<Contact />} />
+        <Route path="/register" element={<ModalRegister />} />
+        <Route path="/login" element={<ModalLogin />} />
+        <Route path="/products" element={<Products />} />
+        <Route path="/products/:slug" element={<Product />} />
+        <Route path="/about-us" element={<About />} />
+        <Route path="/contact" element={<Contact />} />
       </Routes>
       <Footer />
     </>

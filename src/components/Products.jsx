@@ -69,7 +69,7 @@ function Products() {
                     alt={product.name}
                   />
                   <div className="card-body">
-                    <NavLink to={`/productos/${product.slug}`}>
+                    <NavLink to={`/products/${product.slug}`}>
                       <h5 className="card-title">{product.name}</h5>
                     </NavLink>
                     <p className="card-text">$USD: {product.price}</p>
