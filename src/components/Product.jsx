@@ -3,12 +3,15 @@ import Accordion from "react-bootstrap/Accordion";
 import { BsFill0CircleFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import { useSelector, useDispatch } from "react-redux";
+import { addProduct } from "../redux/productSlice";
 import axios from "axios";
 
 function Product() {
-  const [product, setProduct] = useState("");
+  const product = useSelector((state) => state.product);
   const params = useParams();
   const slug = params.slug;
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProduct = async () => {
@@ -19,7 +22,7 @@ function Product() {
           Authorization: "Bearer " + (user && user.token),
         }, */
       });
-      response && setProduct(response.data[0]);
+      response && dispatch(addProduct(response.data[0]));
     };
     getProduct();
   }, []);

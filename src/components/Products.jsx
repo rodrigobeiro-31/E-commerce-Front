@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 
 function Products() {
-  const [products, setProducts] = useState([]);
+  const [products, setProducts] = useState();
 
   useEffect(() => {
     const getProducts = async () => {
@@ -15,7 +15,7 @@ function Products() {
           Authorization: "Bearer " + (user && user.token),
         }, */
       });
-      setProducts(response.data);
+      response && setProducts(response.data);
     };
     getProducts();
   }, []);
@@ -69,7 +69,7 @@ function Products() {
                     alt={product.name}
                   />
                   <div className="card-body">
-                    <NavLink to={`/productos/${product.slug}`}>
+                    <NavLink to={`/products/${product.slug}`}>
                       <h5 className="card-title">{product.name}</h5>
                     </NavLink>
                     <p className="card-text">$USD: {product.price}</p>

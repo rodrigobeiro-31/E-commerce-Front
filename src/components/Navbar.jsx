@@ -58,17 +58,17 @@ function Navbar() {
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/productos">
+              <NavLink className="nav-link" to="/products">
                 Products
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/sobre-nosotros">
+              <NavLink className="nav-link" to="/about-us">
                 About
               </NavLink>
             </li>
             <li className="nav-item">
-              <NavLink className="nav-link" to="/contacto">
+              <NavLink className="nav-link" to="/contact">
                 Contact
               </NavLink>
             </li>
