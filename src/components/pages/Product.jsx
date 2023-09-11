@@ -4,7 +4,7 @@ import { BsFill0CircleFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addProduct } from "../redux/productSlice";
+import { addProduct } from "../../redux/productSlice";
 import axios from "axios";
 
 function Product() {
