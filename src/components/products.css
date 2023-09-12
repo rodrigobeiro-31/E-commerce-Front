@@ -33,13 +33,15 @@ h6 {
 }
 
 body {
-  background: rgb(83, 46, 28);
+  background-image: url("/imgs/grey-marble-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  /* background: rgb(83, 46, 28);
   background: linear-gradient(
     330deg,
     rgba(83, 46, 28, 1) 0%,
     rgba(197, 168, 128, 1) 73%
-  );
-  height: 100%;
+  ); */
 }
 
 .productName {
