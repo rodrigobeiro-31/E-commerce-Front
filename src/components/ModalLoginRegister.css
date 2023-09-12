@@ -128,7 +128,7 @@
 
 .btn-modal:hover {
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px var(--secondaryBrown);
+  box-shadow: 0 5px 10px var(--secondaryBrown);
   color: white;
   background-color: var(--secondaryBrown);
 }
