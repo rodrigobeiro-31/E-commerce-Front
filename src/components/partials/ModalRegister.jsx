@@ -1,78 +1,87 @@
 import Modal from "react-bootstrap/Modal";
+import "../ModalLoginRegister.css";
+import { Link } from "react-router-dom";
 
 function ModalRegister({
   fullscreen,
   show,
   handleClose,
+  handleShowAll,
+  setShowLogin,
+  setFullscreenLogin,
   setShowRegister,
   setFullscreenRegister,
 }) {
   return (
     <>
-      <Modal
-        show={show}
-        fullscreen={fullscreen}
-        onHide={() => handleClose(setShowRegister, setFullscreenRegister)}
-      >
+      <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
         <Modal.Header closeButton>
           <Modal.Title></Modal.Title>
         </Modal.Header>
         <Modal.Body className="bg-dark-subtle">
-          <div className="mt-4 rounded shadow p-4 container bg-body">
-            <h1>Create an account</h1>
+          <div className="login-box p-4">
+            <p>Create an account</p>
             <form action="">
-              <div className="mb-3">
-                <label htmlFor="firstname" className="form-label">
-                  Firstname
-                </label>
+              <div className="user-box">
                 <input
                   type="text"
                   name="firstname"
                   id="firstname"
-                  placeholder="Firstname.."
                   className="form-control"
                 />
+                <label htmlFor="firstname">Firstname</label>
               </div>
-              <div className="mb-3">
-                <label htmlFor="lastname" className="form-label">
-                  Lastname
-                </label>
+              <div className="user-box">
                 <input
                   type="text"
-                  name="lastname"
-                  id="lastname"
-                  placeholder="Lastname.."
+                  name="Lastname"
+                  id="Lastname"
                   className="form-control"
                 />
+                <label htmlFor="Lastname">Lastname</label>
               </div>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email address
-                </label>
+              <div className="user-box">
                 <input
                   type="email"
                   name="email"
                   id="email"
-                  placeholder="Email address.."
                   className="form-control"
                 />
+                <label htmlFor="email">Email</label>
               </div>
-              <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
+              <div className="user-box">
                 <input
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password.."
                   className="form-control"
                 />
+                <label htmlFor="password">Password</label>
               </div>
-              <button type="submit" className="btn btn-success mt-2">
-                Create account
+              <button className="btn-modal" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
               </button>
             </form>
+            <p className="mt-3">
+              Already have an account?{" "}
+              <Link
+                onClick={() =>
+                  handleShowAll(
+                    setShowLogin,
+                    setFullscreenLogin,
+                    setShowRegister,
+                    setFullscreenRegister
+                  )
+                }
+                className="a2"
+              >
+                Sign in!
+              </Link>
+            </p>
           </div>
         </Modal.Body>
       </Modal>

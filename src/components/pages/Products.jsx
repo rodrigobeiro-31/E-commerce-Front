@@ -1,5 +1,5 @@
 import React from "react";
-import "../components/products.css"
+import "../../components/products.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
@@ -84,7 +84,7 @@ function Products() {
           </div>
         </div> */}
 
-{/* <div className="container mt-5">
+        {/* <div className="container mt-5">
           <div className="row">
             {products.map((product, id) => (
               <div key={id} className="col-3 mb-4">
@@ -113,34 +113,35 @@ function Products() {
           </div>
         </div> */}
 
-<div className="container mt-5">
-  <div className="row">
-    {products.map((product, id) => (
-      <div key={id} className="col-3 mb-4">
-        <div className="productsCard">
-          <div className="position-relative">
-            <img
-              src={product.image}
-              className="card-img-top"
-              alt={product.name}
-            />
-            <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-              <h6 className="text-center mt-auto">ADD TO CART</h6>
-            </div>
-          </div>
-          <div className="card-body">
-            <NavLink  className="text-decoration-none text-dark" to={`/products/${product.slug}`}>
-              <h5 className="card-title">{product.name}</h5>
-            </NavLink>
-            <p className="card-text">$USD: {product.price}</p>
-           
+        <div className="container mt-5">
+          <div className="row">
+            {products.map((product, id) => (
+              <div key={id} className="col-3 mb-4">
+                <div className="productsCard">
+                  <div className="position-relative">
+                    <img
+                      src={product.image}
+                      className="card-img-top"
+                      alt={product.name}
+                    />
+                    <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
+                      <h6 className="text-center mt-auto">ADD TO CART</h6>
+                    </div>
+                  </div>
+                  <div className="card-body">
+                    <NavLink
+                      className="text-decoration-none text-dark"
+                      to={`/products/${product.slug}`}
+                    >
+                      <h5 className="card-title">{product.name}</h5>
+                    </NavLink>
+                    <p className="card-text">$USD: {product.price}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
-      </div>
-    ))}
-  </div>
-</div>
-
       </>
     )
   );
