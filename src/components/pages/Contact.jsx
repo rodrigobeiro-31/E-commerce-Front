@@ -3,6 +3,8 @@ import { useState } from "react";
 import "./Contact.css";
 import axios from "axios";
 
+const jwtToken = "hola";
+//poner el token
 function Contact() {
   const [formData, setFormData] = useState({
     firstname: "",
@@ -25,11 +27,7 @@ function Contact() {
       const response = await axios.post(
         "http://localhost:3000/user/contact",
         formData,
-        {
-          headers: {
-            Authorization: `Bearer ${jwtToken}`,
-          },
-        }
+        {}
       );
 
       // Haz algo con la respuesta, como mostrarla en la consola
