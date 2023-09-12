@@ -24,40 +24,9 @@ function Products() {
   return (
     products && (
       <>
-        <div className="container mt-5">
-          <h2 className="text-center">All products</h2>
-          <div className="row">
-            <div className="col d-flex justify-content-end">
-              <h4 className="m-0">Filter by:</h4>
-              <div className="dropdown ms-2">
-                <button
-                  className="btn btn-secondary dropdown-toggle"
-                  type="button"
-                  data-bs-toggle="dropdown"
-                  aria-expanded="false"
-                >
-                  Category
-                </button>
-                <ul className="dropdown-menu">
-                  <li>
-                    <button className="dropdown-item" type="button">
-                      Cafetería
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item" type="button">
-                      Panadería
-                    </button>
-                  </li>
-                  <li>
-                    <button className="dropdown-item" type="button">
-                      Something else here
-                    </button>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
+        <div className="container-fluid d-flex align-items-center flex-column justify-content-center imageContainer m-0 p-0">
+          <h2 className="text-center allProductsText">All products</h2>
+          
         </div>
 
         {/* <div className="container mt-5">
@@ -125,7 +94,7 @@ function Products() {
                       className="card-img imgCard"
                       alt={product.name}
                       style={{
-                        width: "25rem",
+                        maxWidth: "25rem",
                         height: "25rem",
                         objectFit: "cover",
                       }}
