@@ -1,5 +1,5 @@
 import React from "react";
-import "../../components/products.css";
+import "./products.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
