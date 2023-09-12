@@ -1,23 +1,26 @@
 import Modal from "react-bootstrap/Modal";
 import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
 import { login } from "../../redux/userSlice";
 import axios from "axios";
 import { useState } from "react";
+import "../ModalLoginRegister.css";
+import { Link } from "react-router-dom";
 
 function ModalLogin({
   fullscreen,
   show,
   handleClose,
+  handleShowAll,
+  setShowRegister,
+  setFullscreenRegister,
   setShowLogin,
   setFullscreenLogin,
 }) {
-  const [email, setEmail] = useState("")
-  const [password, setPassword] = useState("")
-  const navigate = useNavigate();
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
   const dispatch = useDispatch();
   const handleSubmit = async (e) => {
-e.preventDefault();
+    e.preventDefault();
     const response = await axios({
       method: "post",
       url: `http://localhost:3000/tokens`,
@@ -25,7 +28,7 @@ e.preventDefault();
     });
     if (response.data.token) {
       dispatch(login(response.data));
-      handleClose(setShowLogin,setFullscreenLogin)
+      handleClose();
     } else {
       console.log(response.data);
     }
@@ -33,61 +36,60 @@ e.preventDefault();
 
   return (
     <>
-      <Modal
-        show={show}
-        fullscreen={fullscreen}
-        onHide={() => handleClose(setShowLogin, setFullscreenLogin)}
-      >
+      <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
         <Modal.Header closeButton>
           <Modal.Title></Modal.Title>
         </Modal.Header>
         <Modal.Body className="bg-dark-subtle">
-          <div className="mt-4 rounded shadow p-4 container bg-body">
-            <h1>Login</h1>
+          <div className="login-box p-4">
+            <p>Login</p>
             <form action="/" method="post" onSubmit={handleSubmit}>
-              <div className="mb-3">
-                <label htmlFor="email" className="form-label">
-                  Email address
-                </label>
+              <div className="user-box">
                 <input
-                  type="text"
+                  type="email"
                   name="email"
                   id="email"
-                  placeholder="Email address..."
                   className="form-control"
                   value={email}
-                  onChange={(e)=>setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
+                <label htmlFor="email">Email</label>
               </div>
-              <div className="mb-3">
-                <label htmlFor="password" className="form-label">
-                  Password
-                </label>
+              <div className="user-box">
                 <input
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password.."
                   className="form-control"
                   value={password}
-                  onChange={(e)=>setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
+                <label htmlFor="password">Password</label>
               </div>
-              <div className="mb-3">
-                <input
-                  className="form-check-input me-1"
-                  type="checkbox"
-                  value=""
-                  id="firstCheckbox"
-                />
-                <label className="form-check-label" htmlFor="firstCheckbox">
-                  Remember me
-                </label>
-              </div>
-              <button type="submit" className="btn btn-success">
-                Sign in
+              <button className="btn-modal" type="submit">
+                <span></span>
+                <span></span>
+                <span></span>
+                <span></span>
+                Submit
               </button>
             </form>
+            <p className="mt-3">
+              Don't have an account?{" "}
+              <Link
+                onClick={() =>
+                  handleShowAll(
+                    setShowRegister,
+                    setFullscreenRegister,
+                    setShowLogin,
+                    setFullscreenLogin
+                  )
+                }
+                className="a2"
+              >
+                Register here!
+              </Link>
+            </p>
           </div>
         </Modal.Body>
       </Modal>
