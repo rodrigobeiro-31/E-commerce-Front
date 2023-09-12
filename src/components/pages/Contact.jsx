@@ -5,7 +5,7 @@ import axios from "axios";
 
 const jwtToken = "hola";
 //poner el token
-function Contact() {
+function Contact({ jwtToken }) {
   const [formData, setFormData] = useState({
     firstname: "",
     lastname: "",
@@ -27,7 +27,11 @@ function Contact() {
       const response = await axios.post(
         "http://localhost:3000/user/contact",
         formData,
-        {}
+        {
+          headers: {
+            Authorization: `Bearer ${jwtToken}`,
+          },
+        }
       );
 
       // Haz algo con la respuesta, como mostrarla en la consola
@@ -75,15 +79,15 @@ function Contact() {
                     </label>
                     <input
                       className="form-control"
-                      name="firstName"
-                      id="firstName"
+                      name="firstname"
+                      id="firstname"
                       placeholder="Nombre..."
                       value={formData.firstname}
                       onChange={handleChange}
                     />
                   </div>
                   <div className="col-5">
-                    <label htmlFor="inputPassword4" className="form-label">
+                    <label htmlFor="lastname" className="form-label">
                       Apellido
                     </label>
                     <input
