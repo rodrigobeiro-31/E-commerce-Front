@@ -1,8 +1,10 @@
 import React from "react";
-import "../components/products.css"
+import "../products.css"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
+import { BsFillBagFill } from "react-icons/bs";
+
 
 function Products() {
   const [products, setProducts] = useState();
@@ -114,25 +116,27 @@ function Products() {
         </div> */}
 
 <div className="container mt-5">
-  <div className="row">
+  <div className="row d-flex justify-content-between g-2 m-0">
     {products.map((product, id) => (
-      <div key={id} className="col-3 mb-4">
+      <div key={id} className="col-4 mainCard">
         <div className="productsCard">
-          <div className="position-relative">
+          <div className="position-relative" >
             <img
               src={product.image}
-              className="card-img-top"
+              className="card-img imgCard"
               alt={product.name}
+              style={{ width: "25rem", height:"25rem", objectFit: "cover" }}
+              
             />
             <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-              <h6 className="text-center mt-auto">ADD TO CART</h6>
+              <h6 className="text-center mt-auto"> <BsFillBagFill/> ADD TO CART</h6>
             </div>
           </div>
           <div className="card-body">
-            <NavLink  className="text-decoration-none text-dark" to={`/products/${product.slug}`}>
-              <h5 className="card-title">{product.name}</h5>
+            <NavLink  className="text-decoration-none productName" to={`/products/${product.slug}`}>
+              <h5 className="card-title mt-3">{product.name}</h5>
             </NavLink>
-            <p className="card-text">$USD: {product.price}</p>
+            <p className="card-text priceText mt-2">$USD: {product.price}</p>
            
           </div>
         </div>
@@ -140,6 +144,8 @@ function Products() {
     ))}
   </div>
 </div>
+
+
 
       </>
     )
