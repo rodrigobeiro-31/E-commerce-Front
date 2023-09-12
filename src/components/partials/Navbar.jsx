@@ -13,13 +13,22 @@ function Navbar() {
   const [showCart, setShowCart] = useState(false);
 
   //Handle for register and login
-  const handleShowAll = (handleShow, handleShowScreen) => {
+  const handleShowAll = (
+    handleShow,
+    handleShowScreen,
+    handleClose,
+    handleCloseScreen
+  ) => {
     handleShow(true);
     handleShowScreen(true);
-  };
-  const handleCloseAll = (handleClose, handleCloseScreen) => {
     handleClose(false);
     handleCloseScreen(false);
+  };
+  const handleCloseAll = () => {
+    setFullscreenRegister(false);
+    setShowRegister(false);
+    setFullscreenLogin(false);
+    setShowLogin(false);
   };
 
   //Handle for cart
@@ -78,13 +87,21 @@ function Navbar() {
               fullscreen={fullscreenRegister}
               show={showRegister}
               handleClose={handleCloseAll}
+              handleShowAll={handleShowAll}
+              setShowLogin={setShowLogin}
+              setFullscreenLogin={setFullscreenLogin}
               setShowRegister={setShowRegister}
               setFullscreenRegister={setFullscreenRegister}
             />
             <Button
               className="me-2 mb-2"
               onClick={() =>
-                handleShowAll(setShowRegister, setFullscreenRegister)
+                handleShowAll(
+                  setShowRegister,
+                  setFullscreenRegister,
+                  setShowLogin,
+                  setFullscreenLogin
+                )
               }
             >
               Register
@@ -93,12 +110,22 @@ function Navbar() {
               fullscreen={fullscreenLogin}
               show={showLogin}
               handleClose={handleCloseAll}
+              handleShowAll={handleShowAll}
+              setShowRegister={setShowRegister}
+              setFullscreenRegister={setFullscreenRegister}
               setShowLogin={setShowLogin}
               setFullscreenLogin={setFullscreenLogin}
             />
             <Button
               className="me-2 mb-2"
-              onClick={() => handleShowAll(setShowLogin, setFullscreenLogin)}
+              onClick={() =>
+                handleShowAll(
+                  setShowLogin,
+                  setFullscreenLogin,
+                  setShowRegister,
+                  setFullscreenRegister
+                )
+              }
             >
               Login
             </Button>
