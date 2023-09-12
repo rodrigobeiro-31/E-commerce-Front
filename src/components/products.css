@@ -1,11 +1,19 @@
-.imgCard{
-  
- 
+.imageContainer {
+  margin: 0; 
+  padding: 0;
+  height: 100vh;
+  background-image: url("/imgs/all_products_banner.jpg");
+  background-size: cover;
+}
+
+.allProductsText{
+color: var(--lightBackgroud);
+font-size: 6rem; 
 }
 
 .addToCart {
-  width: 416px;
-  height: 30px;
+  width: 100%;
+  height: 3rem;
   display: block;
   background-color: #c5a88096;
   opacity: 0;
@@ -29,13 +37,13 @@ body {
 }
 
 .productName{
-  font-family: 'Oswald', sans-serif ;
- color: var(--darkBrown);
+  color: var(--darkBrown);
+  
 }
 
 .priceText{
  color:var(--secondaryBrown);
- font-family: 'Merriweather', sans-serif 
+  
  
 }
 

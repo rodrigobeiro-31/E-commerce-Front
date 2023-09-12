@@ -50,6 +50,7 @@ function ModalLogin({
                   name="email"
                   id="email"
                   className="form-control"
+                  autoComplete="off"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                 />

@@ -28,6 +28,7 @@ function ModalRegister({
                   name="firstname"
                   id="firstname"
                   className="form-control"
+                  autoComplete="off"
                 />
                 <label htmlFor="firstname">Firstname</label>
               </div>
@@ -37,6 +38,7 @@ function ModalRegister({
                   name="Lastname"
                   id="Lastname"
                   className="form-control"
+                  autoComplete="off"
                 />
                 <label htmlFor="Lastname">Lastname</label>
               </div>
@@ -46,6 +48,7 @@ function ModalRegister({
                   name="email"
                   id="email"
                   className="form-control"
+                  autoComplete="off"
                 />
                 <label htmlFor="email">Email</label>
               </div>
