@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Carousel from 'react-bootstrap/Carousel';
 import Image from 'react-bootstrap/Image';
+import './Home.css';
 
 function Home() {
   const [products, setProducts] = useState();
@@ -31,25 +32,23 @@ function Home() {
   
   return products &&
     <>
-      <div className="container">
-        <div className="row">
-          <Carousel >
+      <div className="container-fluid p-0 g-0">
+      <Carousel>
             <Carousel.Item>
-              <Image src="./imgs/banner-1.jpg" fluid />
+              <Image src="./imgs/home-carousel-1.jpg" className="w-100" fluid />
             </Carousel.Item>
             <Carousel.Item>
-              <Image src="./imgs/banner-2.jpg" fluid />
+              <Image src="./imgs/home-carousel-2.jpg" className="w-100" fluid />
             </Carousel.Item>
             <Carousel.Item>
-              <Image src="./imgs/banner-3.jpg" fluid />
+              <Image src="./imgs/home-carousel-3.jpg" className="w-100" fluid />
             </Carousel.Item>
           </Carousel>
-        </div>
-        <div className="row d-flex text-center">
+        <div className="row d-flex text-center m-0 p-0">
           <h1 className="mt-2">Home</h1>
           <h5 className="mt-1">Scroll down to see more</h5>
         </div>
-        <div className="row mt-5">
+        <div className="row mt-5 m-0 p-0">
           <h3 className="mb-5">Top products</h3>
           {products.map((product, id) => (
             <div key={id} className="col-3 mb-4">
