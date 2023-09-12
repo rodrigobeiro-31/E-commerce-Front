@@ -18,7 +18,7 @@ function ModalRegister({
         <Modal.Header closeButton>
           <Modal.Title></Modal.Title>
         </Modal.Header>
-        <Modal.Body className="bg-dark-subtle">
+        <Modal.Body className="modal-bg">
           <div className="login-box p-4">
             <p>Create an account</p>
             <form action="">
