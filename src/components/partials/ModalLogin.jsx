@@ -60,7 +60,6 @@ function ModalLogin({
                   type="password"
                   name="password"
                   id="password"
-                  placeholder="Password.."
                   className="form-control"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
