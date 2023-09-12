@@ -1,11 +1,10 @@
-body{height:100vh;
-       background-color: var(--secondaryBrown);}
+body{ background-color: black;}
 
-.arriba{background-image:url("/imgs/contactofoto.webp") ;
+.arriba{background-image:url("/imgs/contacto.jpg") ;
         background-size: cover;
-         height: 25rem;
-        color:black;}
+         height: 90vh;
+        color:white;
+        font-weight: bold ;
+         }
 
-.colorForm{ background-color: var(lightBackgroud);}
 
-.bg-color{background-color: var(secondaryBrown);}
