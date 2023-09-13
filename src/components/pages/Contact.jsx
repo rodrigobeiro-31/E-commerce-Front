@@ -59,7 +59,7 @@ function Contact() {
       <div className=" d-flex-column  align-self-center align-content-between blur ">
         <div className="row">
           <div className="col-6">
-            <div className="container ">
+            <div className="container">
               <div>
                 <h2 className="mt-5 pt-4">Send us a message.</h2>
                 <h3>We will be responding to you shortly.</h3>

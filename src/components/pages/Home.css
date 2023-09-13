@@ -30,3 +30,24 @@
 .home-section-logo {
   max-width: 5rem;
 }
+
+.custom-image {
+  max-width: 5rem;
+  height: auto;
+}
+
+.custom-background1 {
+  background-color:var(--creamyWhite);
+}
+
+.custom-background2 {
+  background-color:var(--secondaryBrown);
+}
+
+.custom-background3 {
+  background-color:var(--secondaryBrown);
+}
+
+.custom-background4 {
+  background-color:var(--secondaryBrown);
+}
