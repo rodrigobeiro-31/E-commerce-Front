@@ -54,7 +54,7 @@ function Header() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className={`${scroll ? "nav-scroll" : "nav-top"} navbar-custom`} 
+        className={`${scroll ? "nav-scroll" : "nav-top"} navbar-custom`}
         fixed="top"
       >
         <div>
@@ -72,7 +72,7 @@ function Header() {
             children={<NavbarToggle />}
           />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="me-auto">
+            <Nav>
               <NavLink className="nav-link" aria-current="page" to="/">
                 Home
               </NavLink>
@@ -98,7 +98,7 @@ function Header() {
                 />
                 <Button
                   variant="light"
-                  className="me-3 mb-2"
+                  className="mx-2 mb-2"
                   onClick={() =>
                     handleShowAll(
                       setShowRegister,
@@ -122,7 +122,7 @@ function Header() {
                 />
                 <Button
                   variant="outline-light"
-                  className="me-3 mb-2"
+                  className="mx-2 mb-2"
                   onClick={() =>
                     handleShowAll(
                       setShowLogin,
@@ -136,7 +136,7 @@ function Header() {
                 </Button>
                 <ModalCart show={showCart} handleClose={handleCloseCart} />
                 <BsCartFill
-                  className="me-2 mb-2 nav-icon"
+                  className="mx-2 mb-2 nav-icon"
                   onClick={handleShowCart}
                 />
               </div>
