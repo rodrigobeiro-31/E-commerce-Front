@@ -55,8 +55,8 @@ function Contact() {
   };
 
   return (
-    <div className="column arriba ">
-      <div className=" d-flex-column  align-self-center align-content-between ">
+    <div className="column arriba  ">
+      <div className=" d-flex-column  align-self-center align-content-between blur ">
         <h1 className="m-4">Contáctate con nosotros</h1>
 
         <div className="row">
@@ -167,7 +167,7 @@ function Contact() {
               </form>
             </div>
           </div>
-          <div className="col  d-flex-column  align-self-center align-content-between">
+          <div className="col  d-flex-column  align-self-center align-content-between blur ">
             <h1 className="m-5"> DATOS DE CONTACTO</h1>
             <h4 className="m-3"> E-commerce ONLINE: todos los días</h4>
             <h4 className="m-3">
