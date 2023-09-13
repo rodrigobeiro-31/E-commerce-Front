@@ -48,7 +48,7 @@ function Product() {
                   }}
                 />
               </div>
-              <div className="col-6 cardBody ">
+              <div className="col-6 cardBody">
                 <div className="card-body p-5">
                   <h3>{product.name}</h3>
                   <p className="card-text mt-3 fs-2 priceText">
@@ -119,8 +119,8 @@ function Product() {
           </Accordion>
         </div>
 
-        <div className="container mt-5">
-          <h3 className="text-center">Products you might also like: </h3>
+        <div className="container-fluid mt-5">
+        <h3 className="mb-4 fw-bold text-center bg-light p-2">THIS WEEK'S PICKS</h3>
           <div className="row d-flex flex-wrap g-3 m-0">
             {interestingProduct.map((product, id) => (
               <div key={id} className="col-3 mainCard mb-5">

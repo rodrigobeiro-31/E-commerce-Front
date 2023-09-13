@@ -25,7 +25,7 @@ function Products() {
     products && (
       <>
         <div className="container-fluid d-flex align-items-center flex-column justify-content-center imageContainer m-0 p-0">
-          <h2 className="text-center allProductsText">All products</h2>
+          <h2 className="text-center allProductsText">Products</h2>
         </div>
 
         <div className="container mt-5">
