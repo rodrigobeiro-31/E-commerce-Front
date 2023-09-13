@@ -1,0 +1,17 @@
+#homeBanner1 {
+    width: 100vw;
+}
+
+#homeTitle {
+  position: absolute;
+  top: 7rem;
+  left: 28rem;
+}
+
+#homeLogo {
+    max-width: 30rem;
+}
+
+.homeSectionLogo {
+    max-width: 5rem;
+}
