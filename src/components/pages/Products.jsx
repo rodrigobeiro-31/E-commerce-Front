@@ -40,7 +40,7 @@ function Products() {
                       alt={product.name}
                     />
                     <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-                      <h6 className="text-center mt-auto">
+                      <h6 className="text-center mt-auto p-1">
                         {" "}
                         <BsFillBagFill /> ADD TO CART
                       </h6>

@@ -54,7 +54,7 @@ function Header() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className={`${scroll ? "nav-scroll" : "nav-top"} navbar-custom`}
+        className={`${scroll ? "nav-scroll" : "nav-top"} navbar-custom`} 
         fixed="top"
       >
         <div>
