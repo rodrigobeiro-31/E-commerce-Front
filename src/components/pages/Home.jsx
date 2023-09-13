@@ -38,6 +38,7 @@ function Home() {
           </Carousel.Item> */}
         {/* </Carousel> */}
         <img id="homeBanner1" src="./imgs/home-banner-1.jpg" alt="Coffee beans" />
+        <div className="home-gd-overlay"></div>
         <div id="homeTitle" className="row d-flex justify-content-center m-0 p-0 mb-5">
           <img id="homeLogo" src="/imgs/doppios-main-logo.png" alt="Doppio's" />
         </div>
@@ -51,7 +52,7 @@ function Home() {
                 <h3 className="card-title mb-5  fw-bold">About Doppio's</h3>
                 <p className="card-text mb-4">At Doppio's Coffee & Bakery, we blend the rich tradition of artisanal coffee crafting with the comforting aroma of freshly baked bread to create an inviting haven for coffee enthusiasts and pastry lovers alike. Our name, "Doppio," embodies our commitment to excellence, as it refers to the Italian term for "double." Just as a doppio espresso is a double shot of pure espresso, we aim to double your satisfaction with every visit.</p>
                 <p className="card-text">With a passion for quality and a dedication to delighting your senses, our coffee is sourced from the finest beans and expertly roasted to perfection, ensuring each sip is a symphony of flavor. Complementing our coffee, our bakery boasts an array of handcrafted bread, pastries, and confections, baked fresh daily. Whether you're seeking the bold, invigorating notes of a doppio espresso or the comforting embrace of a warm croissant, Doppio's is where genuine Italian tradition meets warm-hearted hospitality. Join us in savoring the simple pleasures of life, one cup and one bite at a time. Welcome to Doppio's, where every visit is a double delight.</p>
-                <img className="img align-self-center mt-4 mb-0 opacity-75 homeSectionLogo" src="/imgs/doppios-black-logo.png" alt="Doppio's logo" />
+                <img className="img align-self-center mt-4 mb-0 opacity-75 home-section-logo" src="/imgs/doppios-black-logo.png" alt="Doppio's logo" />
               </div>
             </div>
           </div>
