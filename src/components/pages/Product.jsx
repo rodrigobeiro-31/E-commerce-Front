@@ -50,8 +50,8 @@ function Product() {
               </div>
               <div className="col-6 cardBody">
                 <div className="card-body p-5">
-                  <h3>{product.name}</h3>
-                  <p className="card-text mt-3 fs-2 priceText">
+                  <h3 className="text-uppercase fw-bold">{product.name}</h3>
+                  <p className="card-text mt-3 fs-2 priceText fst-italic">
                     $USD: {product.price}
                   </p>
                   <p className="card-text">{product.description}</p>
@@ -146,9 +146,9 @@ function Product() {
                       className="text-decoration-none productName"
                       to={`/products/${product.slug}`}
                     >
-                      <h5 className="card-title">{product.name}</h5>
+                      <h5 className="card-title text-uppercase fw-bold">{product.name}</h5>
                     </NavLink>
-                    <p className="card-text priceText mt-2">
+                    <p className="card-text priceText mt-2 fst-italic">
                       $USD: {product.price}
                     </p>
                   </div>
