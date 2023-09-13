@@ -1,8 +1,10 @@
 import React from "react";
+import "./product.css";
+import { BsFillBagFill } from "react-icons/bs";
 import Accordion from "react-bootstrap/Accordion";
 import { BsFill0CircleFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { NavLink, useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
 import { addProduct } from "../../redux/productSlice";
 import axios from "axios";
@@ -12,6 +14,7 @@ function Product() {
   const params = useParams();
   const slug = params.slug;
   const dispatch = useDispatch();
+  const [interestingProduct, setInterestingProduct] = useState([])
 
   useEffect(() => {
     const getProduct = async () => {
@@ -22,7 +25,8 @@ function Product() {
           Authorization: "Bearer " + (user && user.token),
         }, */
       });
-      response && dispatch(addProduct(response.data[0]));
+      response && dispatch(addProduct(response.data.product[0]));
+     response && setInterestingProduct(response.data.products)
     };
     getProduct();
   }, []);
@@ -31,7 +35,7 @@ function Product() {
     product && (
       <>
         <div className="container d-flex justify-content-center align-items-center mt-5">
-          <div className="card mb-3">
+          <div className="mb-3">
             <div className="row g-0">
               <div className="col-6">
                 <img
@@ -43,19 +47,22 @@ function Product() {
                   }}
                 />
               </div>
-              <div className="col-6">
-                <div className="card-body">
-                  <h5 className="text-end">{product.category}</h5>
+              <div className="col-6 cardBody ">
+                <div className="card-body p-5">
                   <h3>{product.name}</h3>
+                  <p className="card-text mt-3 fs-2 priceText">$USD: {product.price}</p>
                   <p className="card-text">{product.description}</p>
-                  <p className="text-body-secondary">STOCK: {product.stock}</p>
+                  <hr className="mt-5" />
+                  <p>CATEGORY: {product.category}</p>
+                  <p className="text-body-secondary ">STOCK: {product.stock}</p>
+                  <hr className="mt-2"/>
+                  <div className="d-flex justify-content-end mt-5 ">
+  <a href="#" className="text-decoration-none d-flex align-items-center px-4 py-2 addToCartButton">
+    <BsFillBagFill />
+    <span className="ms-2">ADD TO CART</span>
+  </a>
+</div>
 
-                  <div className="d-flex justify-content-between">
-                    <p className="card-text">$USD: {product.price}</p>
-                    <a href="#" className="btn btn-secondary d-inline">
-                      Ir al carrito
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
@@ -64,114 +71,91 @@ function Product() {
 
         <div className="container mt-5">
           <Accordion defaultActiveKey="0">
-            <Accordion.Item eventKey="0">
-              <Accordion.Header>
-                Infomación sobre pedidos y envios
+            <Accordion.Item eventKey="0" >
+              <Accordion.Header >
+              Ordering and shipping information
               </Accordion.Header>
-              <Accordion.Body>
-                En nuestra tienda, la satisfacción del cliente es nuestra
-                prioridad. Realizar un pedido es fácil y conveniente.
-                Simplemente selecciona tus productos favoritos, proporciona tus
-                detalles de envío y elige tu método de pago preferido. Nuestro
-                equipo de expertos panaderos preparará con cariño y cuidado tus
-                productos frescos antes de enviarlos de forma segura y puntual a
-                tu puerta. Confía en nosotros para ofrecerte una experiencia de
-                compra excepcional, donde la calidad y la frescura son lo
-                primero.
+              <Accordion.Body >
+              In our store, customer satisfaction is our
+                priority. Placing an order is easy and convenient.
+                Simply select your favorite products, provide your
+                shipping details and choose your preferred payment method. Our
+                team of expert bakers will prepare with love and care your
+                fresh produce before shipping it safely and on time to
+                your door Trust us to offer you an experience of
+                exceptional purchase, where quality and freshness are what
+                first.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="1">
-              <Accordion.Header>Métodos de pago</Accordion.Header>
+              <Accordion.Header>Payment methods</Accordion.Header>
               <Accordion.Body>
-                Queremos que tu experiencia de compra sea cómoda y segura.
-                Ofrecemos una variedad de métodos de pago para adaptarnos a tus
-                necesidades. Puedes pagar con tarjeta de crédito o débito.
-                También aceptamos transferencias bancarias y, si lo prefieres,
-                puedes pagar en efectivo en nuestra tienda física al momento de
-                la entrega. Tu seguridad y conveniencia son fundamentales para
-                nosotros, por lo que puedes elegir el método que mejor te
-                convenga.
+              We want your shopping experience to be comfortable and safe.
+                We offer a variety of payment methods to suit your
+                needs. You can pay with credit or debit card.
+                We also accept bank transfers and, if you prefer,
+                You can pay in cash in our physical store at the time of
+                Delivery. Your safety and convenience are essential to
+                us, so you can choose the method that best suits you.
+                suits.
               </Accordion.Body>
             </Accordion.Item>
             <Accordion.Item eventKey="2">
-              <Accordion.Header>Aviso legal</Accordion.Header>
+              <Accordion.Header>Legal warning</Accordion.Header>
               <Accordion.Body>
-                Este sitio web está diseñado para proporcionar información sobre
-                nuestros productos y permitirte realizar compras en línea. Nos
-                esforzamos por mantener la precisión y actualidad de la
-                información, pero no garantizamos la disponibilidad constante de
-                todos los productos. Además, cualquier información proporcionada
-                en este sitio no debe considerarse asesoramiento legal, médico o
-                profesional. Al hacer una compra, aceptas nuestros términos y
-                condiciones, incluyendo nuestra política de privacidad. Si
-                tienes alguna pregunta o inquietud, no dudes en contactarnos. Tu
-                satisfacción es nuestra prioridad.
+              This website is designed to provide information about
+                our products and allow you to make purchases online. Us
+                We strive to maintain the accuracy and timeliness of the
+                information, but we do not guarantee the constant availability of
+                all the products. Additionally, any information provided
+                This site should not be considered legal, medical or advice.
+                professional. By making a purchase, you agree to our terms and
+                conditions, including our privacy policy. Yeah
+                If you have any questions or concerns, do not hesitate to contact us. You
+                satisfaction is our priority.
               </Accordion.Body>
             </Accordion.Item>
           </Accordion>
         </div>
 
-        <div className="container mt-5">
-          <h2 className="text-center mb-3">
-            Productos que te pueden interesar:
-          </h2>
-          <div className="row">
-            <div className="col-3 mb-4">
-              <div className="card">
-                <img
-                  src="https://unareceta.com/wp-content/uploads/2017/06/receta-de-muffins-con-pepitas-de-chocolate.jpg"
-                  className="card-img-top"
-                  alt="muffins"
-                />
-                <div className="card-body">
-                  <a href="#" className="text-decoration-none text-dark">
-                    <h5 className="text-center">Muffins de chocolate</h5>
-                  </a>
+       
+
+<div className="container mt-5">
+  <h3 className="text-center">Products you migth also like: </h3>
+          <div className="row d-flex flex-wrap g-3 m-0">
+            {interestingProduct.map((product, id) => (
+              <div key={id} className="col-3 mainCard mb-5">
+                <div className="productsCard">
+                  <div className="position-relative">
+                    <img
+                      src={product.image}
+                      className="card-img imgCard"
+                      alt={product.name}
+                    />
+                    <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
+                      <h6 className="text-center mt-auto">
+                        {" "}
+                        <BsFillBagFill /> ADD TO CART
+                      </h6>
+                    </div>
+                  </div>
+                  <div
+                    className="card-body p-1 ps-2 mt-3"
+                    style={{ backgroundColor: "black" }}
+                  >
+                    <NavLink
+                      className="text-decoration-none productName"
+                      to={`/products/${product.slug}`}
+                    >
+                      <h5 className="card-title">{product.name}</h5>
+                    </NavLink>
+                    <p className="card-text priceText mt-2">
+                      $USD: {product.price}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="col-3 mb-4">
-              <div className="card">
-                <img
-                  src="https://unareceta.com/wp-content/uploads/2017/06/receta-de-muffins-con-pepitas-de-chocolate.jpg"
-                  className="card-img-top"
-                  alt="muffins"
-                />
-                <div className="card-body">
-                  <a href="#" className="text-decoration-none text-dark">
-                    <h5 className="text-center">Muffins de chocolate</h5>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-3 mb-4">
-              <div className="card">
-                <img
-                  src="https://unareceta.com/wp-content/uploads/2017/06/receta-de-muffins-con-pepitas-de-chocolate.jpg"
-                  className="card-img-top"
-                  alt="muffins"
-                />
-                <div className="card-body">
-                  <a href="#" className="text-decoration-none text-dark">
-                    <h5 className="text-center">Muffins de chocolate</h5>
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div className="col-3 mb-4">
-              <div className="card">
-                <img
-                  src="https://unareceta.com/wp-content/uploads/2017/06/receta-de-muffins-con-pepitas-de-chocolate.jpg"
-                  className="card-img-top"
-                  alt="muffins"
-                />
-                <div className="card-body">
-                  <a href="#" className="text-decoration-none text-dark">
-                    <h5 className="text-center">Muffins de chocolate</h5>
-                  </a>
-                </div>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </>
