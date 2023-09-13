@@ -87,11 +87,9 @@ function Home() {
                 src="/imgs/coffee-bean-icon.png"
                 alt="label"
                 className="img-fluid mt-3 opacity-75 custom-image" />
-              <h5 className="text-center mt-3 fw-semibold">Without preservatives</h5>
+              <h5 className="text-center mt-3 fw-semibold">Family business</h5>
               <p className="text-center fw-light">
-                We take pride in using only the freshest and most natural
-                ingredients to create delicious treats that are free from artificial
-                preservatives.
+              For generations, our family business has been the heart of our bakery and boutique café, where each creation carries with it the love and tradition passed down from parents to children.
               </p>
             </div>
             <div className="col d-flex flex-column align-items-center p-3">
