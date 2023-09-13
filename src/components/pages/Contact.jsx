@@ -156,7 +156,7 @@ function Contact() {
                     <option>divorcio top</option>
                   </select>
                 </div>
-                <div className="col-5 text-center ">
+                <div className="col-5 text-center mt-5 pt-4 ">
                   <button
                     type="submit"
                     className="btn  m-4 text-center btn-modal "
