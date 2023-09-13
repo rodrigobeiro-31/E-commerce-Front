@@ -57,7 +57,7 @@ function Contact() {
   return (
     <div className="column arriba  ">
       <div className=" d-flex-column  align-self-center align-content-between blur ">
-        <h1 className="m-4">Contáctate con nosotros</h1>
+        <h1 className="">Contáctate con nosotros</h1>
 
         <div className="row">
           <div className="col-6">
@@ -156,7 +156,7 @@ function Contact() {
                     <option>divorcio top</option>
                   </select>
                 </div>
-                <div className="col-5 text-center ">
+                <div className="col-5 text-center mt-5 pt-4 ">
                   <button
                     type="submit"
                     className="btn  m-4 text-center btn-modal "
@@ -176,10 +176,8 @@ function Contact() {
             <h4 className="m-3">
               093 838890 - Sábados y Domingos de 12:00 a 19:00 horas
             </h4>
-            <h4 className="m-3">
-              093 838890 - Sábados y Domingos de 12:00 a 19:00 horas
-            </h4>
-            <h3 className="m-5">Ecommerce@portoMembrillo.com</h3>
+
+            <h3 className="m-5">Ecommerce@doppios.com</h3>
           </div>
         </div>
       </div>
