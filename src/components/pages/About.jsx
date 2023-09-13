@@ -20,7 +20,7 @@ function About() {
         <div className="about-gd-overlay"></div>
         <div className="row ps-5 about-content">
           <div className="col-xl-5 col-lg-6 col-md-6">
-            <h2>Qué es HackCommerce?</h2>
+            <h2>What is HackCommerce?</h2>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Perferendis quam neque eos veritatis minus molestiae dignissimos
@@ -45,7 +45,7 @@ function About() {
       <div className="text-center container-fluid">
         <section className="about-section-one justify-content-center align-items-center row m-5">
           <div className="align-self-center mb-2 col-lg-6 col-md-8 col-12">
-            <h3>TECNOLOGÍAS Y HERRAMIENTAS UTILIZADAS</h3>
+            <h3>TECHNOLOGIES AND TOOLS USED</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. A velit
               suscipit unde dolores odio maxime quibusdam dicta quod, ut laborum
@@ -93,7 +93,7 @@ function About() {
           </div>
         </section>
         <section className="about-section-two justify-content-center align-items-center m-5 row">
-          <h3 className="mb-5">NUESTRO EQUIPO</h3>
+          <h3 className="mb-5">OUR TEAM</h3>
           <div className="col">
             <img
               src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"

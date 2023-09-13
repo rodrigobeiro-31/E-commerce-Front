@@ -7,16 +7,16 @@ function Footer() {
       <div className="">HackCommerce</div>
       <div className="nav">
         <NavLink to="#" className="nav-link py-1 footer-links">
-          INICIO
+          START
         </NavLink>
         <NavLink to="#" className="nav-link py-1 footer-links">
-          SOBRE NUESTRO PROYECTO
+          ABOUT OUR PROJECT
         </NavLink>
         <NavLink to="# " className="nav-link py-1 footer-links">
-          PRODUCTOS
+          PRODUCTS
         </NavLink>
         <NavLink to="#" className="nav-link py-1 footer-links">
-          CONTACTO
+          CONTACT
         </NavLink>
       </div>
       <div>SOCIAL:</div>
