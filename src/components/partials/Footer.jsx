@@ -1,5 +1,6 @@
 import { NavLink } from "react-router-dom";
 import "./Footer.css";
+import { FaFacebook, FaInstagram, FaTwitter, FaLinkedin } from "react-icons/fa";
 
 function Footer() {
   return (
@@ -34,28 +35,28 @@ function Footer() {
           target="blank"
           className=" footerLink text-white mb-2 a-icons"
         >
-          <i className="fa-brands fa-facebook"></i>
+          <FaFacebook />
         </a>
         <a
           href="https://www.instagram.com/"
           target="blank"
           className=" footerLink text-white a-icons"
         >
-          <i className="fa-brands fa-instagram"></i>
+          <FaInstagram />
         </a>
         <a
           href="https://twitter.com/"
           target="blank"
           className=" footerLink text-white a-icons"
         >
-          <i className="fa-brands fa-twitter"></i>
+          <FaTwitter />
         </a>
         <a
           href="https://www.linkedin.com/"
           target="blank"
           className=" footerLink text-white a-icons"
         >
-          <i className="fa-brands fa-linkedin"></i>
+          <FaLinkedin />
         </a>
       </div>
     </footer>
