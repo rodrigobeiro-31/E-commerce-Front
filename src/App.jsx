@@ -5,7 +5,7 @@ import Contact from "./components/pages/Contact";
 import ModalRegister from "./components/partials/ModalRegister";
 import ModalLogin from "./components/partials/ModalLogin";
 import Footer from "./components/partials/Footer";
-import Navbar from "./components/partials/Navbar";
+import Header from "./components/partials/Header";
 import Products from "./components/pages/Products";
 import About from "./components/pages/About";
 import Product from "./components/pages/Product";
@@ -14,7 +14,7 @@ import ProductIn from "./components/admin/inProduct";
 function App() {
   return (
     <>
-      <Navbar />
+      <Header />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<ModalRegister />} />
