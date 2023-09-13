@@ -54,7 +54,7 @@ function Header() {
       <Navbar
         collapseOnSelect
         expand="lg"
-        className={`${scroll ? "nav-scroll" : "nav-top"} navbar-custom`}
+        className={`${scroll ? "nav-scroll" : "nav-top"} navbar-custom`} 
         fixed="top"
       >
         <div>
@@ -97,7 +97,8 @@ function Header() {
                   setFullscreenRegister={setFullscreenRegister}
                 />
                 <Button
-                  className="me-2 mb-2"
+                  variant="light"
+                  className="me-3 mb-2"
                   onClick={() =>
                     handleShowAll(
                       setShowRegister,
@@ -120,7 +121,8 @@ function Header() {
                   setFullscreenLogin={setFullscreenLogin}
                 />
                 <Button
-                  className="me-2 mb-2"
+                  variant="outline-light"
+                  className="me-3 mb-2"
                   onClick={() =>
                     handleShowAll(
                       setShowLogin,
