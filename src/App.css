@@ -1,9 +1,7 @@
 :root {
-     --mainBrown: #532E1C;
-    --secondaryBrown: #C5A880;
-    --darkBrown: #0F0F0F;
-    --lightBackgroud: #E6E6E6;
-    
-};
-
-
+  --mainBrown: #532e1c;
+  --secondaryBrown: #c5a880;
+  --darkBrown: #0f0f0f;
+  --lightBackgroud: #e6e6e6;
+  --clr-brown-terciary: #c38154;
+}

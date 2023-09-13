@@ -11,36 +11,13 @@ import {
 import { FaBootstrap } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function About() {
-  useEffect(() => {
-    document.title = "About us";
-  });
   return (
     <div>
       <div className="about-bg-img container-fluid">
         <div className="about-gd-overlay"></div>
-        <div className="row ps-5 about-content">
-          <div className="col-xl-5 col-lg-6 col-md-6">
-            <h2>What is HackCommerce?</h2>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis quam neque eos veritatis minus molestiae dignissimos
-              ratione ipsa quod suscipit, fugiat aliquid placeat eveniet, non
-              possimus hic consequuntur quo? Soluta.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis quam neque eos veritatis minus molestiae dignissimos
-              ratione ipsa quod suscipit, fugiat aliquid placeat eveniet, non
-              possimus hic consequuntur quo? Soluta.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Perferendis quam neque eos veritatis minus molestiae dignissimos
-              ratione ipsa quod suscipit, fugiat aliquid placeat eveniet, non
-              possimus hic consequuntur quo? Soluta.
-            </p>
-          </div>
-        </div>
+        <h2 className="w-100 h-100 text-white d-flex justify-content-center align-items-center title">
+          ABOUT THIS PROJECT
+        </h2>
       </div>
       <div className="text-center container-fluid">
         <section className="about-section-one justify-content-center align-items-center row m-5">

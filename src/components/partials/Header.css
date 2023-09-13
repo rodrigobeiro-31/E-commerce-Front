@@ -27,10 +27,17 @@
 }
 
 .nav-link:hover {
-  color: var(--secondaryBrown);
+  color: white;
 }
 
 .nav-link.active {
   color: var(--secondaryBrown) !important;
   font-weight: bold;
+}
+
+.nav-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+  cursor: pointer;
 }

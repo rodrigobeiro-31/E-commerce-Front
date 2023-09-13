@@ -2,10 +2,11 @@ import { NavLink } from "react-router-dom";
 import ModalRegister from "./ModalRegister";
 import ModalLogin from "./ModalLogin";
 import ModalCart from "./ModalCart";
-import { Button, Container, Nav, Navbar, NavDropdown } from "react-bootstrap";
+import { Button, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useEffect, useState } from "react";
-import "./Navbar.css";
+import "./Header.css";
 import NavbarToggle from "./NavbarToggle";
+import { BsCartFill } from "react-icons/bs";
 
 function Header() {
   const [fullscreenRegister, setFullscreenRegister] = useState(true);
@@ -75,15 +76,68 @@ function Header() {
               <NavLink className="nav-link" aria-current="page" to="/">
                 Home
               </NavLink>
-              <NavLink className="nav-link" to="/products">
-                Products
-              </NavLink>
               <NavLink className="nav-link" to="/about-us">
                 About This Project
+              </NavLink>
+              <NavLink className="nav-link" to="/products">
+                Products
               </NavLink>
               <NavLink className="nav-link" to="/contact">
                 Contact
               </NavLink>
+              <div>
+                <ModalRegister
+                  fullscreen={fullscreenRegister}
+                  show={showRegister}
+                  handleClose={handleCloseAll}
+                  handleShowAll={handleShowAll}
+                  setShowLogin={setShowLogin}
+                  setFullscreenLogin={setFullscreenLogin}
+                  setShowRegister={setShowRegister}
+                  setFullscreenRegister={setFullscreenRegister}
+                />
+                <Button
+                  className="me-2 mb-2"
+                  onClick={() =>
+                    handleShowAll(
+                      setShowRegister,
+                      setFullscreenRegister,
+                      setShowLogin,
+                      setFullscreenLogin
+                    )
+                  }
+                >
+                  Register
+                </Button>
+                <ModalLogin
+                  fullscreen={fullscreenLogin}
+                  show={showLogin}
+                  handleClose={handleCloseAll}
+                  handleShowAll={handleShowAll}
+                  setShowRegister={setShowRegister}
+                  setFullscreenRegister={setFullscreenRegister}
+                  setShowLogin={setShowLogin}
+                  setFullscreenLogin={setFullscreenLogin}
+                />
+                <Button
+                  className="me-2 mb-2"
+                  onClick={() =>
+                    handleShowAll(
+                      setShowLogin,
+                      setFullscreenLogin,
+                      setShowRegister,
+                      setFullscreenRegister
+                    )
+                  }
+                >
+                  Login
+                </Button>
+                <ModalCart show={showCart} handleClose={handleCloseCart} />
+                <BsCartFill
+                  className="me-2 mb-2 nav-icon"
+                  onClick={handleShowCart}
+                />
+              </div>
             </Nav>
           </Navbar.Collapse>
         </div>
