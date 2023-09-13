@@ -11,3 +11,7 @@ footer {
 .footer-links:hover {
   color: rgb(226, 226, 226);
 }
+
+.a-icons:hover {
+  transform: scale(1.2, 1.2);
+}
