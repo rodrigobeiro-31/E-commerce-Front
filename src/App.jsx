@@ -12,7 +12,6 @@ import Product from "./components/pages/Product";
 
 import ProductIn from "./components/admin/inProduct";
 import { useEffect } from "react";
-import Brand from "./components/pages/brand";
 
 function App() {
   const location = useLocation();
@@ -32,7 +31,6 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<ProductIn />} />
-       
       </Routes>
       <Footer />
     </>
