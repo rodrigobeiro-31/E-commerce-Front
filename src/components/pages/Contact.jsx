@@ -176,10 +176,8 @@ function Contact() {
             <h4 className="m-3">
               093 838890 - Sábados y Domingos de 12:00 a 19:00 horas
             </h4>
-            <h4 className="m-3">
-              093 838890 - Sábados y Domingos de 12:00 a 19:00 horas
-            </h4>
-            <h3 className="m-5">Ecommerce@portoMembrillo.com</h3>
+
+            <h3 className="m-5">Ecommerce@doppios.com</h3>
           </div>
         </div>
       </div>
