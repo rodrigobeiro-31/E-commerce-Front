@@ -97,7 +97,8 @@ function Header() {
                   setFullscreenRegister={setFullscreenRegister}
                 />
                 <Button
-                  className="me-2 mb-2"
+                  variant="light"
+                  className="me-3 mb-2"
                   onClick={() =>
                     handleShowAll(
                       setShowRegister,
@@ -120,7 +121,8 @@ function Header() {
                   setFullscreenLogin={setFullscreenLogin}
                 />
                 <Button
-                  className="me-2 mb-2"
+                  variant="outline-light"
+                  className="me-3 mb-2"
                   onClick={() =>
                     handleShowAll(
                       setShowLogin,
