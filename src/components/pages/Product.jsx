@@ -35,9 +35,9 @@ function Product() {
   return (
     product && (
       <>
-        <div className="container d-flex justify-content-center align-items-center mt-5">
-          <div className="mb-3">
-            <div className="row g-0">
+        <div className="container d-flex justify-content-center align-items-center mt-5 mb-3">
+         
+            <div className="row g-0 mt-5">
               <div className="col-6">
                 <img
                   src={product.image}
@@ -71,7 +71,7 @@ function Product() {
                 </div>
               </div>
             </div>
-          </div>
+         
         </div>
 
         <div className="container mt-5">
@@ -132,7 +132,7 @@ function Product() {
                       alt={product.name}
                     />
                     <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-                      <h6 className="text-center mt-auto">
+                      <h6 className="text-center mt-auto p-1">
                         {" "}
                         <BsFillBagFill /> ADD TO CART
                       </h6>
