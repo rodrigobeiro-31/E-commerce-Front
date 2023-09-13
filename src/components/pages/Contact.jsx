@@ -30,12 +30,12 @@ function Contact() {
       // Realiza la solicitud POST utilizando Axios
       const response = await axios.post(
         "http://localhost:3000/user/contact",
-        formData
-        // {
-        //   headers: {
-        //     Authorization: `Bearer ${token}`,
-        //   },
-        //}
+        formData,
+        {
+          /* headers: {
+            Authorization: `Bearer ${token}`,
+          }, */
+        }
       );
 
       // Haz algo con la respuesta, como mostrarla en la consola
