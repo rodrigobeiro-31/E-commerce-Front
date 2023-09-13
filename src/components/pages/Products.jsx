@@ -54,9 +54,9 @@ function Products() {
                       className="text-decoration-none productName"
                       to={`/products/${product.slug}`}
                     >
-                      <h5 className="card-title">{product.name}</h5>
+                      <p className="card-title text-uppercase fw-bold">{product.name}</p>
                     </NavLink>
-                    <p className="card-text priceText mt-2">
+                    <p className="card-text priceText mt-2 fst-italic">
                       $USD: {product.price}
                     </p>
                   </div>
