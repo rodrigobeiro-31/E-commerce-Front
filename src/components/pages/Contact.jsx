@@ -61,7 +61,7 @@ function Contact() {
           <div className="col-6">
             <div className="container ">
               <div>
-                <h2 className="mt-5">Envíanos un mensaje.</h2>
+                <h2 className="mt-5 pt-4">Envíanos un mensaje.</h2>
                 <h3>En breves te estaremos respondiendo</h3>
               </div>
               <form onSubmit={sendForm} className="row g-3">
