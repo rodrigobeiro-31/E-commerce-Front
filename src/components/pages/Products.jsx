@@ -25,9 +25,9 @@ function Products() {
     products && (
       <>
         <div className="container-fluid d-flex align-items-center flex-column justify-content-center imageContainer m-0 p-0">
-        <h2 className="text-white d-flex justify-content-center align-items-center title">
-          PRODUCTS
-        </h2>
+          <h2 className="text-white d-flex justify-content-center align-items-center title">
+            PRODUCTS
+          </h2>
         </div>
 
         <div className="container mt-5">
@@ -56,7 +56,9 @@ function Products() {
                       className="text-decoration-none productName"
                       to={`/products/${product.slug}`}
                     >
-                      <p className="card-title text-uppercase fw-bold">{product.name}</p>
+                      <p className="card-title text-uppercase fw-bold">
+                        {product.name}
+                      </p>
                     </NavLink>
                     <p className="card-text priceText mt-2 fst-italic">
                       $USD: {product.price}

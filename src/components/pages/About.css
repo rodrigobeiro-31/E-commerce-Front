@@ -23,7 +23,6 @@
 }
 
 .title {
-  position: absolute;
   font-weight: bolder;
   z-index: 1;
 }
@@ -58,7 +57,7 @@
 }
 
 .custom-background {
-  background-color:var(--creamyWhite);
+  background-color: var(--creamyWhite);
 }
 
 .social-icons {

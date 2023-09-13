@@ -37,7 +37,7 @@
 }
 
 .custom-background1 {
-  background-color:var(--creamyWhite);
+  background-color: var(--creamyWhite);
 }
 
 /* .custom-background2 {
@@ -51,3 +51,8 @@
 .custom-background4 {
   background-color:var(--secondaryBrown);
 } */
+
+.home-separator {
+  margin-top: 8rem !important;
+  margin-bottom: 8rem !important;
+}
