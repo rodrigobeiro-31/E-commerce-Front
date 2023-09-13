@@ -26,7 +26,7 @@ function Footer() {
         </NavLink>
       </div>
       <div className="d-flex justify-content-between gap-2">
-        <h6 className="footerLink nav-link text-white align-self-center">
+        <h6 className="footerLink nav-link text-white align-self-center mb-1">
           SOCIAL :
         </h6>
         <a

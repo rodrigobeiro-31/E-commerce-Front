@@ -1,14 +1,14 @@
 .imageContainer {
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 400px;
   background-image: url("/imgs/all_products_banner.jpg");
   background-size: cover;
 }
 
 .allProductsText {
   color: var(--lightBackgroud);
-  font-size: 6rem;
+ 
 }
 
 .addToCart {
