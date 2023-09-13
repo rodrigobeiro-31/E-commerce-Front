@@ -32,6 +32,42 @@ function Home() {
         <div id="homeTitle" className="row d-flex justify-content-center m-0 p-0 mb-5">
           <img id="homeLogo" src="/imgs/doppios-main-logo.png" alt="Doppio's" />
         </div>
+        <div className="row mt-5 mb-5 m-0 p-0">
+          <h3 className="mb-4 fw-bold text-center bg-light p-2">THIS WEEK'S PICKS</h3>
+          {products.map((product, id) => (
+            <div key={id} className="col-3 mainCard mb-5">
+              <div className="productsCard">
+                <div className="position-relative">
+                  <img
+                    src={product.image}
+                    className="card-img imgCard"
+                    alt={product.name}
+                  />
+                  <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
+                    <h6 className="text-center mt-auto">
+                      {" "}
+                      <BsFillBagFill /> ADD TO CART
+                    </h6>
+                  </div>
+                </div>
+                <div
+                  className="card-body p-1 ps-2 mt-3"
+                  style={{ backgroundColor: "black" }}
+                >
+                  <NavLink
+                    className="text-decoration-none productName"
+                    to={`/products/${product.slug}`}
+                  >
+                    <h5 className="card-title">{product.name}</h5>
+                  </NavLink>
+                  <p className="card-text priceText mt-2">
+                    $USD: {product.price}
+                  </p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
         <div id="homeAboutCard" className="card m-5 rounded-0">
           <div className="row g-0">
             <div className="col-md-5">
@@ -47,7 +83,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="container-fluid ps-5 pe-5 custom-background1">
+        <div className="container-fluid ps-5 pe-5 mb-5 custom-background1">
           <div className="row d-flex">
             <div className="col d-flex flex-column align-items-center p-3">
               <img
@@ -95,42 +131,6 @@ function Home() {
               </p>
             </div>
           </div>
-        </div>
-        <div className="row mt-5 mb-5 m-0 p-0">
-          <h3 className="mb-4 fw-bold text-center bg-light p-2">THIS WEEK'S PICKS</h3>
-          {products.map((product, id) => (
-            <div key={id} className="col-3 mainCard mb-5">
-              <div className="productsCard">
-                <div className="position-relative">
-                  <img
-                    src={product.image}
-                    className="card-img imgCard"
-                    alt={product.name}
-                  />
-                  <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-                    <h6 className="text-center mt-auto">
-                      {" "}
-                      <BsFillBagFill /> ADD TO CART
-                    </h6>
-                  </div>
-                </div>
-                <div
-                  className="card-body p-1 ps-2 mt-3"
-                  style={{ backgroundColor: "black" }}
-                >
-                  <NavLink
-                    className="text-decoration-none productName"
-                    to={`/products/${product.slug}`}
-                  >
-                    <h5 className="card-title">{product.name}</h5>
-                  </NavLink>
-                  <p className="card-text priceText mt-2">
-                    $USD: {product.price}
-                  </p>
-                </div>
-              </div>
-            </div>
-          ))}
         </div>
         <Carousel>
           <Carousel.Item>

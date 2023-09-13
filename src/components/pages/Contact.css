@@ -5,9 +5,9 @@ body {
 .contact-banner {
   background-image: url("/imgs/contacto.jpg");
   background-size: cover;
-  height: 95vh;
-  color: white;
-  font-weight: bold;
+  margin: 0;
+  padding: 0;
+  height: 400px;
 }
 
 .blur {

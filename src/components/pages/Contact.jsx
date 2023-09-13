@@ -58,6 +58,9 @@ function Contact() {
   return (
     <>
       <div className="container-fluid d-flex align-items-center flex-column justify-content-center m-0 p-0 contact-banner">
+        <h2 className="text-white d-flex justify-content-center align-items-center title fw-bold">
+          CONTACT
+        </h2>
       </div>
       <div className="container mb-5 mt-5 contact-container custom-background">
         <div className=" d-flex-column  align-self-center align-content-between">
@@ -172,10 +175,10 @@ function Contact() {
             <div className="col-6 d-flex-column align-self-center align-content-between">
               <h4 className="fw-bold mb-5">PHONE NUMBER</h4>
               <p>Mondays through Fridays from 9:00 am to 19:00 pm</p>
-              <h5 className="ps-5 mt-3"><BsFillTelephoneFill className="me-2"/> 2606 1980</h5>
-              <h5 className="ps-5 mb-5"><BsFillTelephoneFill className="me-2"/> 093 838 890</h5>
+              <h5 className="ps-5 mt-3"><BsFillTelephoneFill className="me-2" /> 2606 1980</h5>
+              <h5 className="ps-5 mb-5"><BsFillTelephoneFill className="me-2" /> 093 838 890</h5>
               <p>Saturdays and Sundays from 12:00 am to 19:00 pm</p>
-              <h5 className="ps-5 mt-3"><BsFillTelephoneFill className="me-2"/> 093 838 890</h5>
+              <h5 className="ps-5 mt-3"><BsFillTelephoneFill className="me-2" /> 093 838 890</h5>
             </div>
           </div>
         </div>

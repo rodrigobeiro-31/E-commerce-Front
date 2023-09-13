@@ -56,3 +56,12 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+.custom-background {
+  background-color:var(--creamyWhite);
+}
+
+.social-icons {
+  width: 1rem;
+  height: 1rem;
+}

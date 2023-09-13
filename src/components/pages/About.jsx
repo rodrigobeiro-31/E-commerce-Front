@@ -19,10 +19,10 @@ function About() {
           ABOUT THIS PROJECT
         </h2>
       </div>
-      <div className="text-center container-fluid">
+      <div className="container-fluid">
         <section className="about-section-one justify-content-center align-items-center row m-5">
-          <div className="align-self-center mb-2 col-lg-6 col-md-8 col-12">
-            <h3>TECHNOLOGIES AND TOOLS USED</h3>
+          <div className="align-self-center mb-2 col-lg-8 col-md-10 col-12 p-5 custom-background">
+            <h3 className="mb-5 fw-bold text-center ">Technologies and tools used</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. A velit
               suscipit unde dolores odio maxime quibusdam dicta quod, ut laborum
@@ -70,7 +70,7 @@ function About() {
           </div>
         </section>
         <section className="about-section-two justify-content-center align-items-center m-5 row">
-          <h3 className="mb-5">OUR TEAM</h3>
+          <h3 className="text-center mb-5 fw-bold">Our team</h3>
           <div className="col">
             <img
               src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
@@ -81,10 +81,10 @@ function About() {
             <small>Full Stack Dev</small>
             <div>
               <Link to="linkedin" target="_blank">
-                <BiLogoLinkedinSquare />
+                <BiLogoLinkedinSquare className="social-icons"/>
               </Link>
               <Link to="github" target="_blank">
-                <BiLogoGithub />
+                <BiLogoGithub className="social-icons" />
               </Link>
             </div>
           </div>
@@ -98,10 +98,10 @@ function About() {
             <small>Full Stack Dev</small>
             <div>
               <Link to="linkedin" target="_blank">
-                <BiLogoLinkedinSquare />
+                <BiLogoLinkedinSquare className="social-icons"/>
               </Link>
               <Link to="github" target="_blank">
-                <BiLogoGithub />
+                <BiLogoGithub className="social-icons"/>
               </Link>
             </div>
           </div>
@@ -115,10 +115,10 @@ function About() {
             <small>Full Stack Dev</small>
             <div>
               <Link to="linkedin" target="_blank">
-                <BiLogoLinkedinSquare />
+                <BiLogoLinkedinSquare className="social-icons"/>
               </Link>
               <Link to="github" target="_blank">
-                <BiLogoGithub />
+                <BiLogoGithub className="social-icons"/>
               </Link>
             </div>
           </div>
@@ -132,10 +132,10 @@ function About() {
             <small>Full Stack Dev</small>
             <div>
               <Link to="linkedin" target="_blank">
-                <BiLogoLinkedinSquare />
+                <BiLogoLinkedinSquare className="social-icons"/>
               </Link>
               <Link to="github" target="_blank">
-                <BiLogoGithub />
+                <BiLogoGithub className="social-icons"/>
               </Link>
             </div>
           </div>
@@ -149,10 +149,10 @@ function About() {
             <small>Full Stack Dev</small>
             <div>
               <Link to="linkedin" target="_blank">
-                <BiLogoLinkedinSquare />
+                <BiLogoLinkedinSquare className="social-icons"/>
               </Link>
               <Link to="github" target="_blank">
-                <BiLogoGithub />
+                <BiLogoGithub className="social-icons"/>
               </Link>
             </div>
           </div>
