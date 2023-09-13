@@ -61,75 +61,75 @@ function Contact() {
           <div className="col-6">
             <div className="container ">
               <div>
-                <h2 className="mt-5 pt-4">Envíanos un mensaje.</h2>
-                <h3>En breves te estaremos respondiendo</h3>
+                <h2 className="mt-5 pt-4">Send us a message.</h2>
+                <h3>We will be responding to you shortly.</h3>
               </div>
               <form onSubmit={sendForm} className="row g-3">
                 <div className="col-5">
                   <label htmlFor="firstName" className="form-label">
-                    Nombre :
+                    Firstname :
                   </label>
                   <input
                     className="form-control"
                     name="firstname"
                     id="firstname"
-                    placeholder="Nombre..."
+                    placeholder="Firstname..."
                     value={formData.firstname}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="col-5">
                   <label htmlFor="lastname" className="form-label">
-                    Apellido
+                    Lastname :
                   </label>
                   <input
                     type="text"
                     className="form-control"
                     name="lastname"
                     id="lastname"
-                    placeholder="Apellido.."
+                    placeholder="Lastname..."
                     value={formData.lastname}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="col-5">
                   <label htmlFor="ilastName" className="form-label">
-                    Telefono
+                    Phone number :
                   </label>
                   <input
                     type="text"
                     className="form-control"
                     name="fone"
                     id="fone"
-                    placeholder="telefono..."
+                    placeholder="Phone number..."
                     value={formData.fone}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="col-md-5">
                   <label htmlFor="direction" className="form-label">
-                    Direccion
+                    Address :
                   </label>
                   <input
                     type="name"
                     className="form-control"
                     name="direction"
                     id="direction"
-                    placeholder="Dirección..."
+                    placeholder="Address..."
                     value={formData.direction}
                     onChange={handleChange}
                   />
                 </div>
                 <div className="col-10">
                   <label htmlFor="fone" className="form-label">
-                    Asunto:
+                    Affair :
                   </label>
                   <textarea
                     type="name"
                     className="form-control"
                     name="affaire"
                     id="affaire"
-                    placeholder="Asunto..."
+                    placeholder="Affair..."
                     value={formData.affaire}
                     onChange={handleChange}
                   />
@@ -137,21 +137,21 @@ function Contact() {
 
                 <div className="col-md-5">
                   <label htmlFor="options" className="form-label">
-                    Opciones:
+                    Options :
                   </label>
                   <select
                     className="form-select"
                     type="text"
                     name="options"
                     id="options"
-                    placeholder="Dirección..."
+                    placeholder="Options..."
                     value={formData.options}
                     onChange={handleChange}
                   >
-                    <option>Golozo</option>
-                    <option>catering</option>
-                    <option>Cumpleaños del nene</option>
-                    <option>divorcio top</option>
+                    <option>Family birthday</option>
+                    <option>Coffee shop</option>
+                    <option>Weddings</option>
+                    <option>whim</option>
                   </select>
                 </div>
                 <div className="col-5 text-center mt-5 pt-4 ">
@@ -159,20 +159,20 @@ function Contact() {
                     type="submit"
                     className="btn  m-4 text-center btn-modal "
                   >
-                    Enviar{" "}
+                    Send{" "}
                   </button>
                 </div>
               </form>
             </div>
           </div>
           <div className="col  d-flex-column  align-self-center align-content-between blur ">
-            <h1 className="m-5"> DATOS DE CONTACTO</h1>
-            <h4 className="m-3"> E-commerce ONLINE: todos los días</h4>
+            <h1 className="m-5"> Contact information...</h1>
+            <h4 className="m-3"> E-commerce ONLINE: every day ...</h4>
             <h4 className="m-3">
-              26061980 - 093 838890 - Lun a Vie de 9:00 a 19:00 horas{" "}
+              26061980 - 093 838890 - Monday to Friday de 9:00 a 19:00 hs{" "}
             </h4>
             <h4 className="m-3">
-              093 838890 - Sábados y Domingos de 12:00 a 19:00 horas
+              093 838890 - Saturdays and Sundays de 12:00 a 19:00 hs
             </h4>
 
             <h3 className="m-5">Ecommerce@doppios.com</h3>
