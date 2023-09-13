@@ -3,7 +3,7 @@ import "./Footer.css";
 
 function Footer() {
   return (
-    <footer className="d-flex justify-content-between align-items-center mt-5 text-white">
+    <footer className="d-flex justify-content-between align-items-center  text-white">
       <div className="">HackCommerce</div>
       <div className="nav">
         <NavLink to="#" className="nav-link py-1 footer-links">
