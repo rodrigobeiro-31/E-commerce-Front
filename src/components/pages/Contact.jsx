@@ -57,7 +57,7 @@ function Contact() {
   return (
     <div className="column arriba  ">
       <div className=" d-flex-column  align-self-center align-content-between blur ">
-        <h1 className="m-4">Contáctate con nosotros</h1>
+        <h1 className="">Contáctate con nosotros</h1>
 
         <div className="row">
           <div className="col-6">
