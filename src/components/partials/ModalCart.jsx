@@ -1,5 +1,6 @@
 import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
+import { BsFillPlusCircleFill, BsFillDashCircleFill } from "react-icons/bs";
 
 function ModalCart({ show, handleClose }) {
   return (
@@ -9,13 +10,96 @@ function ModalCart({ show, handleClose }) {
           <div className="offcanvas-title h5"> Shopping Cart</div>
         </Offcanvas.Header>
         <Offcanvas.Body>
-          Some text as placeholder. In real life you can have the elements you
-          have chosen. Like, text, images, lists, etc. Content of products!
+          <hr className="my-4" />
+          <div className="row mb-4 d-flex justify-content-between align-items-center">
+            <div className="col-md-2 col-lg-2 col-xl-2">
+              <img
+                src="/imgs/products/hot-chocolate.png"
+                className="img-fluid rounded-3"
+                alt="Cotton T-shirt"
+              />
+            </div>
+            <div className="col-md-3 col-lg-3 col-xl-3">
+              <h6 className="text-muted">Cafe</h6>
+              <h6 className="text-black mb-0">HOT CHOCOLATE</h6>
+            </div>
+            <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+              <button className="btn btn-link px-2">
+                <BsFillPlusCircleFill />
+              </button>
+              <h3>2</h3>
+
+              <button className="btn btn-link px-2">
+                <BsFillDashCircleFill />
+              </button>
+            </div>
+            <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+              <h6 className="mb-0 text-black">$ 6.0</h6>
+            </div>
+          </div>
+
+          <hr className="my-4" />
+
+          <div className="row mb-4 d-flex justify-content-between align-items-center">
+            <div className="col-md-2 col-lg-2 col-xl-2">
+              <img
+                src="http://localhost:5173/imgs/products/capuccino.png"
+                className="img-fluid rounded-3"
+                alt="capuccino"
+              />
+            </div>
+            <div className="col-md-3 col-lg-3 col-xl-3">
+              <h6 className="text-muted">Cafe</h6>
+              <h6 className="text-black mb-0">CAPUCCINO</h6>
+            </div>
+            <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+              <button className="btn btn-link px-2">
+                <BsFillPlusCircleFill />
+              </button>
+              <h3>4</h3>
+              <button className="btn btn-link px-2">
+                <BsFillDashCircleFill />
+              </button>
+            </div>
+            <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+              <h6 className="mb-0 text-black">$ 4.0</h6>
+            </div>
+          </div>
+
+          <hr className="my-4" />
+
+          <div className="row mb-4 d-flex justify-content-between align-items-center">
+            <div className="col-md-2 col-lg-2 col-xl-2">
+              <img
+                src="http://localhost:5173/imgs/products/pastafrola.png"
+                className="img-fluid rounded-3"
+                alt="Cotton T-shirt"
+              />
+            </div>
+            <div className="col-md-3 col-lg-3 col-xl-3">
+              <h6 className="text-muted">Cakes</h6>
+              <h6 className="text-black mb-0">PASTAFROLA</h6>
+            </div>
+            <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
+              <button className="btn btn-link px-2">
+                <BsFillPlusCircleFill />
+              </button>
+              <h3>1</h3>
+              <button className="btn btn-link px-2">
+                <BsFillDashCircleFill />
+              </button>
+            </div>
+            <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
+              <h6 className="mb-0 text-black">$ 16.1</h6>
+            </div>
+          </div>
+
+          <hr className="my-4" />
         </Offcanvas.Body>
         <div className="border-top cart-footer">
           <div className="d-flex justify-content-between px-2">
             <p className="fw-bold">Order total</p>
-            <p className="fw-bold">US$ 0.00</p>
+            <p className="fw-bold">US$ 26.10</p>
           </div>
           <div className="d-flex justify-content-between px-2">
             <p className="fw-bold">Shipping</p>
