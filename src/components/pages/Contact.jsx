@@ -6,9 +6,9 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
 function Contact() {
-  const token = useSelector((state) => state.user.token);
-  // Ahora puedes usar el token en tu componente
-  console.log("desde state token =>", token);
+  // const token = useSelector((state) => state.user.token);
+  // // Ahora puedes usar el token en tu componente
+  // console.log("desde state token =>", token);
 
   const [formData, setFormData] = useState({
     firstname: "",
@@ -32,9 +32,9 @@ function Contact() {
         "http://localhost:3000/user/contact",
         formData,
         {
-          headers: {
+          /* headers: {
             Authorization: `Bearer ${token}`,
-          },
+          }, */
         }
       );
 
@@ -57,8 +57,6 @@ function Contact() {
   return (
     <div className="column arriba  ">
       <div className=" d-flex-column  align-self-center align-content-between blur ">
-        <h1 className="">Contáctate con nosotros</h1>
-
         <div className="row">
           <div className="col-6">
             <div className="container ">
