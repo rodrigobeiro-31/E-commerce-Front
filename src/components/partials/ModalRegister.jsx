@@ -1,6 +1,8 @@
 import Modal from "react-bootstrap/Modal";
 import "../ModalLoginRegister.css";
 import { Link } from "react-router-dom";
+import { useState } from "react";
+import axios from "axios";
 
 function ModalRegister({
   fullscreen,
@@ -12,13 +14,37 @@ function ModalRegister({
   setShowRegister,
   setFullscreenRegister,
 }) {
+
+  const [firstname, setFirstname] = useState("");
+  const [lastname, setLastname] = useState("");
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    // const formData = new FormData();
+    // formData.append("firstname", firstname);
+    // formData.append("lastname", lastname);
+    // formData.append("email", email);
+    // formData.append("password", password);
+
+    const response = await axios({
+      method: "post",
+      url: "http://localhost:3000/users/",
+      data: {firstname, lastname, email, password},
+    });
+    console.log(response.data);
+  }
+
   return (
     <>
       <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
         <Modal.Body className="modal-bg">
           <div className="login-box p-4">
             <p>Create an account</p>
-            <form action="">
+            <form
+              method="post"
+              onSubmit={handleSubmit}>
               <div className="user-box">
                 <input
                   type="text"
@@ -26,18 +52,22 @@ function ModalRegister({
                   id="firstname"
                   className="form-control"
                   autoComplete="off"
+                  value={firstname}
+                  onChange={(event) => setFirstname(event.target.value)}
                 />
                 <label htmlFor="firstname">Firstname</label>
               </div>
               <div className="user-box">
                 <input
                   type="text"
-                  name="Lastname"
-                  id="Lastname"
+                  name="lastname"
+                  id="lastname"
                   className="form-control"
                   autoComplete="off"
+                  value={lastname}
+                  onChange={(event) => setLastname(event.target.value)}
                 />
-                <label htmlFor="Lastname">Lastname</label>
+                <label htmlFor="lastname">Lastname</label>
               </div>
               <div className="user-box">
                 <input
@@ -46,6 +76,8 @@ function ModalRegister({
                   id="email"
                   className="form-control"
                   autoComplete="off"
+                  value={email}
+                  onChange={(event) => setEmail(event.target.value)}
                 />
                 <label htmlFor="email">Email</label>
               </div>
@@ -55,6 +87,8 @@ function ModalRegister({
                   name="password"
                   id="password"
                   className="form-control"
+                  value={password}
+                  onChange={(event) => setPassword(event.target.value)}
                 />
                 <label htmlFor="password">Password</label>
               </div>
