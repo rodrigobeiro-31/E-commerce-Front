@@ -55,6 +55,7 @@ function Home() {
               </div>
                
             ))}
+            </div>
           </div>
           <div id="homeAboutCard" className="card m-5 rounded-0 home-separator">
             <div className="row g-0">
@@ -169,7 +170,7 @@ function Home() {
               <Image src="./imgs/home-carousel-3.jpg" className="w-100" fluid />
             </Carousel.Item>
           </Carousel>
-        </div>
+        
         </div>
        
       </>
