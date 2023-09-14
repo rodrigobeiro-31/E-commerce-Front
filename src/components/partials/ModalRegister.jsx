@@ -15,9 +15,6 @@ function ModalRegister({
   return (
     <>
       <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
-        <Modal.Header closeButton>
-          <Modal.Title></Modal.Title>
-        </Modal.Header>
         <Modal.Body className="modal-bg">
           <div className="login-box p-4">
             <p>Create an account</p>

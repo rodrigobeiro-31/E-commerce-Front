@@ -1,5 +1,6 @@
 .modal-bg {
-  background-color: var(--secondaryBrown);
+  background-image: url("/imgs/register-bg.jpg");
+  background-size: cover;
 }
 
 .login-box {
@@ -19,7 +20,7 @@
 .login-box p:first-child {
   margin: 0 0 8px;
   padding: 0;
-  color: #fff;
+  color: #ffffff;
   text-align: center;
   font-size: 1.5rem;
   font-weight: bold;
@@ -122,4 +123,10 @@
 .btn-modal:hover::after {
   transform: scaleX(1.4) scaleY(1.6);
   opacity: 0;
+}
+
+.closeBtn {
+  width: 2rem;
+  height: 2rem;
+  cursor: pointer;
 }

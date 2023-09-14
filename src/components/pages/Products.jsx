@@ -50,7 +50,7 @@ function Products() {
                     </div>
                   </div>
                   <div
-                    className="card-body p-1 ps-2 mt-3"
+                    className="card-body p-1 ps-4 mt-3"
                     style={{ backgroundColor: "black" }}
                   >
                     <NavLink
@@ -62,7 +62,7 @@ function Products() {
                       </p>
                     </NavLink>
                     <p className="card-text priceText mt-2 fst-italic">
-                      $USD: {product.price}
+                      Price: $ {product.price}
                     </p>
                   </div>
                 </div>

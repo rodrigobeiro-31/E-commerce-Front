@@ -53,7 +53,7 @@ function Product() {
                 <div className="card-body p-5">
                   <h3 className="text-uppercase fw-bold">{product.name}</h3>
                   <p className="card-text mt-3 fs-2 priceText fst-italic">
-                    $USD: {product.price}
+                    Price: ${product.price}
                   </p>
                   <p className="card-text">{product.description}</p>
                   <hr className="mt-5" />

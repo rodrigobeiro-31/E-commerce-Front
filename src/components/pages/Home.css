@@ -27,6 +27,11 @@
   max-width: 30rem;
 }
 
+.week-picks-banner {
+  color: var(--creamyWhite);
+  background-color: var(--mainBrown);
+}
+
 .home-section-logo {
   max-width: 5rem;
 }
