@@ -4,16 +4,17 @@
 
 a.addToCartButton {
   font-size: 13px;
-  background-color: var(--secondaryBrown);
+  background-color: var(--mainBrown);
   color: var(--lightBackgroud);
+  
 }
 .addToCartButton:hover {
-  background-color: var(--mainBrown);
+  background-color: var(--secondaryBrown);
   color: var(--lightBackgroud);
 }
 
 hr {
-  color: var(--lightBackgroud);
+  color: var(--darkBrown);
 }
 
 .priceText {
@@ -39,7 +40,10 @@ hr {
   box-shadow: inset 0 calc(-1 * var(--secondaryBrown)) 0 var(--secondaryBrown);
 }
 
+
 .accordion-button.collapsed {
   color: var(--lightBackgroud);
   background-color: var(--darkBrown);
 }
+
+
