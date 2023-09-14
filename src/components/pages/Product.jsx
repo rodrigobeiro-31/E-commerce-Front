@@ -63,7 +63,7 @@ function Product() {
                   <div className="d-flex justify-content-end mt-5 ">
                     <a
                       href="#"
-                      className="text-decoration-none d-flex align-items-center px-4 py-2 addToCartButton"
+                      className="text-decoration-none d-flex align-items-center px-5 py-3 addToCartButton"
                     >
                       <BsFillBagFill />
                       <span className="ms-2">ADD TO CART</span>
