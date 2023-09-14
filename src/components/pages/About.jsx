@@ -12,19 +12,17 @@ import { FaBootstrap } from "react-icons/fa";
 import { Link } from "react-router-dom";
 function About() {
   return (
-    <div>
-      <div className="about-bg-img d-flex align-items-center flex-column justify-content-center container-fluid">
+    <div className="main-container2">
+      <div className="about-bg-img container-fluid">
         <div className="about-gd-overlay"></div>
         <h2 className="text-white d-flex justify-content-center align-items-center title">
           ABOUT THIS PROJECT
         </h2>
       </div>
       <div className="container-fluid">
-        <section className="about-section-one justify-content-center align-items-center row my-5">
-          <div className="align-self-center mb-2 col-lg-8 col-md-10 col-12 p-5 custom-background">
-            <h3 className="mb-5 fw-bold text-center text-uppercase">
-              Technologies and tools used
-            </h3>
+        <section className="about-section-one justify-content-center align-items-center row m-5">
+          <div className="align-self-center mb-2 col-lg-8 col-md-10 col-12 p-5 ">
+            <h3 className="mb-5 fw-bold text-center ">Technologies and tools used</h3>
             <p>
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. A velit
               suscipit unde dolores odio maxime quibusdam dicta quod, ut laborum

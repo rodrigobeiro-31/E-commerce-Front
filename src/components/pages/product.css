@@ -20,6 +20,19 @@ hr {
   color: var(--secondaryBrown);
 }
 
+.main-container {
+  background-image: url("/imgs/grey-marble-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  height: 100%;
+ 
+}
+
+.data-container{
+  padding-top: calc(55.33px - 2rem);
+}
+
+
 .accordion-button:not(.collapsed) {
   color: var(--lightBackgroud);
   background-color: var(--mainBrown);

@@ -40,6 +40,12 @@
   background-color: var(--creamyWhite);
 }
 
+.main-container{
+  background-image: url("/imgs/grey-marble-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
 /* .custom-background2 {
   background-color:var(--secondaryBrown);
 }

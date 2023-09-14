@@ -57,12 +57,13 @@ function Contact() {
 
   return (
     <>
+    <div className="container-fluid main-container2">
       <div className="container-fluid d-flex align-items-center flex-column justify-content-center m-0 p-0 contact-banner">
         <h2 className="text-white d-flex justify-content-center align-items-center title fw-bold">
           CONTACT
         </h2>
       </div>
-      <div className="container mb-5 mt-5 contact-container custom-background">
+      <div className="container mb-5 mt-5 contact-container custom-background text-white">
         <div className=" d-flex-column  align-self-center align-content-between">
           <div className="row">
             <div className="col-6">
@@ -182,6 +183,7 @@ function Contact() {
             </div>
           </div>
         </div>
+      </div>
       </div>
     </>
   );

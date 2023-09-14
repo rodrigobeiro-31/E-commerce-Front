@@ -35,7 +35,8 @@ function Product() {
   return (
     product && (
       <>
-        <div className="container d-flex justify-content-center align-items-center mt-5 mb-3">
+      <div className="container-fluid main-container">
+        <div className="container d-flex justify-content-center align-items-center mb-3 data-container">
          
             <div className="row g-0 mt-5">
               <div className="col-6">
@@ -156,6 +157,7 @@ function Product() {
               </div>
             ))}
           </div>
+        </div>
         </div>
       </>
     )

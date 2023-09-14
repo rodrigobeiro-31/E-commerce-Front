@@ -56,11 +56,21 @@
   object-fit: cover;
 }
 
-.custom-background {
-  background-color: var(--creamyWhite);
+/* .custom-background {
+  background-color:var(--creamyWhite);
+} */
+
+.contact-container{
+  background-color:var(--darkBrown);
 }
 
 .social-icons {
   width: 1rem;
   height: 1rem;
+}
+
+.main-container2{
+  background-color: white;
+  
+
 }
