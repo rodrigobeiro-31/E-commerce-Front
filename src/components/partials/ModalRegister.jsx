@@ -70,7 +70,7 @@ function ModalRegister({
               </button>
             </form>
             <div className="col d-flex align-items-start">
-              <p className="mt-3">
+              <p className="mt-3 text-white">
                 Already have an account?{" "}
                 <Link
                   onClick={() =>

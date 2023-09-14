@@ -76,13 +76,13 @@ function ModalLogin({
               </button>
             </form>
             <div className="col d-flex align-items-start">
-              <p className="mt-4">
+              <p className="mt-4 text-white">
                 Forgot your password?{" "}
                 <Link className="a2">Reset password!</Link>
               </p>
             </div>
             <div className="col d-flex align-items-start">
-              <p className="">
+              <p className="text-white">
                 Don't have an account?{" "}
                 <Link
                   onClick={() =>
