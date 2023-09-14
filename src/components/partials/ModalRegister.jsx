@@ -69,22 +69,24 @@ function ModalRegister({
                 Submit
               </button>
             </form>
-            <p className="mt-3">
-              Already have an account?{" "}
-              <Link
-                onClick={() =>
-                  handleShowAll(
-                    setShowLogin,
-                    setFullscreenLogin,
-                    setShowRegister,
-                    setFullscreenRegister
-                  )
-                }
-                className="a2"
-              >
-                Sign in!
-              </Link>
-            </p>
+            <div className="col d-flex align-items-start">
+              <p className="mt-3">
+                Already have an account?{" "}
+                <Link
+                  onClick={() =>
+                    handleShowAll(
+                      setShowLogin,
+                      setFullscreenLogin,
+                      setShowRegister,
+                      setFullscreenRegister
+                    )
+                  }
+                  className="a2"
+                >
+                  Sign in!
+                </Link>
+              </p>
+            </div>
           </div>
         </Modal.Body>
       </Modal>

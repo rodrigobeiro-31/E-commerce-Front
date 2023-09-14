@@ -75,22 +75,30 @@ function ModalLogin({
                 Submit
               </button>
             </form>
-            <p className="mt-3">
-              Don't have an account?{" "}
-              <Link
-                onClick={() =>
-                  handleShowAll(
-                    setShowRegister,
-                    setFullscreenRegister,
-                    setShowLogin,
-                    setFullscreenLogin
-                  )
-                }
-                className="a2"
-              >
-                Register here!
-              </Link>
-            </p>
+            <div className="col d-flex align-items-start">
+              <p className="mt-4">
+                Forgot your password?{" "}
+                <Link className="a2">Reset password!</Link>
+              </p>
+            </div>
+            <div className="col d-flex align-items-start">
+              <p className="">
+                Don't have an account?{" "}
+                <Link
+                  onClick={() =>
+                    handleShowAll(
+                      setShowRegister,
+                      setFullscreenRegister,
+                      setShowLogin,
+                      setFullscreenLogin
+                    )
+                  }
+                  className="a2"
+                >
+                  Register here!
+                </Link>
+              </p>
+            </div>
           </div>
         </Modal.Body>
       </Modal>
