@@ -65,11 +65,11 @@ function Home() {
                         className="card-img imgCard"
                         alt={product.name}
                       />
-                      <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-                        <h6
-                          className="text-center mt-auto"
-                          onClick={() => handleAddCart(product)}
-                        >
+                      <div
+                        className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart"
+                        onClick={() => handleAddCart(product)}
+                      >
+                        <h6 className="text-center mt-auto">
                           {" "}
                           <BsFillBagFill /> ADD TO CART
                         </h6>

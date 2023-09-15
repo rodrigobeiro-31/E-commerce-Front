@@ -64,11 +64,13 @@ function Product() {
                   <p>CATEGORY: {product.category}</p>
                   <p className="text-body-secondary ">STOCK: {product.stock}</p>
                   <hr className="mt-2" />
-                  <div className="d-flex justify-content-end mt-5 ">
+                  <div
+                    className="d-flex justify-content-end mt-5 "
+                    onClick={() => handleAddCart(product)}
+                  >
                     <a
                       href="#"
                       className="text-decoration-none d-flex align-items-center px-5 py-3 addToCartButton"
-                      onClick={() => handleAddCart(product)}
                     >
                       <BsFillBagFill />
                       <span className="ms-2">ADD TO CART</span>
@@ -140,7 +142,10 @@ function Product() {
                         className="card-img imgCard"
                         alt={product.name}
                       />
-                      <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
+                      <div
+                        className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart"
+                        onClick={() => handleAddCart(product)}
+                      >
                         <h6 className="text-center mt-auto p-1">
                           {" "}
                           <BsFillBagFill /> ADD TO CART
