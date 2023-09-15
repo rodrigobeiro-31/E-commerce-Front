@@ -4,9 +4,10 @@ import { BsFillBagFill } from "react-icons/bs";
 import Accordion from "react-bootstrap/Accordion";
 import { useEffect, useState } from "react";
 import { NavLink, useParams, useLocation } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addToCart } from "../../redux/cartSlice";
+import { addPrice } from "../../redux/orderPriceSlice";
 
 function Product() {
   const params = useParams();
@@ -33,6 +34,7 @@ function Product() {
 
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
+    dispatch(addPrice(product.price));
   };
 
   return (

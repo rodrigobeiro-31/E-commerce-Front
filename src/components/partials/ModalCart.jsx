@@ -1,18 +1,39 @@
 import Offcanvas from "react-bootstrap/Offcanvas";
-import { BsFillPlusCircleFill, BsFillDashCircleFill } from "react-icons/bs";
+import {
+  BsFillPlusCircleFill,
+  BsFillDashCircleFill,
+  BsTrash3Fill,
+} from "react-icons/bs";
 import { useDispatch, useSelector } from "react-redux";
-import { addToCart, removeFromCart } from "../../redux/cartSlice";
+import {
+  addToCart,
+  removeFromCart,
+  removeProductFromCart,
+} from "../../redux/cartSlice";
+import {
+  addPrice,
+  removePrice,
+  removeTotalPrice,
+} from "../../redux/orderPriceSlice";
 
 function ModalCart({ show, handleClose }) {
+  const orderPrice = useSelector((state) => state.orderPrice);
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
+    dispatch(addPrice(product.price));
   };
 
   const handleRemoveFromCart = async (product) => {
     dispatch(removeFromCart(product));
+    dispatch(removePrice(product.price));
+  };
+
+  const handleRemoveProduct = async (product) => {
+    dispatch(removeProductFromCart(product));
+    dispatch(removeTotalPrice(product.totalPrice));
   };
 
   return (
@@ -53,6 +74,9 @@ function ModalCart({ show, handleClose }) {
                     >
                       <BsFillDashCircleFill />
                     </button>
+                    <button onClick={() => handleRemoveProduct(product)}>
+                      <BsTrash3Fill />
+                    </button>
                   </div>
                   <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
                     <h6 className="mb-0 text-black">
@@ -66,7 +90,7 @@ function ModalCart({ show, handleClose }) {
         <div className="border-top cart-footer">
           <div className="d-flex justify-content-between px-2">
             <p className="fw-bold">Order total</p>
-            <p className="fw-bold">US$ 26.10</p>
+            <p className="fw-bold">US$ {orderPrice.toFixed(2)}</p>
           </div>
           <div className="d-flex justify-content-between px-2">
             <p className="fw-bold">Shipping</p>
