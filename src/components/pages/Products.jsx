@@ -6,10 +6,10 @@ import { NavLink, Link } from "react-router-dom";
 import { BsFillBagFill } from "react-icons/bs";
 import { addToCart } from "../../redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
+import { addPrice } from "../../redux/orderPriceSlice";
 
 function Products() {
   const [products, setProducts] = useState();
-  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -28,6 +28,7 @@ function Products() {
 
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
+    dispatch(addPrice(product.price));
   };
   return (
     products && (

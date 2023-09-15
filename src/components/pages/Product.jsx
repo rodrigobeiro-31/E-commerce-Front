@@ -7,6 +7,7 @@ import { NavLink, useParams, useLocation } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addToCart } from "../../redux/cartSlice";
+import { addPrice } from "../../redux/orderPriceSlice";
 
 function Product() {
   const params = useParams();
@@ -33,6 +34,7 @@ function Product() {
 
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
+    dispatch(addPrice(product.price));
   };
 
   return (

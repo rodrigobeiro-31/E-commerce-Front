@@ -8,10 +8,10 @@ import { BsFillBagFill } from "react-icons/bs";
 import "./Home.css";
 import "../products.css";
 import { addToCart } from "../../redux/cartSlice";
+import { addPrice } from "../../redux/orderPriceSlice";
 
 function Home() {
   const [products, setProducts] = useState();
-  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,6 +27,8 @@ function Home() {
 
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
+    dispatch(addPrice(product.price));
+    console.log(product.price);
   };
 
   return (
