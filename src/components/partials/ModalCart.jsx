@@ -15,6 +15,7 @@ import {
   removePrice,
   removeTotalPrice,
 } from "../../redux/orderPriceSlice";
+import { NavLink } from "react-router-dom";
 
 function ModalCart({ show, handleClose }) {
   const orderPrice = useSelector((state) => state.orderPrice);
@@ -97,13 +98,14 @@ function ModalCart({ show, handleClose }) {
             <p className="fw-bold">Free</p>
           </div>
           <div className="p-2">
-            <a
-              href=""
+            <NavLink
               className="btn rounded-pill bg-black fw-medium text-white w-100"
               aria-label="Check Out"
+              to="/user"
+              onClick={handleClose}
             >
               Check Out
-            </a>
+            </NavLink>
           </div>
         </div>
       </Offcanvas>
