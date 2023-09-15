@@ -4,7 +4,7 @@ import { BsFillBagFill } from "react-icons/bs";
 import Accordion from "react-bootstrap/Accordion";
 import { useEffect, useState } from "react";
 import { NavLink, useParams, useLocation } from "react-router-dom";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addToCart } from "../../redux/cartSlice";
 
