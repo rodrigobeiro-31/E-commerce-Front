@@ -4,7 +4,7 @@ function User() {
   return (
 <div className="container mb-5 m-5 p-5 text-white bg-dark">
   <div>
-    <h2 className="fw-bold">My account</h2>
+    <h2 className="text-uppercase fw-bold">My account</h2>
     <p className="fw-normal">
       Welcome Kathia Olaverry! From your Doppios's Account Dashboard, you
       have the ability to edit your profile and track the status of your
@@ -66,26 +66,25 @@ function User() {
         />
       </div>
     </div>
-    <div className="col-5 d-flex align-items-end">
+    <div className="col-5 d-flex align-items-center justify-content-end m-0 ">
       <a
         href="#"
         className="text-decoration-none d-flex align-items-center px-5 py-2 addToCartButton"
       >
-        <span className="ms-2">SAVE CHANGES</span>
+       SAVE CHANGES
       </a>
     </div>
   </form>
 
-  <h2 className="fw-bold">Order tracking</h2>
+  <h2 className="text-uppercase fw-bold">Order tracking</h2>
   <hr />
 
   <table class="table">
   <thead>
     <tr>
-      <th scope="col">#</th>
-      <th scope="col">First</th>
-      <th scope="col">Last</th>
-      <th scope="col">Handle</th>
+      <th scope="col">Order number</th>
+      <th scope="col">Date</th>
+      <th scope="col">Status</th>
     </tr>
   </thead>
   <tbody>
@@ -93,17 +92,17 @@ function User() {
       <th scope="row">1</th>
       <td>Mark</td>
       <td>Otto</td>
-      <td>@mdo</td>
+     
     </tr>
     <tr>
       <th scope="row">2</th>
       <td>Jacob</td>
       <td>Thornton</td>
-      <td>@fat</td>
+      
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td colspan="2">Larry the Bird</td>
+      <td>Larry the Bird</td>
       <td>@twitter</td>
     </tr>
   </tbody>
