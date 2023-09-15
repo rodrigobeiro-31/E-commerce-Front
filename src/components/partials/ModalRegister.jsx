@@ -3,6 +3,7 @@ import "../ModalLoginRegister.css";
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
+import { AiOutlineClose } from "react-icons/ai";
 
 function ModalRegister({
   fullscreen,
@@ -14,7 +15,6 @@ function ModalRegister({
   setShowRegister,
   setFullscreenRegister,
 }) {
-
   const [firstname, setFirstname] = useState("");
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
@@ -31,20 +31,24 @@ function ModalRegister({
     const response = await axios({
       method: "post",
       url: "http://localhost:3000/users/",
-      data: {firstname, lastname, email, password},
+      data: { firstname, lastname, email, password },
     });
     console.log(response.data);
-  }
+  };
 
   return (
     <>
       <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
+        <span
+          className="position-absolute top-0 end-0 text-white pt-4 pe-4 fw-bold fs-4 z-1"
+          onClick={() => handleClose()}
+        >
+          <AiOutlineClose className="closeBtn" />{" "}
+        </span>
         <Modal.Body className="modal-bg">
           <div className="login-box p-4">
             <p>Create an account</p>
-            <form
-              method="post"
-              onSubmit={handleSubmit}>
+            <form method="post" onSubmit={handleSubmit}>
               <div className="user-box">
                 <input
                   type="text"
