@@ -7,6 +7,9 @@ import { useEffect, useState } from "react";
 import "./Header.css";
 import NavbarToggle from "./NavbarToggle";
 import { BsCartFill } from "react-icons/bs";
+import { HiOutlineLogout } from "react-icons/hi";
+import { useDispatch, useSelector } from "react-redux";
+import { logout } from "../../redux/userSlice";
 
 function Header() {
   const [fullscreenRegister, setFullscreenRegister] = useState(true);
@@ -15,6 +18,8 @@ function Header() {
   const [showLogin, setShowLogin] = useState(false);
   const [showCart, setShowCart] = useState(false);
   const [scroll, setScroll] = useState(false);
+  const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -47,6 +52,9 @@ function Header() {
   };
   const handleCloseCart = () => {
     setShowCart(false);
+  };
+  const handleLogOut = () => {
+    dispatch(logout());
   };
 
   return (
@@ -96,20 +104,22 @@ function Header() {
                   setShowRegister={setShowRegister}
                   setFullscreenRegister={setFullscreenRegister}
                 />
-                <Button
-                  variant="light"
-                  className="mx-2 mb-2"
-                  onClick={() =>
-                    handleShowAll(
-                      setShowRegister,
-                      setFullscreenRegister,
-                      setShowLogin,
-                      setFullscreenLogin
-                    )
-                  }
-                >
-                  Register
-                </Button>
+                {!user && (
+                  <Button
+                    variant="light"
+                    className="mx-2 mb-2"
+                    onClick={() =>
+                      handleShowAll(
+                        setShowRegister,
+                        setFullscreenRegister,
+                        setShowLogin,
+                        setFullscreenLogin
+                      )
+                    }
+                  >
+                    Register
+                  </Button>
+                )}
                 <ModalLogin
                   fullscreen={fullscreenLogin}
                   show={showLogin}
@@ -120,25 +130,33 @@ function Header() {
                   setShowLogin={setShowLogin}
                   setFullscreenLogin={setFullscreenLogin}
                 />
-                <Button
-                  variant="outline-light"
-                  className="mx-2 mb-2"
-                  onClick={() =>
-                    handleShowAll(
-                      setShowLogin,
-                      setFullscreenLogin,
-                      setShowRegister,
-                      setFullscreenRegister
-                    )
-                  }
-                >
-                  Login
-                </Button>
+                {!user && (
+                  <Button
+                    variant="outline-light"
+                    className="mx-2 mb-2"
+                    onClick={() =>
+                      handleShowAll(
+                        setShowLogin,
+                        setFullscreenLogin,
+                        setShowRegister,
+                        setFullscreenRegister
+                      )
+                    }
+                  >
+                    Login
+                  </Button>
+                )}
                 <ModalCart show={showCart} handleClose={handleCloseCart} />
                 <BsCartFill
                   className="mx-2 mb-2 nav-icon"
                   onClick={handleShowCart}
                 />
+                {user && (
+                  <HiOutlineLogout
+                    className="mx-2 mb-2 nav-icon"
+                    onClick={() => handleLogOut()}
+                  />
+                )}
               </div>
             </Nav>
           </Navbar.Collapse>
