@@ -55,7 +55,9 @@ function ModalCart({ show, handleClose }) {
                     </button>
                   </div>
                   <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                    <h6 className="mb-0 text-black">$ {product.totalPrice}</h6>
+                    <h6 className="mb-0 text-black">
+                      $ {product.totalPrice.toFixed(2)}
+                    </h6>
                   </div>
                 </div>
               </div>
