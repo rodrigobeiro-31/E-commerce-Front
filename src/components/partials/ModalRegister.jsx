@@ -1,6 +1,6 @@
 import Modal from "react-bootstrap/Modal";
 import "../ModalLoginRegister.css";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { AiOutlineClose } from "react-icons/ai";
@@ -19,7 +19,6 @@ function ModalRegister({
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -34,7 +33,11 @@ function ModalRegister({
       url: "http://localhost:3000/users/",
       data: { firstname, lastname, email, password },
     });
-    navigate("/login");
+    handleShowAll(
+      setShowLogin,
+      setFullscreenLogin,
+      setShowRegister,
+      setFullscreenRegister);
   };
 
   return (
