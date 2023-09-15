@@ -9,7 +9,6 @@ import Header from "./components/partials/Header";
 import Products from "./components/pages/Products";
 import About from "./components/pages/About";
 import Product from "./components/pages/Product";
-
 import ProductIn from "./components/admin/inProduct";
 import { useEffect } from "react";
 import User from "./components/pages/User";
@@ -32,7 +31,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<ProductIn />} />
-        <Route path="/user" element={<User/>} />
+        <Route path="/user" element={<User />} />
       </Routes>
       <Footer />
     </>
