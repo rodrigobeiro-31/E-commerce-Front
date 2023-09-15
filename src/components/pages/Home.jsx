@@ -12,8 +12,8 @@ import { addToCart } from "../../redux/cartSlice";
 function Home() {
   const [products, setProducts] = useState();
   const cart = useSelector((state) => state.cart);
-
   const dispatch = useDispatch();
+
   useEffect(() => {
     const getProducts = async () => {
       const response = await axios({

@@ -5,15 +5,15 @@ import Accordion from "react-bootstrap/Accordion";
 import { useEffect, useState } from "react";
 import { NavLink, useParams, useLocation } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
-import { addProduct } from "../../redux/productSlice";
 import axios from "axios";
+import { addToCart } from "../../redux/cartSlice";
 
 function Product() {
-  const product = useSelector((state) => state.product);
   const params = useParams();
   const slug = params.slug;
   const dispatch = useDispatch();
   const [interestingProduct, setInterestingProduct] = useState([]);
+  const [product, setProduct] = useState([]);
   const location = useLocation();
 
   useEffect(() => {
@@ -25,11 +25,15 @@ function Product() {
           Authorization: "Bearer " + (user && user.token),
         }, */
       });
-      response && dispatch(addProduct(response.data.product[0]));
+      response && setProduct(response.data.product[0]);
       response && setInterestingProduct(response.data.products);
     };
     getProduct();
   }, [location.pathname]);
+
+  const handleAddCart = async (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     product && (
@@ -62,6 +66,7 @@ function Product() {
                     <a
                       href="#"
                       className="text-decoration-none d-flex align-items-center px-5 py-3 addToCartButton"
+                      onClick={() => handleAddCart(product)}
                     >
                       <BsFillBagFill />
                       <span className="ms-2">ADD TO CART</span>

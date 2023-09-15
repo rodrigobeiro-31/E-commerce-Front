@@ -10,8 +10,10 @@ const cartSlice = createSlice({
       );
       if (checkCart) {
         checkCart.quantity = checkCart.quantity + 1;
+        checkCart.totalPrice = checkCart.totalPrice + action.payload.price;
       } else {
         action.payload.quantity = 1;
+        action.payload.totalPrice = action.payload.price;
         state.push(action.payload);
       }
     },
@@ -21,6 +23,8 @@ const cartSlice = createSlice({
       );
       if (selectedProduct.quantity > 1) {
         selectedProduct.quantity = selectedProduct.quantity - 1;
+        selectedProduct.totalPrice =
+          selectedProduct.totalPrice - action.payload.price;
       } else {
         return state.filter((product) => product._id !== action.payload._id);
       }

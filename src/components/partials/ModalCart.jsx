@@ -1,7 +1,5 @@
-import Button from "react-bootstrap/Button";
 import Offcanvas from "react-bootstrap/Offcanvas";
 import { BsFillPlusCircleFill, BsFillDashCircleFill } from "react-icons/bs";
-import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { addToCart, removeFromCart } from "../../redux/cartSlice";
 
@@ -57,7 +55,7 @@ function ModalCart({ show, handleClose }) {
                     </button>
                   </div>
                   <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                    <h6 className="mb-0 text-black">$ {product.price}</h6>
+                    <h6 className="mb-0 text-black">$ {product.totalPrice}</h6>
                   </div>
                 </div>
               </div>

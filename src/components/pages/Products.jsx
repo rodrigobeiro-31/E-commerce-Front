@@ -4,9 +4,13 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink, Link } from "react-router-dom";
 import { BsFillBagFill } from "react-icons/bs";
+import { addToCart } from "../../redux/cartSlice";
+import { useDispatch, useSelector } from "react-redux";
 
 function Products() {
   const [products, setProducts] = useState();
+  const cart = useSelector((state) => state.cart);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const getProducts = async () => {
@@ -21,6 +25,10 @@ function Products() {
     };
     getProducts();
   }, []);
+
+  const handleAddCart = async (product) => {
+    dispatch(addToCart(product));
+  };
   return (
     products && (
       <>
@@ -43,7 +51,10 @@ function Products() {
                         alt={product.name}
                       />
                       <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-                        <h6 className="text-center mt-auto p-1">
+                        <h6
+                          className="text-center mt-auto p-1"
+                          onClick={() => handleAddCart(product)}
+                        >
                           {" "}
                           <BsFillBagFill /> ADD TO CART
                         </h6>
