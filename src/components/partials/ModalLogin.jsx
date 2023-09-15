@@ -5,8 +5,7 @@ import axios from "axios";
 import { useState } from "react";
 import "../ModalLoginRegister.css";
 import { Link } from "react-router-dom";
-import { AiOutlineClose } from 'react-icons/ai'
-
+import { AiOutlineClose } from "react-icons/ai";
 
 function ModalLogin({
   fullscreen,
@@ -29,7 +28,7 @@ function ModalLogin({
       data: { password, email },
     });
     if (response.data.token) {
-      dispatch(login(response.data));
+      dispatch(login(response.data.token));
       handleClose();
     } else {
       console.log(response.data);
@@ -39,7 +38,12 @@ function ModalLogin({
   return (
     <>
       <Modal show={show} fullscreen={fullscreen} onHide={() => handleClose()}>
-        <span className="position-absolute top-0 end-0 text-white pt-4 pe-4 fw-bold fs-4 z-1" onClick={() => handleClose()}><AiOutlineClose className="closeBtn" /> </span>
+        <span
+          className="position-absolute top-0 end-0 text-white pt-4 pe-4 fw-bold fs-4 z-1"
+          onClick={() => handleClose()}
+        >
+          <AiOutlineClose className="closeBtn" />{" "}
+        </span>
         <Modal.Body className="modal-bg">
           <div className="login-box p-4">
             <p>Login</p>

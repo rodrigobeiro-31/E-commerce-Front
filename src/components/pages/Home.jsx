@@ -1,6 +1,4 @@
-// import { useEffect } from "react";
-// import { useSelector } from "react-redux";
-// import { useNavigate } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
@@ -9,9 +7,13 @@ import Image from "react-bootstrap/Image";
 import { BsFillBagFill } from "react-icons/bs";
 import "./Home.css";
 import "../products.css";
+import { addToCart } from "../../redux/cartSlice";
 
 function Home() {
   const [products, setProducts] = useState();
+  const cart = useSelector((state) => state.cart);
+
+  const dispatch = useDispatch();
   useEffect(() => {
     const getProducts = async () => {
       const response = await axios({
@@ -22,6 +24,10 @@ function Home() {
     };
     getProducts();
   }, []);
+
+  const handleAddCart = async (product) => {
+    dispatch(addToCart(product));
+  };
 
   return (
     products && (
@@ -58,7 +64,10 @@ function Home() {
                         alt={product.name}
                       />
                       <div className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart">
-                        <h6 className="text-center mt-auto">
+                        <h6
+                          className="text-center mt-auto"
+                          onClick={() => handleAddCart(product)}
+                        >
                           {" "}
                           <BsFillBagFill /> ADD TO CART
                         </h6>

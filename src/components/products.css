@@ -8,7 +8,6 @@
 
 .allProductsText {
   color: var(--lightBackgroud);
- 
 }
 
 .addToCart {
@@ -19,6 +18,7 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
+  cursor: pointer;
 }
 
 h6 {
@@ -36,7 +36,6 @@ h6 {
   background-image: url("/imgs/grey-marble-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
- 
 }
 
 .productName {
