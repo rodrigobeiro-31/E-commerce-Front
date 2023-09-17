@@ -101,7 +101,7 @@ function ModalCart({ show, handleClose }) {
             <NavLink
               className="btn rounded-pill bg-black fw-medium text-white w-100"
               aria-label="Check Out"
-              to="/user"
+              to="/checkout"
               onClick={handleClose}
             >
               Check Out
