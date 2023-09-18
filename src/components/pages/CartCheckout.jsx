@@ -1,14 +1,17 @@
 import { useEffect } from "react";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { useNavigate } from "react-router";
 import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
+import { resetCart } from "../../redux/cartSlice";
+import { resetPrice } from "../../redux/orderPriceSlice";
 
 function CartCheckout() {
   const user = useSelector((state) => state.user);
   const cart = useSelector((state) => state.cart);
   const orderPrice = useSelector((state) => state.orderPrice);
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (!user) {
@@ -26,6 +29,8 @@ function CartCheckout() {
         Authorization: "Bearer " + (user && user),
       },
     });
+    dispatch(resetCart());
+    dispatch(resetPrice());
   }
 
   return (

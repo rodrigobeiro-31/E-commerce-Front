@@ -13,9 +13,12 @@ const orderPriceSlice = createSlice({
     removeTotalPrice(state, action) {
       return (state = state - action.payload);
     },
+    resetPrice(state, action) {
+      return state = 0;
+    }
   },
 });
 
 const { actions, reducer } = orderPriceSlice;
-export const { addPrice, removePrice, removeTotalPrice } = actions;
+export const { addPrice, removePrice, removeTotalPrice, resetPrice } = actions;
 export default reducer;
