@@ -28,7 +28,7 @@ function ModalRegister({
     // formData.append("email", email);
     // formData.append("password", password);
 
-    const response = await axios({
+    await axios({
       method: "post",
       url: "http://localhost:3000/users/",
       data: { firstname, lastname, email, password },
