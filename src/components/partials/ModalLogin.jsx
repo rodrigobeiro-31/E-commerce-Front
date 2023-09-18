@@ -47,7 +47,7 @@ function ModalLogin({
         <Modal.Body className="modal-bg">
           <div className="login-box p-4">
             <p>Login</p>
-            <form action="/" method="post" onSubmit={handleSubmit}>
+            <form method="post" onSubmit={handleSubmit}>
               <div className="user-box">
                 <input
                   type="email"

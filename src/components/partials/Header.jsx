@@ -146,7 +146,15 @@ function Header() {
                     Login
                   </Button>
                 )}
-                <ModalCart show={showCart} handleClose={handleCloseCart} />
+                <ModalCart
+                  show={showCart}
+                  handleClose={handleCloseCart}
+                  handleShowAll={handleShowAll}
+                  setShowLogin={setShowLogin}
+                  setFullscreenLogin={setFullscreenLogin}
+                  setShowRegister={setShowRegister}
+                  setFullscreenRegister={setFullscreenRegister}
+                />
                 <BsCartFill
                   className="mx-2 mb-2 nav-icon"
                   onClick={handleShowCart}

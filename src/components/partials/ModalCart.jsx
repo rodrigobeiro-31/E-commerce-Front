@@ -17,7 +17,16 @@ import {
 } from "../../redux/orderPriceSlice";
 import { NavLink } from "react-router-dom";
 
-function ModalCart({ show, handleClose }) {
+function ModalCart({
+  show,
+  handleClose,
+  handleShowAll,
+  setShowLogin,
+  setFullscreenLogin,
+  setShowRegister,
+  setFullscreenRegister,
+}) {
+  const user = useSelector((state) => state.user);
   const orderPrice = useSelector((state) => state.orderPrice);
   const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
@@ -98,14 +107,30 @@ function ModalCart({ show, handleClose }) {
             <p className="fw-bold">Free</p>
           </div>
           <div className="p-2">
-            <NavLink
-              className="btn rounded-pill bg-black fw-medium text-white w-100"
-              aria-label="Check Out"
-              to="/checkout"
-              onClick={handleClose}
-            >
-              Check Out
-            </NavLink>
+            {user ? (
+              <NavLink
+                className="btn rounded-pill bg-black fw-medium text-white w-100"
+                aria-label="Check Out"
+                to="/checkout"
+                onClick={handleClose}
+              >
+                Check Out
+              </NavLink>
+            ) : (
+              <button
+                className="btn rounded-pill bg-black fw-medium text-white w-100"
+                onClick={() =>
+                  handleShowAll(
+                    setShowLogin,
+                    setFullscreenLogin,
+                    setShowRegister,
+                    setFullscreenRegister
+                  )
+                }
+              >
+                Check Out
+              </button>
+            )}
           </div>
         </div>
       </Offcanvas>
