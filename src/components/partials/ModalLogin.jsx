@@ -28,7 +28,7 @@ function ModalLogin({
       data: { password, email },
     });
     if (response.data.token) {
-      dispatch(login(response.data.token));
+      dispatch(login(response.data));
       handleClose();
     } else {
       console.log(response.data);

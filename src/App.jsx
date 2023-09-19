@@ -11,8 +11,8 @@ import About from "./components/pages/About";
 import Product from "./components/pages/Product";
 import ProductIn from "./components/admin/inProduct";
 import { useEffect } from "react";
-import User from "./components/pages/User";
 import CartCheckout from "./components/pages/CartCheckout";
+import Profile from "./components/pages/Profile";
 
 function App() {
   const location = useLocation();
@@ -32,7 +32,7 @@ function App() {
         <Route path="/about-us" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/admin" element={<ProductIn />} />
-        <Route path="/user" element={<User />} />
+        <Route path="/profile/:id" element={<Profile />} />
         <Route path="/checkout" element={<CartCheckout />} />
       </Routes>
       <Footer />

@@ -26,7 +26,7 @@ function CartCheckout() {
       url: "http://localhost:3000/orders/",
       data: { cart, orderPrice, orderId },
       headers: {
-        Authorization: "Bearer " + (user && user),
+        Authorization: "Bearer " + (user && user.token),
       },
     });
     dispatch(resetCart());

@@ -6,7 +6,7 @@ import { Button, Nav, Navbar, NavDropdown } from "react-bootstrap";
 import { useEffect, useState } from "react";
 import "./Header.css";
 import NavbarToggle from "./NavbarToggle";
-import { BsCartFill } from "react-icons/bs";
+import { BsCartFill, BsFillPersonFill } from "react-icons/bs";
 import { HiOutlineLogout } from "react-icons/hi";
 import { useDispatch, useSelector } from "react-redux";
 import { logout } from "../../redux/userSlice";
@@ -155,6 +155,13 @@ function Header() {
                   setShowRegister={setShowRegister}
                   setFullscreenRegister={setFullscreenRegister}
                 />
+                {user && ( <NavLink to={`${scroll ? "nav-scroll" : "nav-top"} navbar-custom`}>
+                  <HiOutlineLogout
+                    className="mx-2 mb-2 nav-icon"
+                   
+                  />
+                  </NavLink>
+                )}
                 <BsCartFill
                   className="mx-2 mb-2 nav-icon"
                   onClick={handleShowCart}
