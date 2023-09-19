@@ -41,11 +41,12 @@ function Product() {
     product && (
       <>
         <div className="container-fluid main-container">
+          {console.log(product)}
           <div className="container d-flex justify-content-center align-items-center mb-3 data-container">
             <div className="row g-0 mt-5">
               <div className="col-6">
                 <img
-                  src={product.image}
+                  src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                   style={{
                     maxHeight: "100%",
                     width: "100%",
@@ -138,7 +139,7 @@ function Product() {
                   <div className="productsCard">
                     <div className="position-relative">
                       <img
-                        src={product.image}
+                        src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                         className="card-img imgCard"
                         alt={product.name}
                       />

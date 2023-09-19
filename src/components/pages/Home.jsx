@@ -61,7 +61,7 @@ function Home() {
                   <div className="productsCard">
                     <div className="position-relative">
                       <img
-                        src={product.image}
+                        src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                         className="card-img imgCard"
                         alt={product.name}
                       />

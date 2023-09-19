@@ -33,6 +33,7 @@ function Products() {
   return (
     products && (
       <>
+        {console.log(products)}
         <div className="container-fluid main-container p-0">
           <div className="container-fluid d-flex align-items-center flex-column justify-content-center imageContainer m-0 p-0">
             <h2 className="text-white d-flex justify-content-center align-items-center title">
@@ -44,10 +45,12 @@ function Products() {
             <div className="row d-flex flex-wrap g-3 m-0">
               {products.map((product, id) => (
                 <div key={id} className="col-3 mainCard mb-5">
+                  {console.log(product.slug)}
+
                   <div className="productsCard">
                     <div className="position-relative">
                       <img
-                        src={product.image}
+                        src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                         className="card-img imgCard"
                         alt={product.name}
                       />
