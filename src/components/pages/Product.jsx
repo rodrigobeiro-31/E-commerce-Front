@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addToCart } from "../../redux/cartSlice";
 import { addPrice } from "../../redux/orderPriceSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Product() {
   const params = useParams();
@@ -16,6 +18,11 @@ function Product() {
   const [interestingProduct, setInterestingProduct] = useState([]);
   const [product, setProduct] = useState([]);
   const location = useLocation();
+  const notify = () => {
+    toast.success("Product added!", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
 
   useEffect(() => {
     const getProduct = async () => {
@@ -35,6 +42,7 @@ function Product() {
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
     dispatch(addPrice(product.price));
+    notify();
   };
 
   return (
@@ -77,6 +85,7 @@ function Product() {
                       <span className="ms-2">ADD TO CART</span>
                     </a>
                   </div>
+                  <ToastContainer autoClose={3000} />
                 </div>
               </div>
             </div>
