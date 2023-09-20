@@ -129,13 +129,13 @@ function Product() {
             </Accordion>
           </div>
 
-          <div className="container-fluid mt-5">
+          {/* <div className="container-fluid mt-5">
             <h3 className="mb-4 fw-bold text-center bg-light p-2">
               THIS WEEK'S PICKS
             </h3>
             <div className="row d-flex flex-wrap g-3 m-0">
               {interestingProduct.map((product, id) => (
-                <div key={id} className="col-3 mainCard mb-5">
+                <div key={id} className="mainCard p-1 rounded-1">
                   <div className="productsCard">
                     <div className="position-relative">
                       <img
@@ -172,7 +172,55 @@ function Product() {
                   </div>
                 </div>
               ))}
+            </div> */}
+
+<div className="container-fluid mt-5">
+            <h3 className="mb-4 fw-bold text-center bg-light p-2">
+              THIS WEEK'S PICKS
+            </h3>
+            <div className="row d-flex flex-wrap g-3 m-0">
+              {interestingProduct.map((product, id) => (
+                <div key={id} className="mainCard p-1 rounded-1">
+                  <div className="productsCard">
+                   
+                      <img
+                        src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
+                        className="card-img imgCard"
+                        alt={product.name}
+                      />
+                      <div
+                        className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart"
+                        onClick={() => handleAddCart(product)}
+                      >
+                        <h6 className="text-center mt-auto p-1">
+                          {" "}
+                          <BsFillBagFill /> ADD TO CART
+                        </h6>
+                      </div>
+                    
+                    <div
+                      className="card-body p-1 ps-2 mt-3"
+                      style={{ backgroundColor: "black" }}
+                    >
+                      <NavLink
+                        className="text-decoration-none productName"
+                        to={`/products/${product.slug}`}
+                      >
+                        <h5 className="card-title text-uppercase fw-bold">
+                          {product.name}
+                        </h5>
+                      </NavLink>
+                      <p className="card-text priceText mt-2 fst-italic">
+                        $USD: {product.price}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
+
+
+
           </div>
         </div>
       </>
