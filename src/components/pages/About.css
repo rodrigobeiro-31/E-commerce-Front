@@ -25,7 +25,13 @@
 .title {
   font-weight: bolder;
   z-index: 1;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
+
+
 
 .tech-icon {
   display: flex;
