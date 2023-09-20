@@ -55,43 +55,27 @@ function ModalCart({
         <Offcanvas.Body>
           {cart.length > 0 &&
             cart.map((product, id) => (
-              <div key={id}>
-                <hr className="my-4" />
-                <div className="row mb-4 d-flex justify-content-between align-items-center">
-                  <div className="col-md-2 col-lg-2 col-xl-2">
-                    <img
-                      src={product.image}
-                      className="img-fluid rounded-3"
-                      alt={product.name}
-                    />
+              <div key={id} className="row">
+                <div className="row mb-2 d-flex justify-content-between align-items-center m-0 p-0">
+                  <div className="col-5">
+                    <h6 className="fw-semibold text-dark m-0">{product.name}</h6>
+                    <p className="text-secondary m-0 p-0">{product.category}</p>
                   </div>
-                  <div className="col-md-3 col-lg-3 col-xl-3">
-                    <h6 className="text-muted">{product.category}</h6>
-                    <h6 className="text-black mb-0">{product.name}</h6>
-                  </div>
-                  <div className="col-md-3 col-lg-3 col-xl-2 d-flex">
-                    <button
-                      className="btn btn-link px-2"
-                      onClick={() => handleAddCart(product)}
-                    >
-                      <BsFillPlusCircleFill />
-                    </button>
-                    <h3>{product.quantity}</h3>
-
-                    <button
-                      className="btn btn-link px-2"
-                      onClick={() => handleRemoveFromCart(product)}
-                    >
-                      <BsFillDashCircleFill />
-                    </button>
-                    <button onClick={() => handleRemoveProduct(product)}>
-                      <BsTrash3Fill />
-                    </button>
-                  </div>
-                  <div className="col-md-3 col-lg-2 col-xl-2 offset-lg-1">
-                    <h6 className="mb-0 text-black">
-                      $ {product.totalPrice.toFixed(2)}
-                    </h6>
+                  <div className="col-7 d-flex justify-content-between">
+                    <div className="d-flex align-items-center m-0 p-0">
+                      <BsFillDashCircleFill className="btn m-0 p-0"
+                        onClick={() => handleRemoveFromCart(product)} />
+                      <p className="fw-normal text-black fs-5 m-0 mx-2 p-0">{product.quantity}</p>
+                      <BsFillPlusCircleFill className="btn m-0 p-0"
+                        onClick={() => handleAddCart(product)} />
+                    </div>
+                    <div className="d-flex align-items-center m-0 p-0">
+                      <h6 className="text-black m-0 p-0 me-2">
+                        $ {product.totalPrice.toFixed(2)}
+                      </h6>
+                      <BsTrash3Fill className="btn fs-5 m-0 p-0"
+                        onClick={() => handleRemoveProduct(product)} />
+                    </div>
                   </div>
                 </div>
               </div>
