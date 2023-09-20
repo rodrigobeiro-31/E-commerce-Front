@@ -1,17 +1,21 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap");
+
 :root {
   --mainBrown: #532e1c;
   --secondaryBrown: #c5a880;
   --darkBrown: #0f0f0f;
-  --lightBackgroud: #e6e6e6;
+  --lightBackground: #e6e6e6;
   --clr-brown-terciary: #c38154;
   --creamyWhite: #f8f0e5;
   /* Transition default */
   --transition-default: all 100ms ease-in-out;
+  /* Roboto Condensed Typo */
+  --roboto-condensed: "Roboto Condensed", sans-serif;
 }
 
 .main-btn {
   background-color: var(--mainBrown);
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
   padding: 0.5rem 1.5rem;
   border: none;
   cursor: pointer;
@@ -30,4 +34,24 @@ input:focus {
   box-shadow: none !important;
   border-color: var(--secondaryBrown) !important;
   color: var(--mainBrown) !important;
+}
+
+.scroll-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--secondaryBrown);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-default);
+}
+
+.scroll-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
 }
