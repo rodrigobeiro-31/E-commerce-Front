@@ -67,8 +67,6 @@ function Home() {
               <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
                 {products.map((product, id) => (
                   <div key={id} className="mainCard p-1 rounded-1">
-                    {console.log(product.slug)}
-
                     <div className="productsCard">
                       <img
                         src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
