@@ -9,12 +9,11 @@ function Profile() {
   const [lastname, setLastname] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const user = useSelector((state) => state.user);
 
-  const navigate = useNavigate();
   const handleSubmit = async (e) => {
-e.preventDefault();
+    e.preventDefault();
     await axios({
       method: "patch",
       url: `${import.meta.env.VITE_API_URL}/users/${user.id}`,
@@ -28,12 +27,10 @@ e.preventDefault();
       navigate("/");
     }
     const getUser = async () => {
-      console.log(user.id);
       const response = await axios({
         method: "get",
         url: `${import.meta.env.VITE_API_URL}/users/${user.id}`,
       });
-      console.log(response.data);
       setFirstname(response.data.firstname);
       setLastname(response.data.lastname);
       setEmail(response.data.email);
