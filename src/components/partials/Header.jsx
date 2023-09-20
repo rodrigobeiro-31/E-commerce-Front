@@ -155,11 +155,9 @@ function Header() {
                   setShowRegister={setShowRegister}
                   setFullscreenRegister={setFullscreenRegister}
                 />
-                {user && ( <NavLink to={`profile/${user.id}`}>
-                  <BsFillPersonFill
-                    className="mx-2 mb-2 nav-icon"
-                   
-                  />
+                {user && (
+                  <NavLink to={`profile/${user.id}`}>
+                    <BsFillPersonFill className="mx-2 mb-2 nav-icon" />
                   </NavLink>
                 )}
                 <BsCartFill
