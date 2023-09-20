@@ -19,12 +19,12 @@
 
 #homeTitle {
   position: absolute;
-  top: 6rem;
-  left: 28rem;
+  top: 9%;
+  left: 0;
 }
 
 #homeLogo {
-  max-width: 30rem;
+  max-width: 38%;
 }
 
 .week-picks-banner {
@@ -50,18 +50,6 @@
   background-size: cover;
   background-attachment: fixed;
 }
-
-/* .custom-background2 {
-  background-color:var(--secondaryBrown);
-}
-
-.custom-background3 {
-  background-color:var(--secondaryBrown);
-}
-
-.custom-background4 {
-  background-color:var(--secondaryBrown);
-} */
 
 .home-separator {
   margin-top: 8rem !important;
