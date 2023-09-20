@@ -85,7 +85,7 @@ function CartCheckout() {
                 </ul>
                 <div className="row px-3 pt-4 pb-2">
                   <button
-                    className="btn btn-none text-center rounded-0 px-2 py-2 completeOrderBtn"
+                    className="btn btn-none text-center text-white rounded-0 px-2 py-2 completeOrderBtn"
                     onClick={handleClick}
                   >Complete order</button>
                 </div>
