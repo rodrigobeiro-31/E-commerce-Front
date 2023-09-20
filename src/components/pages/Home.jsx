@@ -11,6 +11,7 @@ import { addToCart } from "../../redux/cartSlice";
 import { addPrice } from "../../redux/orderPriceSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import BackToTop from "../partials/BackToTop";
 
 function Home() {
   const [products, setProducts] = useState();
@@ -218,6 +219,7 @@ function Home() {
             </Carousel.Item>
           </Carousel>
         </div>
+        <BackToTop />
       </>
     )
   );

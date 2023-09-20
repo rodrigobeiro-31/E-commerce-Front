@@ -35,3 +35,23 @@ input:focus {
   border-color: var(--secondaryBrown) !important;
   color: var(--mainBrown) !important;
 }
+
+.scroll-btn {
+  position: fixed;
+  bottom: 50px;
+  right: 25px;
+  height: 2rem;
+  width: 2rem;
+  background-color: var(--secondaryBrown);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-default);
+}
+
+.scroll-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: white;
+}
