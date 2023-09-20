@@ -74,14 +74,14 @@ function CartCheckout() {
                 <ul className="me-4">
                   <li className="d-flex justify-content-between">
                     <span className="fst-italic">Products </span>
-                    <span>$ 2.50</span></li>
+                    <span>$ {orderPrice}</span></li>
 
                   <li className="d-flex justify-content-between">
                     <span className="fst-italic">Shipping </span>
                     <span>$ 0.00</span></li>
                   <li className="d-flex justify-content-between mt-2">
                     <span className="fw-semibold">Total </span>
-                    <span>$ 2.50</span></li>
+                    <span>$ {orderPrice}</span></li>
                 </ul>
                 <div className="row px-3 pt-4 pb-2">
                   <button
