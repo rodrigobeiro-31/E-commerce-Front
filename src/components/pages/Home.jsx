@@ -9,10 +9,17 @@ import "./Home.css";
 import "../products.css";
 import { addToCart } from "../../redux/cartSlice";
 import { addPrice } from "../../redux/orderPriceSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Home() {
   const [products, setProducts] = useState();
   const dispatch = useDispatch();
+  const notify = () => {
+    toast.success("Product added!", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -28,7 +35,7 @@ function Home() {
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
     dispatch(addPrice(product.price));
-    console.log(product.price);
+    notify();
   };
 
   return (
@@ -73,6 +80,7 @@ function Home() {
                           {" "}
                           <BsFillBagFill /> ADD TO CART
                         </h6>
+                        <ToastContainer autoClose={3000} />
                       </div>
                     </div>
                     <div

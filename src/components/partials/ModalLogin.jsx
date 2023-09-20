@@ -4,8 +4,9 @@ import { login } from "../../redux/userSlice";
 import axios from "axios";
 import { useState } from "react";
 import "../ModalLoginRegister.css";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
+import "./ModalLogin.css";
 
 function ModalLogin({
   fullscreen,
@@ -20,6 +21,7 @@ function ModalLogin({
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const dispatch = useDispatch();
+
   const handleSubmit = async (e) => {
     e.preventDefault();
     const response = await axios({
@@ -45,7 +47,85 @@ function ModalLogin({
           <AiOutlineClose className="closeBtn" />{" "}
         </span>
         <Modal.Body className="modal-bg">
-          <div className="login-box p-4">
+          <div className="login-container">
+            <div className="login-img-container">
+              <img
+                src="imgs/doppios-main-logo.png"
+                alt="mainLogo"
+                className="login-img"
+              />
+            </div>
+            <div className="login-form-container">
+              <h4 className="login-title">Welcome to Doppios.</h4>
+              <form onSubmit={handleSubmit}>
+                <div className="mb-3">
+                  <label htmlFor="email" className="form-label">
+                    Email address
+                  </label>
+                  <input
+                    type="email"
+                    className="form-control input-form"
+                    id="email"
+                    aria-describedby="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                  />
+                </div>
+                <div className="mb-3">
+                  <label htmlFor="password" className="form-label">
+                    Password
+                  </label>
+                  <input
+                    type="password"
+                    className="form-control input-form"
+                    id="password"
+                    name="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                  <div className="form-text login-text">
+                    Forgot your password?{" "}
+                    <NavLink to="#" className="login-link">
+                      Reset your password!
+                    </NavLink>
+                  </div>
+                </div>
+
+                <button type="submit" className="main-btn">
+                  Submit
+                </button>
+
+                <div className="col d-flex align-items-start">
+                  <p className="form-text">
+                    Don't have an account?{" "}
+                    <NavLink
+                      onClick={() =>
+                        handleShowAll(
+                          setShowRegister,
+                          setFullscreenRegister,
+                          setShowLogin,
+                          setFullscreenLogin
+                        )
+                      }
+                      className="login-link"
+                    >
+                      Register here!
+                    </NavLink>
+                  </p>
+                </div>
+              </form>
+            </div>
+          </div>
+        </Modal.Body>
+      </Modal>
+    </>
+  );
+}
+
+export default ModalLogin;
+
+{
+  /* <div className="login-box p-4">
             <p>Login</p>
             <form method="post" onSubmit={handleSubmit}>
               <div className="user-box">
@@ -103,11 +183,5 @@ function ModalLogin({
                 </Link>
               </p>
             </div>
-          </div>
-        </Modal.Body>
-      </Modal>
-    </>
-  );
+          </div> */
 }
-
-export default ModalLogin;

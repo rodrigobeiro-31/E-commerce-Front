@@ -4,5 +4,30 @@
   --darkBrown: #0f0f0f;
   --lightBackgroud: #e6e6e6;
   --clr-brown-terciary: #c38154;
-  --creamyWhite: #F8F0E5;
+  --creamyWhite: #f8f0e5;
+  /* Transition default */
+  --transition-default: all 100ms ease-in-out;
+}
+
+.main-btn {
+  background-color: var(--mainBrown);
+  color: var(--lightBackgroud);
+  padding: 0.5rem 1.5rem;
+  border: none;
+  cursor: pointer;
+  transition: var(--transition-default);
+  border: 1px solid var(--mainBrown);
+}
+
+.main-btn:hover {
+  background-color: transparent;
+  color: var(--mainBrown);
+  border: 1px solid var(--mainBrown);
+  border-color: var(--mainBrown);
+}
+
+input:focus {
+  box-shadow: none !important;
+  border-color: var(--secondaryBrown) !important;
+  color: var(--mainBrown) !important;
 }
