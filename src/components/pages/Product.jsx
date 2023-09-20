@@ -1,6 +1,6 @@
 import React from "react";
 import "./product.css";
-import { BsFillBagFill } from "react-icons/bs";
+import { BsCartFill } from "react-icons/bs";
 import Accordion from "react-bootstrap/Accordion";
 import { useEffect, useState } from "react";
 import { NavLink, useParams, useLocation } from "react-router-dom";
@@ -8,6 +8,8 @@ import { useDispatch } from "react-redux";
 import axios from "axios";
 import { addToCart } from "../../redux/cartSlice";
 import { addPrice } from "../../redux/orderPriceSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Product() {
   const params = useParams();
@@ -16,6 +18,11 @@ function Product() {
   const [interestingProduct, setInterestingProduct] = useState([]);
   const [product, setProduct] = useState([]);
   const location = useLocation();
+  const notify = () => {
+    toast.success("Product added!", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
 
   useEffect(() => {
     const getProduct = async () => {
@@ -35,6 +42,7 @@ function Product() {
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
     dispatch(addPrice(product.price));
+    notify();
   };
 
   return (
@@ -73,10 +81,11 @@ function Product() {
                       href="#"
                       className="text-decoration-none d-flex align-items-center px-5 py-3 addToCartButton"
                     >
-                      <BsFillBagFill />
+                      <BsCartFill />
                       <span className="ms-2">ADD TO CART</span>
                     </a>
                   </div>
+                  <ToastContainer autoClose={3000} />
                 </div>
               </div>
             </div>
@@ -129,51 +138,52 @@ function Product() {
             </Accordion>
           </div>
 
-          <div className="container-fluid mt-5">
-            <h3 className="mb-4 fw-bold text-center bg-light p-2">
-              THIS WEEK'S PICKS
-            </h3>
-            <div className="row d-flex flex-wrap g-3 m-0">
+
+<div className="container mt-5">
+            <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
               {interestingProduct.map((product, id) => (
-                <div key={id} className="col-3 mainCard mb-5">
+                <div key={id} className="mainCard p-1 rounded-1">
+                  {console.log(product.slug)}
+
                   <div className="productsCard">
-                    <div className="position-relative">
-                      <img
-                        src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
-                        className="card-img imgCard"
-                        alt={product.name}
-                      />
-                      <div
-                        className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart"
-                        onClick={() => handleAddCart(product)}
-                      >
-                        <h6 className="text-center mt-auto p-1">
-                          {" "}
-                          <BsFillBagFill /> ADD TO CART
-                        </h6>
-                      </div>
-                    </div>
+                    <img
+                      src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
+                      className="card-img imgCard"
+                      alt={product.name}
+                    />
+
                     <div
-                      className="card-body p-1 ps-2 mt-3"
-                      style={{ backgroundColor: "black" }}
+                      className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between" 
+                      style={{ backgroundColor: "white" }}
                     >
                       <NavLink
                         className="text-decoration-none productName"
                         to={`/products/${product.slug}`}
                       >
-                        <h5 className="card-title text-uppercase fw-bold">
+                        <p className="card-title text-dark text-uppercase fw-bold product-name">
                           {product.name}
-                        </h5>
+                        </p>
                       </NavLink>
-                      <p className="card-text priceText mt-2 fst-italic">
-                        $USD: {product.price}
-                      </p>
+
+                      <div className="d-flex justify-content-between align-items-center mt-1">
+                        <p className="card-text priceText fw-medium fst-italic mt-2 mb-2">
+                          $ {product.price}
+                        </p>
+                        <button
+                          className="addToCartButton1 px-2 py-1 d-flex align-items-center"
+                          onClick={() => handleAddCart(product)}
+                        >
+                          <BsCartFill className="me-1"/> Add
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
               ))}
             </div>
           </div>
+        
+
         </div>
       </>
     )
