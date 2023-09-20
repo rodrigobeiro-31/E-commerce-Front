@@ -93,7 +93,7 @@ function Header() {
               <NavLink className="nav-link" to="/contact">
                 Contact
               </NavLink>
-              <div>
+              <div className="d-flex align-items-center">
                 <ModalRegister
                   fullscreen={fullscreenRegister}
                   show={showRegister}
