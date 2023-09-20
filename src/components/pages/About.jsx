@@ -15,7 +15,7 @@ function About() {
     <div className="main-container2">
       <div className="about-bg-img container-fluid">
         <div className="about-gd-overlay"></div>
-        <h2 className="text-white d-flex justify-content-center align-items-center title">
+        <h2 className="text-white d-flex justify-content-center align-items-center text-center title">
           ABOUT THIS PROJECT
         </h2>
       </div>
