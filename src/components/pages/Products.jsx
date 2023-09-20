@@ -7,10 +7,17 @@ import { BsCartFill } from "react-icons/bs";
 import { addToCart } from "../../redux/cartSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { addPrice } from "../../redux/orderPriceSlice";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function Products() {
   const [products, setProducts] = useState();
   const dispatch = useDispatch();
+  const notify = () => {
+    toast.success("Product added!", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -29,6 +36,7 @@ function Products() {
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
     dispatch(addPrice(product.price));
+    notify();
   };
   return (
     products && (
@@ -100,7 +108,7 @@ function Products() {
                     />
 
                     <div
-                      className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between" 
+                      className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between"
                       style={{ backgroundColor: "white" }}
                     >
                       <NavLink
@@ -120,11 +128,12 @@ function Products() {
                           className="addToCartButton1 px-2 py-1 d-flex align-items-center"
                           onClick={() => handleAddCart(product)}
                         >
-                          <BsCartFill className="me-1"/> Add
+                          <BsCartFill className="me-1" /> Add
                         </button>
                       </div>
                     </div>
                   </div>
+                  <ToastContainer autoClose={3000} />
                 </div>
               ))}
             </div>
