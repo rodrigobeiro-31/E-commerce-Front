@@ -1,0 +1,11 @@
+.profile-banner {
+  background-image: url("/imgs/coffee-waiter.jpg");
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  height: 400px;
+}
+
+.profile-container {
+  background-color: white;
+}
