@@ -174,7 +174,7 @@ function Product() {
               ))}
             </div> */}
 
-<div className="container-fluid mt-5">
+          <div className="container-fluid mt-5">
             <h3 className="mb-4 fw-bold text-center bg-light p-2">
               THIS WEEK'S PICKS
             </h3>
@@ -182,13 +182,12 @@ function Product() {
               {interestingProduct.map((product, id) => (
                 <div key={id} className="mainCard p-1 rounded-1">
                   <div className="productsCard">
-                   
-                      <img
-                        src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
-                        className="card-img imgCard"
-                        alt={product.name}
-                      />
-                      <div
+                    <img
+                      src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
+                      className="card-img imgCard"
+                      alt={product.name}
+                    />
+                    {/* <div
                         className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart"
                         onClick={() => handleAddCart(product)}
                       >
@@ -196,8 +195,8 @@ function Product() {
                           {" "}
                           <BsFillBagFill /> ADD TO CART
                         </h6>
-                      </div>
-                    
+                      </div> */}
+
                     <div
                       className="card-body p-1 ps-2 mt-3"
                       style={{ backgroundColor: "black" }}
@@ -218,9 +217,6 @@ function Product() {
                 </div>
               ))}
             </div>
-
-
-
           </div>
         </div>
       </>

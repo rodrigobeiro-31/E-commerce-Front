@@ -7,7 +7,7 @@
 }
 
 .allProductsText {
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
 }
 
 /* .addToCart {
@@ -26,17 +26,17 @@
 
   font-size: 13px;
   background-color: var(--mainBrown);
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
   cursor: pointer;
   border: none;
 }
 .addToCartButton1:hover {
   background-color: var(--secondaryBrown);
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
 }
 
 h6 {
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
   font-size: 17px;
   font-family: "Oswald", sans-serif;
 }

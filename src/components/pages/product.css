@@ -5,13 +5,13 @@
 a.addToCartButton {
   font-size: 13px;
   background-color: var(--mainBrown);
-  color: var(--lightBackgroud);
-  
+  color: var(--lightBackground);
   
 }
 .addToCartButton:hover {
   background-color: var(--secondaryBrown);
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
+  cursor: pointer;
 }
 
 hr {
@@ -27,24 +27,19 @@ hr {
   background-size: cover;
   background-attachment: fixed;
   height: 100%;
- 
 }
 
-.data-container{
+.data-container {
   padding-top: calc(55.33px - 2rem);
 }
 
-
 .accordion-button:not(.collapsed) {
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
   background-color: var(--mainBrown);
   box-shadow: inset 0 calc(-1 * var(--secondaryBrown)) 0 var(--secondaryBrown);
 }
 
-
 .accordion-button.collapsed {
-  color: var(--lightBackgroud);
+  color: var(--lightBackground);
   background-color: var(--darkBrown);
 }
-
-
