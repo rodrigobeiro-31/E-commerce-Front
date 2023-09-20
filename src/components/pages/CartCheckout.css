@@ -26,6 +26,11 @@
     );
   }
 
+.checkout-table-img {
+  width: 5rem;
+  height: 5rem;
+}
+
 .title {
     font-weight: bolder;
     color: var(--mainBrown);

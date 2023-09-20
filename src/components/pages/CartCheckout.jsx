@@ -49,21 +49,22 @@ function CartCheckout() {
               CHECKOUT
             </h2>
             <div className="col-8 card p-3">
-              <table className="table">
+              <table className="table align-middle horizontal-align-middle">
                 <thead>
                   <tr>
-                    <th scope="col">Product</th>
-                    <th scope="col">Quantity</th>
-                    <th scope="col">Price</th>
+                    <th scope="col-6">Product</th>
+                    <th scope="col-3">Quantity</th>
+                    <th scope="col-3">Price</th>
                   </tr>
                 </thead>
                 <tbody>
-                  {cart.map(product, id)}
-                  <tr>
-                    <td scope="row">Product</td>
-                    <td>1</td>
-                    <td>$ 2.5</td>
-                  </tr>
+                  {cart.map((product, id) => (
+                    <tr key={id}>
+                      <td scope="row"><img className="me-4 checkout-table-img" src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`} alt={product.name} />{product.name}</td>
+                      <td>{product.quantity}</td>
+                      <td>$ {product.price}</td>
+                    </tr>
+                  ))}
                 </tbody>
               </table>
             </div>
