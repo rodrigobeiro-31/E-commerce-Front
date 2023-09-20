@@ -138,8 +138,7 @@ function Product() {
             </Accordion>
           </div>
 
-
-<div className="container mt-5">
+          <div className="container mt-5">
             <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
               {interestingProduct.map((product, id) => (
                 <div key={id} className="mainCard p-1 rounded-1">
@@ -153,7 +152,7 @@ function Product() {
                     />
 
                     <div
-                      className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between" 
+                      className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between"
                       style={{ backgroundColor: "white" }}
                     >
                       <NavLink
@@ -173,7 +172,7 @@ function Product() {
                           className="addToCartButton1 px-2 py-1 d-flex align-items-center"
                           onClick={() => handleAddCart(product)}
                         >
-                          <BsCartFill className="me-1"/> Add
+                          <BsCartFill className="me-1" /> Add
                         </button>
                       </div>
                     </div>
@@ -182,8 +181,6 @@ function Product() {
               ))}
             </div>
           </div>
-        
-
         </div>
       </>
     )

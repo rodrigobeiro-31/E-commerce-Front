@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import { NavLink } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
-import { BsFillBagFill } from "react-icons/bs";
+import { BsCartFill } from "react-icons/bs";
 import "./Home.css";
 import "../products.css";
 import { addToCart } from "../../redux/cartSlice";
@@ -63,46 +63,49 @@ function Home() {
             <h3 className="mb-4 fw-bold text-center p-3 week-picks-banner">
               THIS WEEK'S PICKS
             </h3>
-            <div className="row p-5 m-0 p-0">
-              {products.map((product, id) => (
-                <div key={id} className="col-3 mainCard mb-5">
-                  <div className="productsCard">
-                    <div className="position-relative">
+            <div className="container mt-5">
+              <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
+                {products.map((product, id) => (
+                  <div key={id} className="mainCard p-1 rounded-1">
+                    {console.log(product.slug)}
+
+                    <div className="productsCard">
                       <img
                         src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                         className="card-img imgCard"
                         alt={product.name}
                       />
+
                       <div
-                        className="card-img-overlay d-flex flex-column justify-content-end p-0 addToCart"
-                        onClick={() => handleAddCart(product)}
+                        className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between"
+                        style={{ backgroundColor: "white" }}
                       >
-                        <h6 className="text-center mt-auto">
-                          {" "}
-                          <BsFillBagFill /> ADD TO CART
-                        </h6>
-                        <ToastContainer autoClose={3000} />
+                        <NavLink
+                          className="text-decoration-none productName"
+                          to={`/products/${product.slug}`}
+                        >
+                          <p className="card-title text-dark text-uppercase fw-bold product-name">
+                            {product.name}
+                          </p>
+                        </NavLink>
+
+                        <div className="d-flex justify-content-between align-items-center mt-1">
+                          <p className="card-text priceText fw-medium fst-italic mt-2 mb-2">
+                            $ {product.price}
+                          </p>
+                          <button
+                            className="addToCartButton1 px-2 py-1 d-flex align-items-center"
+                            onClick={() => handleAddCart(product)}
+                          >
+                            <BsCartFill className="me-1" /> Add
+                          </button>
+                        </div>
                       </div>
                     </div>
-                    <div
-                      className="card-body p-1 ps-4 mt-3"
-                      style={{ backgroundColor: "black" }}
-                    >
-                      <NavLink
-                        className="text-decoration-none productName"
-                        to={`/products/${product.slug}`}
-                      >
-                        <p className="card-title text-uppercase fw-bold">
-                          {product.name}
-                        </p>
-                      </NavLink>
-                      <p className="card-text priceText mt-2 fst-italic">
-                        Price: $ {product.price}
-                      </p>
-                    </div>
+                    <ToastContainer autoClose={3000} />
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
           </div>
           <div id="homeAboutCard" className="card m-5 rounded-0 home-separator">
