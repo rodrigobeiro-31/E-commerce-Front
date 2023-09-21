@@ -24,6 +24,7 @@ body {
   cursor: pointer;
   transition: var(--transition-default);
   border: 1px solid var(--mainBrown);
+  text-decoration: none;
 }
 
 .main-btn:hover {
