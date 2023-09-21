@@ -27,9 +27,9 @@ function Home() {
     const getProducts = async () => {
       const response = await axios({
         method: "GET",
-        url: "http://localhost:3000/products",
+        url: "http://localhost:3000/products/filter/top",
       });
-      response && setProducts(response.data.topProducts);
+      response && setProducts(response.data);
     };
     getProducts();
   }, []);
@@ -89,11 +89,11 @@ function Home() {
                         </NavLink>
 
                         <div className="d-flex justify-content-between align-items-center mt-1">
-                          <p className="card-text priceText fw-medium fst-italic mt-2 mb-2">
+                          <p className="card-text priceText fw-semibold mt-2 mb-2">
                             $ {product.price}
                           </p>
                           <button
-                            className="addToCartButton1 px-2 py-1 d-flex align-items-center"
+                            className="addToCartButton1 px-3 py-2 d-flex align-items-center"
                             onClick={() => handleAddCart(product)}
                           >
                             <BsCartFill className="me-1" /> Add

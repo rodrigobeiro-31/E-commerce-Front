@@ -108,7 +108,7 @@ function CartCheckout() {
                             onClick={() => handleAddCart(product)} />
                         </div>
                       </td>
-                      <td>$ {product.totalPrice}</td>
+                      <td>$ {product.totalPrice.toFixed(2)}</td>
                       <td>
                         <BsTrash3Fill className="btn fs-5 m-0 p-0"
                           onClick={() => handleRemoveProduct(product)} /></td>
@@ -123,14 +123,14 @@ function CartCheckout() {
                 <ul className="me-4">
                   <li className="d-flex justify-content-between">
                     <span className="fst-italic">Products </span>
-                    <span>$ {orderPrice.toFixed(2)}</span></li>
+                    <span>$ {orderPrice < 0 ? "0.00" : orderPrice.toFixed(2)}</span></li>
 
                   <li className="d-flex justify-content-between">
                     <span className="fst-italic">Shipping </span>
                     <span>$ 0.00</span></li>
                   <li className="d-flex justify-content-between mt-2">
                     <span className="fw-semibold">Total </span>
-                    <span>$ {orderPrice.toFixed(2)}</span></li>
+                    <span>$ {orderPrice < 0 ? "0.00" : orderPrice.toFixed(2)}</span></li>
                 </ul>
                 <div className="row px-3 pt-4 pb-2">
                   {cart.length >= 1

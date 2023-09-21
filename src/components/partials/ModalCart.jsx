@@ -85,7 +85,7 @@ function ModalCart({
         <div className="border-top cart-footer">
           <div className="d-flex justify-content-between px-2">
             <p className="fw-bold">Order total</p>
-            <p className="fw-bold">US$ {orderPrice.toFixed(2)}</p>
+            <p className="fw-bold">US$ {orderPrice < 0 ? "0.00" : orderPrice.toFixed(2)}</p>
           </div>
           <div className="d-flex justify-content-between px-2">
             <p className="fw-bold">Shipping</p>
