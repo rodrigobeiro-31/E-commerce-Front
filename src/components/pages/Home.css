@@ -58,6 +58,7 @@
 
 #homeAboutSection {
   margin: 5rem 0;
+  flex-wrap: wrap;
 }
 
 .home-text-container {
