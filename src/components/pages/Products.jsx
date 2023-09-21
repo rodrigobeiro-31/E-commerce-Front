@@ -44,7 +44,7 @@ function Products() {
         {console.log(products)}
         <div className="container-fluid main-container p-0">
           <div className="container-fluid d-flex align-items-center flex-column justify-content-center imageContainer m-0 p-0">
-            <h2 className="text-white d-flex justify-content-center align-items-center title">
+            <h2 className="text-white d-flex justify-content-center align-items-center">
               PRODUCTS
             </h2>
           </div>

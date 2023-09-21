@@ -7,7 +7,6 @@ import { AiOutlineMail } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 
-
 function Contact() {
   // const token = useSelector((state) => state.user.token);
   // // Ahora puedes usar el token en tu componente
@@ -61,26 +60,32 @@ function Contact() {
     <>
       <div className="container-fluid main-container2 p-0">
         <div className="container-fluid d-flex align-items-center flex-column justify-content-center m-0 p-0 contact-banner">
-          <h2 className="text-white d-flex justify-content-center align-items-center title fw-bold">
+          <h2 className="text-white d-flex justify-content-center align-items-center fw-bold">
             CONTACT
           </h2>
         </div>
-        <div className="container mb-5 mt-5 contact-container custom-background text-white">
-          <div className=" d-flex-column  align-self-center align-content-between">
-            <div className="row">
+        <div className="container mb-5 mt-5 text-white d-flex justify-content-center align-items-center">
+          <div className="d-flex justify-content-center">
+            <div className="row contact-container ">
               <div className="col-6">
                 <div className="container">
                   <div>
-                    <h2 className="fw-bold pt-4">Contact us</h2>
-                    <p className="fw-normal">We will be responding to you shortly.</p>
+                    <h2 className="fw-bold pt-4 contact-title">Contact us</h2>
+                    <span className="line-span"></span>
+                    <p className="fw-normal contact-text mb-5">
+                      We will be responding to you shortly.
+                    </p>
                   </div>
-                  <form onSubmit={sendForm} className="row g-3">
-                    <div className="col-5">
-                      <label htmlFor="firstName" className="form-label">
+                  <form onSubmit={sendForm} className="row">
+                    <div className="col-6">
+                      <label
+                        htmlFor="firstName"
+                        className="form-label contact-text"
+                      >
                         Firstname :
                       </label>
                       <input
-                        className="form-control"
+                        className="form-control contact-input mb-3"
                         name="firstname"
                         id="firstname"
                         placeholder="Firstname..."
@@ -88,13 +93,16 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-5">
-                      <label htmlFor="lastname" className="form-label">
+                    <div className="col-6">
+                      <label
+                        htmlFor="lastname"
+                        className="form-label contact-text"
+                      >
                         Lastname :
                       </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control contact-input mb-3"
                         name="lastname"
                         id="lastname"
                         placeholder="Lastname..."
@@ -102,13 +110,16 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-5">
-                      <label htmlFor="ilastName" className="form-label">
+                    <div className="col-6">
+                      <label
+                        htmlFor="ilastName"
+                        className="form-label contact-text"
+                      >
                         Phone number :
                       </label>
                       <input
                         type="text"
-                        className="form-control"
+                        className="form-control contact-input mb-3"
                         name="fone"
                         id="fone"
                         placeholder="Phone number..."
@@ -116,13 +127,16 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-md-5">
-                      <label htmlFor="direction" className="form-label">
+                    <div className="col-md-6">
+                      <label
+                        htmlFor="direction"
+                        className="form-label contact-text"
+                      >
                         Address :
                       </label>
                       <input
                         type="name"
-                        className="form-control"
+                        className="form-control contact-input mb-3"
                         name="direction"
                         id="direction"
                         placeholder="Address..."
@@ -130,13 +144,13 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-10">
-                      <label htmlFor="fone" className="form-label">
+                    <div className="col-12">
+                      <label htmlFor="fone" className="form-label contact-text">
                         Affair :
                       </label>
                       <textarea
                         type="name"
-                        className="form-control"
+                        className="form-control contact-input mb-3"
                         name="affaire"
                         id="affaire"
                         placeholder="Affair..."
@@ -145,12 +159,15 @@ function Contact() {
                       />
                     </div>
 
-                    <div className="col-md-5">
-                      <label htmlFor="options" className="form-label">
+                    <div className="col-md-6">
+                      <label
+                        htmlFor="options"
+                        className="form-label contact-text"
+                      >
                         Options :
                       </label>
                       <select
-                        className="form-select"
+                        className="form-select contact-input mb-3"
                         type="text"
                         name="options"
                         id="options"
@@ -164,35 +181,60 @@ function Contact() {
                         <option>Other</option>
                       </select>
                     </div>
-                    <div className="col-5 text-center pt-1">
+                    <div className="col-12 d-flex justify-content-end text-center pt-1">
                       <button
                         type="submit"
-                        className="btn  m-4 text-center btn-modal "
+                        className="m-4 text-center main-btn btn-contact"
                       >
-                        Send{" "}
+                        Send
                       </button>
                     </div>
                   </form>
                 </div>
               </div>
-              <div className="col-6 d-flex-column align-self-center align-content-between">
+              <div className="col-6">
                 <div>
-                  <h5 className="fw-semibold mt-3 mb-2">STORES</h5>
-                  <p className="m-0">Mondays through Fridays from 9:00 am to 19:00 pm</p>
-                  <p className="m-0">Saturdays and Sundays from 9:00 am to 13:00 pm</p>
-                  <p className="fw-semibold ps-4 m-0 mt-2">DOPPIO'S COFFEE SHOP</p>
-                  <p className="ps-5 m-0 mb-2">Requena N° 2054, Montevideo</p>
-                  <p className="fw-semibold ps-4 m-0">DOPPIO'S CAFE</p>
-                  <p className="ps-5 m-0 mb-2">Av. Brasil N° 4321, Montevideo</p>
-                </div>
-                <div>
-                  <h5 className="fw-semibold mt-4 mb-2">PHONE NUMBER</h5>
-                  <a href="Tel: 27777777" className="text-decoration-none text-white ps-4 m-0"><BsFillTelephoneFill className="me-2" /> 2777 7777</a>
-                  <a href="Tel: 099999999" className="text-decoration-none text-white ps-4 m-0"><BsFillTelephoneFill className="me-2" /> 099 999 999</a>
-                </div>
-                <div>
-                  <h5 className="fw-semibold mt-4 mb-2">E-MAIL</h5>
-                  <p className="ps-4 m-0"><AiOutlineMail className="me-2" /> doppios@contact.com</p>
+                  <h2 className="fw-bold pt-4 contact-title">Locations</h2>
+                  <span className="line-span"></span>
+                  <p className="m-0 contact-text">
+                    Mondays through Fridays from 9:00 am to 19:00 pm
+                  </p>
+                  <p className="m-0 contact-text">
+                    Saturdays and Sundays from 9:00 am to 13:00 pm
+                  </p>
+                  <div className="locations-container row">
+                    <div className="col-6">
+                      <div className="mt-5">
+                        <h5 className="contact-text fw-bold">ADDRESS</h5>
+                        <p className="contact-text">Requena 2054, Montevideo</p>
+                      </div>
+                      <div className="mt-5">
+                        <h5 className="contact-text fw-bold">PHONES</h5>
+                        <p className="contact-text">099 999 999</p>
+                      </div>
+                      <div className="mt-5">
+                        <h5 className="contact-text fw-bold">EMAILS</h5>
+                        <p className="contact-text">doppios@doppios.com</p>
+                      </div>
+                    </div>
+                    <div className="col-6">
+                      <div className="mt-5">
+                        <h5 className="contact-text fw-bold">ADDRESS</h5>
+                        <p className="contact-text">
+                          Av Brasil 4321, Montevideo
+                        </p>
+                      </div>
+                      <div className="mt-5">
+                        <h5 className="contact-text fw-bold">PHONES</h5>
+                        <p className="contact-text">2425 2345</p>
+                      </div>
+                      <div className="mt-5">
+                        <h5 className="contact-text fw-bold">EMAILS</h5>
+                        <p className="contact-text">contact@doppios.com</p>
+                      </div>
+                    </div>
+                    <div className="col-6"></div>
+                  </div>
                 </div>
               </div>
             </div>

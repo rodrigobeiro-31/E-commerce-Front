@@ -10,10 +10,36 @@
   backdrop-filter: blur(4px);
 }
 
-.custom-background {
-  background-color: var(--creamyWhite);
+.main-container2 {
+  width: 100%;
+  height: 100%;
+  background-color: var(--creamyWhite) !important;
 }
 
-.main-container2{
-  background-color: white;
+.contact-container {
+  background-color: transparent !important;
+  margin: 3rem 0;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-input {
+  border-radius: 0 !important;
+  border: 1px solid var(--secondaryBrown);
+}
+
+.contact-title {
+  font-size: 2.5rem;
+  color: var(--darkBrown);
+  font-family: var(--roboto-condensed);
+  text-transform: uppercase;
+  margin: 0 !important;
+}
+
+.contact-text {
+  color: var(--darkBrown);
+}
+
+.btn-contact {
+  align-self: flex-end !important;
 }

@@ -9,3 +9,7 @@
 .profile-container {
   background-color: white;
 }
+
+.span-name {
+  text-transform: capitalize;
+}
