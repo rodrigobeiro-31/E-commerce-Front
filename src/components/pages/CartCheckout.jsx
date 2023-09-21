@@ -5,7 +5,24 @@ import axios from "axios";
 import { v4 as uuidv4 } from 'uuid';
 import { resetCart } from "../../redux/cartSlice";
 import { resetPrice } from "../../redux/orderPriceSlice";
+import {
+  BsFillPlusCircleFill,
+  BsFillDashCircleFill,
+  BsTrash3Fill,
+} from "react-icons/bs";
+import {
+  addToCart,
+  removeFromCart,
+  removeProductFromCart,
+} from "../../redux/cartSlice";
+import {
+  addPrice,
+  removePrice,
+  removeTotalPrice,
+} from "../../redux/orderPriceSlice";
 import './CartCheckout.css';
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function CartCheckout() {
   const user = useSelector((state) => state.user);
@@ -35,7 +52,26 @@ function CartCheckout() {
     navigate("/");
   }
 
-  console.log(cart);
+  const handleAddCart = async (product) => {
+    dispatch(addToCart(product));
+    dispatch(addPrice(product.price));
+  };
+
+  const handleRemoveFromCart = async (product) => {
+    dispatch(removeFromCart(product));
+    dispatch(removePrice(product.price));
+  };
+
+  const handleRemoveProduct = async (product) => {
+    dispatch(removeProductFromCart(product));
+    dispatch(removeTotalPrice(product.totalPrice));
+  };
+
+  const notify = () => {
+    toast.error("Your cart is empty", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
 
   return (
     <>
@@ -61,8 +97,21 @@ function CartCheckout() {
                   {cart.map((product, id) => (
                     <tr key={id}>
                       <td scope="row"><img className="me-4 checkout-table-img" src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`} alt={product.name} />{product.name}</td>
-                      <td>{product.quantity}</td>
-                      <td>$ {product.price}</td>
+                      <td>
+                        <div className="d-flex align-items-center m-0 p-0">
+                          {product.quantity > 1
+                            ? <BsFillDashCircleFill className="btn m-0 p-0"
+                              onClick={() => handleRemoveFromCart(product)} />
+                            : <BsFillDashCircleFill className="btn text-secondary m-0 p-0" disabled />}
+                          <p className="fw-normal text-black fs-5 m-0 mx-2 p-0">{product.quantity}</p>
+                          <BsFillPlusCircleFill className="btn m-0 p-0"
+                            onClick={() => handleAddCart(product)} />
+                        </div>
+                      </td>
+                      <td>$ {product.totalPrice}</td>
+                      <td>
+                        <BsTrash3Fill className="btn fs-5 m-0 p-0"
+                          onClick={() => handleRemoveProduct(product)} /></td>
                     </tr>
                   ))}
                 </tbody>
@@ -84,11 +133,18 @@ function CartCheckout() {
                     <span>$ {orderPrice.toFixed(2)}</span></li>
                 </ul>
                 <div className="row px-3 pt-4 pb-2">
-                  <button
+                  {cart.length >= 1
+                    ? <button
+                      className="btn btn-none text-center text-white rounded-0 px-2 py-2 completeOrderBtn"
+                      onClick={handleClick}
+                    >Complete order</button>
+                    : <button
                     className="btn btn-none text-center text-white rounded-0 px-2 py-2 completeOrderBtn"
-                    onClick={handleClick}
+                    onClick={notify}
                   >Complete order</button>
+                  }
                 </div>
+                <ToastContainer autoClose={3000}/>
               </div>
             </div>
           </div>

@@ -16,6 +16,7 @@ import {
   removeTotalPrice,
 } from "../../redux/orderPriceSlice";
 import { NavLink } from "react-router-dom";
+import './ModalCart.css';
 
 function ModalCart({
   show,
@@ -58,7 +59,7 @@ function ModalCart({
               <div key={id} className="row">
                 <div className="row mb-2 d-flex justify-content-between align-items-center m-0 p-0">
                   <div className="col-5">
-                    <h6 className="fw-semibold text-dark m-0">{product.name}</h6>
+                    <h6 className="fw-semibold text-dark m-0 cart-product-substring">{product.name}</h6>
                     <p className="text-secondary m-0 p-0">{product.category}</p>
                   </div>
                   <div className="col-7 d-flex justify-content-between">

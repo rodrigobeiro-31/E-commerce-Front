@@ -100,9 +100,9 @@ function Home() {
                         </div>
                       </div>
                     </div>
-                    <ToastContainer autoClose={3000} />
                   </div>
                 ))}
+                <ToastContainer autoClose={3000} />
               </div>
             </div>
           </div>
