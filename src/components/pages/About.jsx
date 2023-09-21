@@ -87,10 +87,6 @@ function About() {
                 <BiLogoNodejs className="icon" />
                 <small>Nodejs</small>
               </div>
-              <div className="tech-icon">
-                <SiAdobephotoshop className="icon" />
-                <small>Adobe Photoshop</small>
-              </div>
             </div>
           </div>
         </section>
