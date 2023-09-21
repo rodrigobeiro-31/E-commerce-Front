@@ -60,7 +60,7 @@ function Contact() {
     <>
       <div className="container-fluid main-container2 p-0">
         <div className="container-fluid d-flex align-items-center flex-column justify-content-center m-0 p-0 contact-banner">
-          <h2 className="text-white d-flex justify-content-center align-items-center fw-bold">
+          <h2 className="text-white d-flex justify-content-center align-items-center title">
             CONTACT
           </h2>
         </div>
