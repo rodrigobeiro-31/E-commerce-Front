@@ -76,14 +76,14 @@ function CartCheckout() {
   return (
     <>
       <div className="checkout-container pb-5">
-        <div className="checkout-bg-img container-fluid">
-          <div className="checkout-gd-overlay"></div>
+        <div className="checkout-bg-img container-fluid d-flex justify-content-center align-items-center">
+          <div className="checkout-gd-overlay"> </div>
+          <h2 className="d-flex justify-content-center align-items-center mb-3 title">
+          CHECKOUT
+        </h2>
         </div>
         <div className="container p-5">
           <div className="row d-flex justify-content-center mt-4 gap-3">
-            <h2 className="d-flex justify-content-center align-items-center mb-3 title">
-              CHECKOUT
-            </h2>
             <div className="col-8 card p-3">
               <table className="table align-middle horizontal-align-middle">
                 <thead>
@@ -135,16 +135,16 @@ function CartCheckout() {
                 <div className="row px-3 pt-4 pb-2">
                   {cart.length >= 1
                     ? <button
-                      className="btn btn-none text-center text-white rounded-0 px-2 py-2 completeOrderBtn"
+                      className="btn btn-none text-center rounded-0 px-2 py-2 main-btn"
                       onClick={handleClick}
                     >Complete order</button>
                     : <button
-                    className="btn btn-none text-center text-white rounded-0 px-2 py-2 completeOrderBtn"
-                    onClick={notify}
-                  >Complete order</button>
+                      className="btn btn-none text-center rounded-0 px-2 py-2 main-btn"
+                      onClick={notify}
+                    >Complete order</button>
                   }
                 </div>
-                <ToastContainer autoClose={3000}/>
+                <ToastContainer autoClose={3000} />
               </div>
             </div>
           </div>
