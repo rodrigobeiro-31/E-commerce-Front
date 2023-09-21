@@ -3,7 +3,7 @@
 :root {
   --mainBrown: #532e1c;
   --secondaryBrown: #c5a880;
-  --darkBrown: #0f0f0f;
+  --darkBrown: #241b1b;
   --lightBackground: #e6e6e6;
   --clr-brown-terciary: #c38154;
   --creamyWhite: #f8f0e5;
@@ -13,6 +13,9 @@
   --roboto-condensed: "Roboto Condensed", sans-serif;
 }
 
+body {
+  background-color: var(--creamyWhite) !important;
+}
 .main-btn {
   background-color: var(--mainBrown);
   color: var(--lightBackground);
@@ -54,4 +57,13 @@ input:focus {
   width: 1.5rem;
   height: 1.5rem;
   color: white;
+}
+
+.line-span {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  width: 120px;
+  border-bottom: 3px solid var(--clr-brown-terciary);
+  margin: 1.5rem 0;
 }

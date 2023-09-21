@@ -53,30 +53,34 @@ function Profile() {
 
   return (
     email && (
-      <div className="container-fluid d-flex flex-column justify-content-center profile-container p-0">
+      <div className="container-fluid d-flex flex-column justify-content-center p-0">
         <div className="container-fluid d-flex align-items-center flex-column justify-content-center m-0 p-0 profile-banner">
-          <h2 className="text-white d-flex justify-content-center align-items-center title fw-bold">
+          <h2 className="text-white d-flex justify-content-center align-items-center title">
             PROFILE
           </h2>
         </div>
         <div className="container">
-          <div className="card mb-5 m-5 p-5 text-white bg-dark">
-            <h2 className="text-uppercase fw-bold">My account</h2>
-            <p className="fw-normal">
-              Welcome {firstname} {lastname}! From your Doppios's Account
-              Dashboard, you have the ability to edit your profile and track the
-              status of your orders.
+          <div className="mb-5 m-5 p-5 text-white">
+            <h2 className="text-uppercase fw-bold contact-title">My account</h2>
+            <span className="line-span"></span>
+            <p className="fw-normal contact-text">
+              Welcome{" "}
+              <span className="fw-bold span-name">
+                {firstname} {lastname}!
+              </span>{" "}
+              From your Doppios's Account Dashboard, you have the ability to
+              edit your profile and track the status of your orders.
             </p>
             <hr className="bg-white" />
-            <form onSubmit={handleSubmit} className="row g-3">
-              <div className="col-5">
+            <form onSubmit={handleSubmit} className="row g-3 mb-5">
+              <div className="col-6">
                 <div className="input-group mb-3">
                   <span className="input-group-text">
                     <LiaUserEditSolid />
                   </span>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control contact-input"
                     name="firstname"
                     id="firstname"
                     value={firstname}
@@ -85,14 +89,14 @@ function Profile() {
                 </div>
               </div>
 
-              <div className="col-5">
+              <div className="col-6">
                 <div className="input-group mb-3">
                   <span className="input-group-text">
                     <LiaUserEditSolid />
                   </span>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form-control contact-input"
                     name="lastname"
                     id="lastname"
                     value={lastname}
@@ -100,14 +104,14 @@ function Profile() {
                   />
                 </div>
               </div>
-              <div className="col-10">
+              <div className="col-12">
                 <div className="input-group mb-3">
                   <span className="input-group-text">
                     <LiaUserEditSolid />
                   </span>
                   <input
                     type="email"
-                    className="form-control"
+                    className="form-control contact-input"
                     name="email"
                     id="email"
                     value={email}
@@ -116,7 +120,7 @@ function Profile() {
                 </div>
               </div>
 
-              <div className="col-5">
+              <div className="col-6">
                 <div className="input-group mb-3">
                   <span className="input-group-text">
                     {" "}
@@ -124,24 +128,27 @@ function Profile() {
                   </span>
                   <input
                     type="password"
-                    className="form-control"
+                    className="form-control contact-input"
                     name="password"
                     id="password"
+                    placeholder="Password..."
                     onChange={(e) => setPassword(e.target.value)}
                   />
                 </div>
               </div>
-              <div className="col-5 d-flex align-items-center justify-content-end m-0 ">
+              <div className="col-6 d-flex align-items-center justify-content-end m-0 ">
                 <button
                   type="submit"
-                  className="text-decoration-none d-flex align-items-center px-5 py-2 addToCartButton"
+                  className="d-flex align-items-center px-5 py-2 main-btn"
                 >
                   SAVE CHANGES
                 </button>
               </div>
             </form>
-            <h2 className="text-uppercase fw-bold">Order tracking</h2>
-            <hr />
+            <h2 className="text-uppercase fw-bold contact-title">
+              Order tracking
+            </h2>
+            <span className="line-span"></span>
             <table class="table">
               <thead>
                 <tr>
