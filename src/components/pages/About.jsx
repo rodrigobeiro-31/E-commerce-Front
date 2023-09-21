@@ -27,7 +27,7 @@ function About() {
       </div>
       <div className="container-fluid">
         <section className="about-section-one justify-content-center align-items-center row">
-          <div className="align-self-center mb-2 col-lg-8 col-md-10 col-12 p-5 ">
+          <div className="d-flex flex-column justfiy-content-center align-items-center mb-2 col-lg-8 col-md-10 col-12 p-5 ">
             <h3 className="mb-5 fw-bold contact-title">
               Technologies and tools used
             </h3>
