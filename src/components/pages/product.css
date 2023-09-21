@@ -34,14 +34,20 @@ hr {
 }
 
 .accordion-button:not(.collapsed) {
-  color: var(--lightBackground);
-  background-color: var(--mainBrown);
+  color: var(--darkBrown);
+  background-color: var(--clr-brown-terciary);
   box-shadow: inset 0 calc(-1 * var(--secondaryBrown)) 0 var(--secondaryBrown);
 }
 
 .accordion-button.collapsed {
-  color: var(--lightBackground);
-  background-color: var(--darkBrown);
+  color: var(--darkBrown);
+  background-color: var(--secondaryBrown);
+}
+
+button:focus {
+  box-shadow: none !important;
+  border-color: var(--secondaryBrown) !important;
+  color: var(--mainBrown) !important;
 }
 
 

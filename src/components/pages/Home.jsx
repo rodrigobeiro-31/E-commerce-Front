@@ -1,10 +1,8 @@
 import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { useEffect, useState } from "react";
-import { NavLink } from "react-router-dom";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
-import { BsCartFill } from "react-icons/bs";
 import "./Home.css";
 import "../products.css";
 import { addToCart } from "../../redux/cartSlice";
@@ -13,6 +11,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BackToTop from "../partials/BackToTop";
 import ProjectBtn from "../partials/ProjectBtn";
+import ProductCard from "../partials/ProductCard";
 
 function Home() {
   const [products, setProducts] = useState();
@@ -67,41 +66,7 @@ function Home() {
             <div className="container mt-5">
               <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
                 {products.map((product, id) => (
-                  <div key={id} className="mainCard p-1 rounded-1">
-                    <div className="productsCard">
-                      <img
-                        src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
-                        className="card-img imgCard"
-                        alt={product.name}
-                      />
-
-                      <div
-                        className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between"
-                        style={{ backgroundColor: "white" }}
-                      >
-                        <NavLink
-                          className="text-decoration-none productName"
-                          to={`/products/${product.slug}`}
-                        >
-                          <p className="card-title text-dark text-uppercase fw-bold product-name">
-                            {product.name}
-                          </p>
-                        </NavLink>
-
-                        <div className="d-flex justify-content-between align-items-center mt-1">
-                          <p className="card-text priceText fw-semibold mt-2 mb-2">
-                            $ {product.price}
-                          </p>
-                          <button
-                            className="addToCartButton1 px-3 py-2 d-flex align-items-center"
-                            onClick={() => handleAddCart(product)}
-                          >
-                            <BsCartFill className="me-1" /> Add
-                          </button>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                  <ProductCard key={id} product={product} handleAddCart={handleAddCart}/>
                 ))}
                 <ToastContainer autoClose={3000} />
               </div>
