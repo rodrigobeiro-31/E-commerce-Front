@@ -45,7 +45,7 @@
   background-color: var(--creamyWhite);
 }
 
-.main-container{
+.main-container {
   background-image: url("/imgs/grey-marble-bg.jpg");
   background-size: cover;
   background-attachment: fixed;
@@ -54,4 +54,28 @@
 .home-separator {
   margin-top: 8rem !important;
   margin-bottom: 8rem !important;
+}
+
+#homeAboutSection {
+  margin: 5rem 0;
+  flex-wrap: wrap;
+}
+
+.home-text-container {
+  background-color: white;
+  max-width: 600px;
+  width: 100%;
+  height: auto;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.img-home {
+  width: 100%;
+  max-width: 800px;
+  max-height: 700px;
+  height: auto;
+  object-fit: cover !important;
 }

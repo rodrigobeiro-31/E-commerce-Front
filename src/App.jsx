@@ -13,6 +13,7 @@ import ProductIn from "./components/admin/inProduct";
 import { useEffect } from "react";
 import CartCheckout from "./components/pages/CartCheckout";
 import Profile from "./components/pages/Profile";
+import Error from "./components/pages/Error";
 
 function App() {
   const location = useLocation();
@@ -34,6 +35,7 @@ function App() {
         <Route path="/admin" element={<ProductIn />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/checkout" element={<CartCheckout />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
     </>

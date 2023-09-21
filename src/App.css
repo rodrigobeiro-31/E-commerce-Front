@@ -24,6 +24,7 @@ body {
   cursor: pointer;
   transition: var(--transition-default);
   border: 1px solid var(--mainBrown);
+  text-decoration: none;
 }
 
 .main-btn:hover {
@@ -66,4 +67,43 @@ input:focus {
   width: 120px;
   border-bottom: 3px solid var(--clr-brown-terciary);
   margin: 1.5rem 0;
+}
+
+.project-btn {
+  position: fixed;
+  bottom: 50%;
+  left: 0px;
+  height: 2rem;
+  width: auto;
+  padding: 1rem;
+  background-color: var(--clr-brown-terciary);
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-default);
+  animation-name: opacity;
+  animation-duration: 3s;
+  z-index: 99999;
+}
+
+@keyframes opacity {
+  from {
+    left: -100px;
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+    left: 0px;
+  }
+}
+
+.project-btn:hover {
+  background-color: var(--mainBrown);
+}
+
+.project-link {
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 500;
 }

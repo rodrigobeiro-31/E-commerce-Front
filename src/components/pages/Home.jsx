@@ -12,6 +12,7 @@ import { addPrice } from "../../redux/orderPriceSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import BackToTop from "../partials/BackToTop";
+import ProjectBtn from "../partials/ProjectBtn";
 
 function Home() {
   const [products, setProducts] = useState();
@@ -106,13 +107,53 @@ function Home() {
               </div>
             </div>
           </div>
-          <div id="homeAboutCard" className="card m-5 rounded-0 home-separator">
+          <section
+            id="homeAboutSection"
+            className="d-flex justify-content-center align-items-center"
+          >
+            <div className="home-img-container">
+              <img
+                src="imgs/home-about-img.jpg"
+                alt="coffee-shop"
+                className="img-home"
+              />
+            </div>
+            <div className="home-text-container">
+              {" "}
+              <h3 className="card-title mb-5 fw-bold">About Doppio's</h3>
+              <p className="contact-text mb-4">
+                At Doppio's Coffee & Bakery, we blend the rich tradition of
+                artisanal coffee crafting with the comforting aroma of freshly
+                baked bread to create an inviting haven for coffee enthusiasts
+                and pastry lovers alike. Our name, "Doppio," embodies our
+                commitment to excellence, as it refers to the Italian term for
+                "double." Just as a doppio espresso is a double shot of pure
+                espresso, we aim to double your satisfaction with every visit.
+              </p>
+              <p className="contact-text">
+                With a passion for quality and a dedication to delighting your
+                senses, our coffee is sourced from the finest beans and expertly
+                roasted to perfection, ensuring each sip is a symphony of
+                flavor. Complementing our coffee, our bakery boasts an array of
+                handcrafted bread, pastries, and confections, baked fresh daily.
+                Join us in savoring the simple pleasures of life, one cup and
+                one bite at a time. Welcome to Doppio's, where every visit is a
+                double delight.
+              </p>
+              <img
+                className="img align-self-center mt-4 mb-0 opacity-75 home-section-logo"
+                src="/imgs/doppios-black-logo.png"
+                alt="Doppio's logo"
+              />
+            </div>
+          </section>
+          {/* <div id="homeAboutCard" className="card m-5 rounded-0 home-separator">
             <div className="row g-0">
               <div className="col-md-5">
                 <img
                   id="homeAboutImg"
                   src="/imgs/home-about-img.jpg"
-                  className="img-fluid"
+                  className="img-fluid img-home"
                   alt="Coffee place"
                 />
               </div>
@@ -147,7 +188,7 @@ function Home() {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="container-fluid ps-5 pe-5 mb-5 custom-background1 home-separator">
             <div className="row d-flex">
               <div className="col d-flex flex-column align-items-center p-3">
@@ -221,6 +262,7 @@ function Home() {
           </Carousel>
         </div>
         <BackToTop />
+        <ProjectBtn />
       </>
     )
   );
