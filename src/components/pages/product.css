@@ -44,10 +44,4 @@ hr {
   background-color: var(--secondaryBrown);
 }
 
-button:focus {
-  box-shadow: none !important;
-  border-color: var(--secondaryBrown) !important;
-  color: var(--mainBrown) !important;
-}
-
 
