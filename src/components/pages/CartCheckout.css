@@ -1,7 +1,7 @@
 .checkout-bg-img {
     position: relative;
     width: 100%;
-    height: 700px;
+    height: 100vh;
     background-image: url(./imgs/shop-window.jpg);
     background-size:cover;
     background-position: center;

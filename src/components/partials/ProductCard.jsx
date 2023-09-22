@@ -14,8 +14,7 @@ function ProductCard({ product, handleAddCart }) {
                 />
 
                 <div
-                    className="card-body px-3 py-1 mt-2 card-info d-flex flex-column justify-conetnt-between"
-                    style={{ backgroundColor: "white" }}
+                    className="card-body px-3 py-1 mt-2 d-flex flex-column justify-content-between card-info"
                 >
                     <NavLink
                         className="text-decoration-none productName"

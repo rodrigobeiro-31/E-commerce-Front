@@ -64,12 +64,27 @@ h6 {
 .mainCard {
   background-color: rgba(255, 255, 255, 0.53);
   width: 15rem;
-  /* height: 21rem; */
   height: auto;
+  transition: 0.25s ease-in;
+}
+
+.mainCard:hover {
+  background-color: #c5a880ba;
+  transform: scale(1.05);
+}
+
+.card-img {
+  transition: 0.5s ease-in;
+}
+
+.card-img:hover {
+  transform: scale(1.05);
 }
 
 .card-info {
   object-fit: cover;
+  transition: 0.2s ease-in;
+  background-color: white;
 }
 
 .product-name {

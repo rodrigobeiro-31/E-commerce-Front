@@ -85,7 +85,8 @@ function Home() {
             </div>
             <div className="home-text-container">
               {" "}
-              <h3 className="card-title mb-5 fw-bold">About Doppio's</h3>
+              <h3 className="card-title fw-bold">About Doppio's</h3>
+              <span className="line-span align-self-center mb-5"></span>
               <p className="contact-text mb-4">
                 At Doppio's Coffee & Bakery, we blend the rich tradition of
                 artisanal coffee crafting with the comforting aroma of freshly
@@ -112,51 +113,9 @@ function Home() {
               />
             </div>
           </section>
-          {/* <div id="homeAboutCard" className="card m-5 rounded-0 home-separator">
-            <div className="row g-0">
-              <div className="col-md-5">
-                <img
-                  id="homeAboutImg"
-                  src="/imgs/home-about-img.jpg"
-                  className="img-fluid img-home"
-                  alt="Coffee place"
-                />
-              </div>
-              <div className="col-md-7 custom-background1">
-                <div className="card-body d-flex flex-column align-items-center p-5">
-                  <h3 className="card-title mb-5  fw-bold">About Doppio's</h3>
-                  <p className="card-text mb-4">
-                    At Doppio's Coffee & Bakery, we blend the rich tradition of
-                    artisanal coffee crafting with the comforting aroma of
-                    freshly baked bread to create an inviting haven for coffee
-                    enthusiasts and pastry lovers alike. Our name, "Doppio,"
-                    embodies our commitment to excellence, as it refers to the
-                    Italian term for "double." Just as a doppio espresso is a
-                    double shot of pure espresso, we aim to double your
-                    satisfaction with every visit.
-                  </p>
-                  <p className="card-text">
-                    With a passion for quality and a dedication to delighting
-                    your senses, our coffee is sourced from the finest beans and
-                    expertly roasted to perfection, ensuring each sip is a
-                    symphony of flavor. Complementing our coffee, our bakery
-                    boasts an array of handcrafted bread, pastries, and
-                    confections, baked fresh daily. Join us in savoring the
-                    simple pleasures of life, one cup and one bite at a time.
-                    Welcome to Doppio's, where every visit is a double delight.
-                  </p>
-                  <img
-                    className="img align-self-center mt-4 mb-0 opacity-75 home-section-logo"
-                    src="/imgs/doppios-black-logo.png"
-                    alt="Doppio's logo"
-                  />
-                </div>
-              </div>
-            </div>
-          </div> */}
           <div className="container-fluid d-flex flex-column align-items-center ps-5 pe-5 mb-5 custom-background1 home-separator">
-          <h3 className="card-title fw-bold text-center">Our values</h3>
-          <span className="line-span mb-2"></span>
+            <h3 className="card-title fw-bold text-center">Our values</h3>
+            <span className="line-span mb-2"></span>
             <div className="row d-flex px-5 mx-5">
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
