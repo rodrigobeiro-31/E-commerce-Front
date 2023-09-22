@@ -1,0 +1,8 @@
+.confirmation-container {
+  width: 100%;
+  height: 500px;
+  background-image: url("../../../public/imgs/confirmation-bg.jpg");
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}

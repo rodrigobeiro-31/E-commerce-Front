@@ -92,7 +92,7 @@ function ModalLogin({
                 </div>
 
                 <button type="submit" className="main-btn">
-                  Submit
+                  Login
                 </button>
 
                 <div className="col d-flex align-items-start">

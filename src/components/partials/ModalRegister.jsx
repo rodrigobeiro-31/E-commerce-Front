@@ -124,7 +124,7 @@ function ModalRegister({
                 </div>
 
                 <button type="submit" className="main-btn">
-                  Submit
+                  Register
                 </button>
                 <div className="col d-flex align-items-start">
                   <p className="mt-3 form-text">

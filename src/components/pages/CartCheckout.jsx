@@ -49,7 +49,7 @@ function CartCheckout() {
     });
     dispatch(resetCart());
     dispatch(resetPrice());
-    navigate("/");
+    navigate("/checkout/confirmed")
   }
 
   const handleAddCart = async (product) => {

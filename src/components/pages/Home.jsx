@@ -66,7 +66,7 @@ function Home() {
             <div className="container mt-5">
               <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
                 {products.map((product, id) => (
-                  <ProductCard key={id} product={product} handleAddCart={handleAddCart}/>
+                  <ProductCard key={id} product={product} handleAddCart={handleAddCart} />
                 ))}
                 <ToastContainer autoClose={3000} />
               </div>
@@ -154,9 +154,11 @@ function Home() {
               </div>
             </div>
           </div> */}
-          <div className="container-fluid ps-5 pe-5 mb-5 custom-background1 home-separator">
-            <div className="row d-flex">
-              <div className="col d-flex flex-column align-items-center p-3">
+          <div className="container-fluid d-flex flex-column align-items-center ps-5 pe-5 mb-5 custom-background1 home-separator">
+          <h3 className="card-title fw-bold text-center">Our values</h3>
+          <span className="line-span mb-2"></span>
+            <div className="row d-flex px-5 mx-5">
+              <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon.png"
                   alt="label"
@@ -169,7 +171,7 @@ function Home() {
                   artistry.
                 </p>
               </div>
-              <div className="col d-flex flex-column align-items-center p-3">
+              <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon.png"
                   alt="label"
@@ -184,7 +186,7 @@ function Home() {
                   wholesome and delightful culinary journey.
                 </p>
               </div>
-              <div className="col d-flex flex-column align-items-center p-3">
+              <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon.png"
                   alt="label"
@@ -199,7 +201,7 @@ function Home() {
                   the love and tradition passed down from parents to children.
                 </p>
               </div>
-              <div className="col d-flex flex-column align-items-center p-3">
+              <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon.png"
                   alt="label"
