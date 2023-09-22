@@ -15,6 +15,7 @@ function Profile() {
   const [orders, setOrders] = useState("");
   const [show, setShow] = useState(false);
   const [selectedCart, setSelectedCart] = useState(null);
+  const [username, setUsername] = useState("");
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
 
@@ -41,6 +42,7 @@ function Profile() {
       });
       setFirstname(response.data.firstname);
       setLastname(response.data.lastname);
+      setUsername(firstname + " " + lastname);
       setEmail(response.data.email);
     };
     getUser();
@@ -70,10 +72,7 @@ function Profile() {
             <h2 className="text-uppercase fw-bold contact-title">My account</h2>
             <span className="line-span"></span>
             <p className="fw-normal contact-text">
-              Welcome{" "}
-              <span className="fw-bold span-name">
-                {firstname} {lastname}!
-              </span>{" "}
+              Welcome <span className="fw-bold span-name">{username}!</span>{" "}
               From your Doppios's Account Dashboard, you have the ability to
               edit your profile and track the status of your orders.
             </p>
@@ -170,7 +169,9 @@ function Profile() {
                   orders.map((order, id) => (
                     <tr key={id}>
                       <th scope="row">{order._id}</th>
-                      <td>{format(new Date(order.createdAt), "MMMM dd, yyyy")}</td>
+                      <td>
+                        {format(new Date(order.createdAt), "MMMM dd, yyyy")}
+                      </td>
                       <td>
                         <NavLink
                           className=""
