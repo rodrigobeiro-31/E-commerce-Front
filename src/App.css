@@ -42,7 +42,7 @@ input:focus {
 
 .scroll-btn {
   position: fixed;
-  bottom: 50px;
+  bottom: 25px;
   right: 25px;
   height: 2rem;
   width: 2rem;
@@ -72,11 +72,11 @@ input:focus {
 .project-btn {
   position: fixed;
   bottom: 50%;
-  left: 0px;
+  left: -52px;
   height: 2rem;
   width: auto;
   padding: 1rem;
-  background-color: var(--clr-brown-terciary);
+  background-color: var(--mainBrown);
   border: none;
   display: flex;
   align-items: center;
@@ -85,6 +85,7 @@ input:focus {
   animation-name: opacity;
   animation-duration: 3s;
   z-index: 99999;
+  transform: rotate(-90deg);
 }
 
 @keyframes opacity {
@@ -94,12 +95,12 @@ input:focus {
   }
   to {
     opacity: 1;
-    left: 0px;
+    left: -52px;
   }
 }
 
 .project-btn:hover {
-  background-color: var(--mainBrown);
+  background-color: var(--secondaryBrown);
 }
 
 .project-link {
