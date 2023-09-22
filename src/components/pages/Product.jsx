@@ -46,6 +46,12 @@ function Product() {
     notify();
   };
 
+  const notifyError = () => {
+    toast.error("Sorry, there's no more stock for this product.", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
+
   return (
     product && (
       <>
@@ -73,18 +79,27 @@ function Product() {
                   <p>CATEGORY: {product.category}</p>
                   <p className="text-body-secondary ">STOCK: {product.stock}</p>
                   <hr className="mt-2" />
-                  <div
-                    className="d-flex justify-content-end mt-5 "
-                    onClick={() => handleAddCart(product)}
-                  >
-                    <a
-                      href="#"
-                      className="text-decoration-none d-flex align-items-center px-5 py-3 addToCartButton"
+                  {product.stock > 0
+                    ? <div
+                      className="d-flex justify-content-end mt-5 "
+                      onClick={() => handleAddCart(product)}
                     >
+                      <button
+                        className="d-flex align-items-center px-5 py-3 main-btn">
+                        <BsCartFill />
+                        <span className="ms-2">ADD TO CART</span>
+                      </button>
+                    </div>
+                    : <div
+                    className="d-flex justify-content-end mt-5 "
+                    onClick={notifyError}>
+                    <button
+                      className="d-flex align-items-center px-5 py-3 main-btn">
                       <BsCartFill />
                       <span className="ms-2">ADD TO CART</span>
-                    </a>
+                    </button>
                   </div>
+                  }
                   <ToastContainer autoClose={3000} />
                 </div>
               </div>
@@ -141,7 +156,7 @@ function Product() {
           <div className="container mt-5">
             <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
               {interestingProduct.map((product, id) => (
-                  <ProductCard key={id} product={product} handleAddCart={handleAddCart}/>
+                <ProductCard key={id} product={product} handleAddCart={handleAddCart} />
               ))}
             </div>
           </div>
