@@ -4,7 +4,7 @@ import { BsCartFill } from "react-icons/bs";
 import Accordion from "react-bootstrap/Accordion";
 import { useEffect, useState } from "react";
 import { useParams, useLocation } from "react-router-dom";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import axios from "axios";
 import { addToCart } from "../../redux/cartSlice";
 import { addPrice } from "../../redux/orderPriceSlice";
@@ -14,11 +14,11 @@ import ProductCard from "../partials/ProductCard";
 
 function Product() {
   const params = useParams();
+  const cart = useSelector((state) => state.cart);
   const slug = params.slug;
   const dispatch = useDispatch();
   const [interestingProduct, setInterestingProduct] = useState([]);
   const [product, setProduct] = useState([]);
-  const [stock, setStock] = useState();
   const location = useLocation();
 
   const notify = () => {
@@ -43,17 +43,25 @@ function Product() {
         }, */
       });
       response && setProduct(response.data.product[0]);
-      response && setStock(response.data.product[0].stock);
       response && setInterestingProduct(response.data.products);
     };
     getProduct();
   }, [location.pathname]);
 
   const handleAddCart = async (product) => {
-    dispatch(addToCart(product));
-    dispatch(addPrice(product.price));
-    setStock(stock - 1);
-    notify();
+    if (cart.length === 0) {
+      dispatch(addToCart(product));
+      dispatch(addPrice(product.price));
+      notify();
+    }
+    const control = cart.find((item) => item._id === product._id);
+    if (control.quantity < control.stock) {
+      dispatch(addToCart(product));
+      dispatch(addPrice(product.price));
+      notify();
+    } else {
+      notifyError();
+    }
   };
 
   return (
@@ -83,27 +91,16 @@ function Product() {
                   <p>CATEGORY: {product.category}</p>
                   <p className="text-body-secondary ">STOCK: {product.stock}</p>
                   <hr className="mt-2" />
-                  {stock > 0
-                    ? <div
-                      className="d-flex justify-content-end mt-5 "
-                      onClick={() => handleAddCart(product)}
-                    >
-                      <button
-                        className="d-flex align-items-center px-5 py-3 main-btn">
-                        <BsCartFill />
-                        <span className="ms-2">ADD TO CART</span>
-                      </button>
-                    </div>
-                    : <div
-                      className="d-flex justify-content-end mt-5 "
-                      onClick={notifyError}>
-                      <button
-                        className="d-flex align-items-center px-5 py-3 main-btn">
-                        <BsCartFill />
-                        <span className="ms-2">ADD TO CART</span>
-                      </button>
-                    </div>
-                  }
+
+                  <div
+                    className="d-flex justify-content-end mt-5 "
+                    onClick={() => handleAddCart(product)}
+                  >
+                    <button className="d-flex align-items-center px-5 py-3 main-btn">
+                      <BsCartFill />
+                      <span className="ms-2">ADD TO CART</span>
+                    </button>
+                  </div>
                   <ToastContainer autoClose={3000} />
                 </div>
               </div>
@@ -160,7 +157,11 @@ function Product() {
           <div className="container mt-5">
             <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
               {interestingProduct.map((product, id) => (
-                <ProductCard key={id} product={product} handleAddCart={handleAddCart} />
+                <ProductCard
+                  key={id}
+                  product={product}
+                  handleAddCart={handleAddCart}
+                />
               ))}
             </div>
           </div>
