@@ -5,6 +5,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Profile.css";
 import ModalOrder from "../partials/ModalOrder";
+import { format } from "date-fns";
 
 function Profile() {
   const [firstname, setFirstname] = useState("");
@@ -169,7 +170,7 @@ function Profile() {
                   orders.map((order, id) => (
                     <tr key={id}>
                       <th scope="row">{order._id}</th>
-                      <td>{order.createdAt}</td>
+                      <td>{format(new Date(order.createdAt), "MMMM dd, yyyy")}</td>
                       <td>
                         <NavLink
                           className=""
