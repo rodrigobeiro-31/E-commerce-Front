@@ -119,3 +119,9 @@ select:focus {
   border-color: var(--secondaryBrown) !important;
   color: var(--mainBrown) !important;
 }
+
+textarea {
+  box-shadow: none !important;
+  border-color: var(--secondaryBrown) !important;
+  color: var(--mainBrown) !important;
+}

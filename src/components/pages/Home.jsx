@@ -136,7 +136,9 @@ function Home() {
             </div>
           </section>
           <div className="container-fluid d-flex flex-column align-items-center ps-5 pe-5 mb-5 custom-background1 home-separator">
-            <h3 className="card-title fw-bold text-center">Our values</h3>
+            <h3 className="card-title fw-bold text-center contact-title">
+              Our values
+            </h3>
             <span className="line-span mb-2"></span>
             <div className="row d-flex px-5 mx-5">
               <div className="col d-flex flex-column align-items-center p-3 home-value">
