@@ -34,12 +34,20 @@ hr {
 }
 
 .accordion-button:not(.collapsed) {
-  color: var(--darkBrown);
-  background-color: var(--clr-brown-terciary);
+  color: white;
+  background-color: var(--mainBrown);
   box-shadow: inset 0 calc(-1 * var(--secondaryBrown)) 0 var(--secondaryBrown);
 }
 
 .accordion-button.collapsed {
-  color: var(--darkBrown);
-  background-color: var(--secondaryBrown);
+  color: white;
+  background-color: var(--darkBrown);
+}
+
+.accordion-button::after{
+  background-image: url("https://www.freeiconspng.com/thumbs/white-arrow-png/white-down-arrow-png-2.png") !important; 
+}
+
+.accordion-button:focus{
+  box-shadow: none;
 }
