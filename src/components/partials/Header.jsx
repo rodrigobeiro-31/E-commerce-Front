@@ -68,7 +68,7 @@ function Header() {
         <div>
           <Navbar.Brand href="/">
             <img
-              src="imgs/doppios-white-logo.png"
+              src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-white-logo.png"
               alt="Doppios Logo"
               className="nav-logo"
             />

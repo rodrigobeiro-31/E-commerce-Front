@@ -63,7 +63,7 @@ function Home() {
         <div className="container-fluid p-0 g-0">
           <img
             id="homeBanner1"
-            src="./imgs/home-banner.jpg"
+            src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-banner.jpg"
             alt="Coffee beans"
           />
           <div className="home-gd-overlay"></div>
@@ -73,7 +73,7 @@ function Home() {
           >
             <img
               id="homeLogo"
-              src="/imgs/doppios-main-logo.png"
+              src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-main-logo.png"
               alt="Doppio's"
             />
           </div>
@@ -100,7 +100,7 @@ function Home() {
           >
             <div className="home-img-container">
               <img
-                src="imgs/home-about-img.jpg"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-about-img.jpg"
                 alt="coffee-shop"
                 className="img-home"
               />
@@ -130,7 +130,7 @@ function Home() {
               </p>
               <img
                 className="img align-self-center mt-4 mb-0 opacity-75 home-section-logo"
-                src="/imgs/doppios-black-logo.png"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-black-logo.png"
                 alt="Doppio's logo"
               />
             </div>
@@ -141,7 +141,7 @@ function Home() {
             <div className="row d-flex px-5 mx-5">
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon.png"
+                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -154,7 +154,7 @@ function Home() {
               </div>
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon.png"
+                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -169,7 +169,7 @@ function Home() {
               </div>
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon.png"
+                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -184,7 +184,7 @@ function Home() {
               </div>
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon.png"
+                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -199,13 +199,13 @@ function Home() {
           </div>
           <Carousel>
             <Carousel.Item>
-              <Image src="./imgs/home-carousel-1.jpg" className="w-100" fluid />
+              <Image src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-1.jpg" className="w-100" fluid />
             </Carousel.Item>
             <Carousel.Item>
-              <Image src="./imgs/home-carousel-2.jpg" className="w-100" fluid />
+              <Image src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-2.jpg" className="w-100" fluid />
             </Carousel.Item>
             <Carousel.Item>
-              <Image src="./imgs/home-carousel-3.jpg" className="w-100" fluid />
+              <Image src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-3.jpg" className="w-100" fluid />
             </Carousel.Item>
           </Carousel>
         </div>
