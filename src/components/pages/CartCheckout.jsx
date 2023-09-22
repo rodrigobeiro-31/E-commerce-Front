@@ -104,8 +104,12 @@ function CartCheckout() {
                               onClick={() => handleRemoveFromCart(product)} />
                             : <BsFillDashCircleFill className="btn text-secondary m-0 p-0" disabled />}
                           <p className="fw-normal text-black fs-5 m-0 mx-2 p-0">{product.quantity}</p>
-                          <BsFillPlusCircleFill className="btn m-0 p-0"
+                          {product.stock > product.quantity
+                          ? <BsFillPlusCircleFill className="btn m-0 p-0"
                             onClick={() => handleAddCart(product)} />
+                            : <BsFillPlusCircleFill className="btn text-secondary m-0 p-0"
+                            disabled />
+                          }
                         </div>
                       </td>
                       <td>$ {product.totalPrice.toFixed(2)}</td>
