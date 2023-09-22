@@ -94,7 +94,7 @@ function About() {
           <div className="d-flex flex-column justify-content-center align-items-center">
             <h2 className="contact-title">MAIN WEB</h2>
             <span className="line-span"></span>
-            <img src="imgs/doppios1.png" alt="" className="about-img" />
+            <img src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-1.png" alt="" className="about-img" />
             <p className="contact-text my-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam
               recusandae aperiam facere asperiores fuga enim eaque iusto nemo ex
@@ -105,7 +105,7 @@ function About() {
           <div className="d-flex flex-column justify-content-center align-items-center mt-5">
             <h2 className="contact-title">ADMIN WEB</h2>
             <span className="line-span"></span>
-            <img src="imgs/doppios2.png" alt="" className="about-img" />
+            <img src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.png" alt="" className="about-img" />
             <p className="contact-text my-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam
               recusandae aperiam facere asperiores fuga enim eaque iusto nemo ex

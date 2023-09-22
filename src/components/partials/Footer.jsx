@@ -9,7 +9,7 @@ function Footer() {
     <>
       <footer className="row m-0 p-0">
         <div className="footer-container">
-          <div className="col-xxl-4 col-md-12 col-sm-12 col-xs-12 section-container">
+          <div className="col-12 col-md-4 section-container">
             <h4 className="text-white footer-title mb-5">Opening hours</h4>
             <div>
               <ul className="days-container">
@@ -51,7 +51,7 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="col-xxl-4 col-md-12 col-sm-12 col-xs-12 section-container">
+          <div className="col-12 col-md-4 section-container">
             <h4 className="text-white footer-title mb-5">Contact us</h4>
             <div className="footer-contact">
               <ul>
@@ -77,7 +77,7 @@ function Footer() {
               </div>
             </div>
           </div>
-          <div className="col-xxl-4 col-md-12 col-sm-12 col-xs-12 section-container">
+          <div className="col-12 col-md-4 section-container">
             <h4 className="text-white footer-title mb-5">Other locations</h4>
             <div>
               <h5 className="text-white location-title">

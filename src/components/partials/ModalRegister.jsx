@@ -55,7 +55,7 @@ function ModalRegister({
           <div className="register-container">
             <div className="register-img-container">
               <img
-                src="imgs/doppios-main-logo.png"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-main-logo.png"
                 alt="mainLogo"
                 className="login-img"
               />
