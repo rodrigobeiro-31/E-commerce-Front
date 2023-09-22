@@ -66,7 +66,7 @@ function Contact() {
         </div>
         <div className="container mb-5 mt-5 text-white d-flex justify-content-center align-items-center">
           <div className="d-flex justify-content-center">
-            <div className="row contact-container ">
+            <div className="row d-flex justify-contact-between gap-5 contact-container">
               <div className="col-6">
                 <div className="container">
                   <div>
@@ -181,10 +181,10 @@ function Contact() {
                         <option>Other</option>
                       </select>
                     </div>
-                    <div className="col-12 d-flex justify-content-end text-center pt-1">
+                    <div className="col-6 d-flex justify-content-end text-center pt-1">
                       <button
                         type="submit"
-                        className="m-4 text-center main-btn btn-contact"
+                        className="px-5 text-center main-btn btn-contact"
                       >
                         Send
                       </button>
@@ -192,48 +192,69 @@ function Contact() {
                   </form>
                 </div>
               </div>
-              <div className="col-6">
-                <div>
-                  <h2 className="fw-bold pt-4 contact-title">Locations</h2>
-                  <span className="line-span"></span>
-                  <p className="m-0 contact-text">
-                    Mondays through Fridays from 9:00 am to 19:00 pm
-                  </p>
-                  <p className="m-0 contact-text">
-                    Saturdays and Sundays from 9:00 am to 13:00 pm
-                  </p>
-                  <div className="locations-container row">
-                    <div className="col-6">
-                      <div className="mt-5">
-                        <h5 className="contact-text fw-bold">ADDRESS</h5>
-                        <p className="contact-text">Requena 2054, Montevideo</p>
-                      </div>
-                      <div className="mt-5">
-                        <h5 className="contact-text fw-bold">PHONES</h5>
-                        <p className="contact-text">099 999 999</p>
-                      </div>
-                      <div className="mt-5">
-                        <h5 className="contact-text fw-bold">EMAILS</h5>
-                        <p className="contact-text">doppios@doppios.com</p>
-                      </div>
-                    </div>
-                    <div className="col-6">
-                      <div className="mt-5">
-                        <h5 className="contact-text fw-bold">ADDRESS</h5>
-                        <p className="contact-text">
-                          Av Brasil 4321, Montevideo
-                        </p>
-                      </div>
-                      <div className="mt-5">
-                        <h5 className="contact-text fw-bold">PHONES</h5>
-                        <p className="contact-text">2425 2345</p>
-                      </div>
-                      <div className="mt-5">
-                        <h5 className="contact-text fw-bold">EMAILS</h5>
-                        <p className="contact-text">contact@doppios.com</p>
-                      </div>
-                    </div>
-                    <div className="col-6"></div>
+              <div className="col-5">
+                <h2 className="fw-bold pt-4 contact-title">Locations</h2>
+                <span className="line-span"></span>
+                <div className="row d-flex justify-content-between">
+                  <h5 className="opening-hours">Opening hours</h5>
+                  <ul className="contact-days-container">
+                    <li>
+                      <span className="text-span">Monday</span>
+                      <span className="span-line"></span>
+                      <span className="text-span opacity-50">Closed</span>
+                    </li>
+                    <li>
+                      <span className="text-span">Tuesday</span>
+                      <span className="span-line"></span>
+                      <span className="text-span">9:00 - 22:00</span>
+                    </li>
+                    <li>
+                      <span className="text-span">Wednesday</span>
+                      <span className="span-line"></span>
+                      <span className="text-span">9:00 - 22:00</span>
+                    </li>
+                    <li>
+                      <span className="text-span">Thursday</span>
+                      <span className="span-line"></span>
+                      <span className="text-span">9:00 - 22:00</span>
+                    </li>
+                    <li>
+                      <span className="text-span">Friday</span>
+                      <span className="span-line"></span>
+                      <span className="text-span">9:00 - 1:00</span>
+                    </li>
+                    <li>
+                      <span className="text-span">Saturday</span>
+                      <span className="span-line"></span>
+                      <span className="text-span">12:00 - 1:00</span>
+                    </li>
+                    <li>
+                      <span className="text-span">Sunday</span>
+                      <span className="span-line"></span>
+                      <span className="text-span">9:00 - 22:00</span>
+                    </li>
+                  </ul>
+                </div>
+                <div className="row d-flex flex-wrap mt-5 locations-container">
+                  <div className="col-6 mt-2">
+                    <h5 className="contact-text fw-bold">DOPPIO'S CENTRAL CAFE</h5>
+                    <p className="contact-text">Requena 2054, Montevideo</p>
+                  </div>
+                  <div className="col-6 mt-2">
+                    <h5 className="contact-text fw-bold">DOPPIO'S TAKEAWAY</h5>
+                    <p className="contact-text">
+                      Av Brasil 4321, Montevideo
+                    </p>
+                  </div>
+                  <div className="col-6 mt-5">
+                    <h5 className="contact-text fw-bold mb-3">PHONE NUMBERS</h5>
+                    <p className="contact-text m-0">099 999 999</p>
+                    <p className="contact-text m-0">2425 2345</p>
+                  </div>
+                  <div className="col-6 mt-5">
+                    <h5 className="contact-text fw-bold mb-3">EMAILS</h5>
+                    <p className="contact-text m-0">doppios@doppios.com</p>
+                    <p className="contact-text m-0">contact@doppios.com</p>
                   </div>
                 </div>
               </div>

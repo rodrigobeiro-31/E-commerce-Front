@@ -8,9 +8,10 @@ function OrderConfirmed() {
         <h3 className="fw-bold title">Order confirmed!</h3>
       </div>
       <div className="d-flex flex-column justify-content-center align-items-center p-5">
-        <h4>
+        <img className="confirmation-logo" src="../../../public/imgs/doppios-black-logo.png" alt="Doppio's logo" />
+        <h3 className="fw-semibold">
           Thank you for buying at Doppio's!
-        </h4>
+        </h3>
         <span className="line-span mb-4"></span>
         <NavLink to="/products" className="mb-5 main-btn">
           Continue buying

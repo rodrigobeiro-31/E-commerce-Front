@@ -1,7 +1,7 @@
 .imageContainer {
   margin: 0;
   padding: 0;
-  height: 400px;
+  height: 100vh;
   background-image: url("/imgs/all_products_banner.jpg");
   background-size: cover;
 }

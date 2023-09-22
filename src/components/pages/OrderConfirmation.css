@@ -1,8 +1,13 @@
 .confirmation-container {
   width: 100%;
-  height: 500px;
+  height: 100vh;
   background-image: url("../../../public/imgs/confirmation-bg.jpg");
   background-size: cover;
   display: flex;
   align-items: center;
+}
+
+.confirmation-logo {
+  width: 10rem;
+  opacity: 90%;
 }

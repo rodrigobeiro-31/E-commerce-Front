@@ -17,6 +17,7 @@
 }
 
 .contact-container {
+  font-family: var(--roboto-condensed);
   background-color: transparent !important;
   margin: 3rem 0;
   display: flex;
@@ -43,4 +44,34 @@
 
 .btn-contact {
   align-self: flex-end !important;
+}
+
+.opening-hours {
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--darkBrown);
+}
+
+.contact-days-container {
+  font-weight: 400;
+  padding: 0;
+  list-style: none;
+  color: rgb(0, 0, 0);
+  text-transform: uppercase;
+}
+
+.contact-days-container > li {
+  height: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.text-span {
+  white-space: nowrap;
+  align-self: flex-end !important;
+}
+
+.span-line {
+  width: 100%;
+  border-bottom: 0.2px solid var(--mainBrown);
 }
