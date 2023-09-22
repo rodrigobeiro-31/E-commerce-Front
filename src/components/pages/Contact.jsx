@@ -76,7 +76,7 @@ function Contact() {
                       We will be responding to you shortly.
                     </p>
                   </div>
-                  <form onSubmit={sendForm} className="row">
+                  <form action="https://formspree.io/f/xqkvygjd"  method="POST" className="row">
                     <div className="col-6">
                       <label
                         htmlFor="firstName"
