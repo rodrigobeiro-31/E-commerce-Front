@@ -1,5 +1,5 @@
 import React from "react";
-import "./product.css";
+import "./Product.css";
 import { BsCartFill } from "react-icons/bs";
 import Accordion from "react-bootstrap/Accordion";
 import { useEffect, useState } from "react";
@@ -18,9 +18,17 @@ function Product() {
   const dispatch = useDispatch();
   const [interestingProduct, setInterestingProduct] = useState([]);
   const [product, setProduct] = useState([]);
+  const [stock, setStock] = useState();
   const location = useLocation();
+
   const notify = () => {
     toast.success("Product added!", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
+
+  const notifyError = () => {
+    toast.error("Sorry, there's no more stock for this product.", {
       position: toast.POSITION.BOTTOM_LEFT,
     });
   };
@@ -35,6 +43,7 @@ function Product() {
         }, */
       });
       response && setProduct(response.data.product[0]);
+      response && setStock(response.data.product[0].stock);
       response && setInterestingProduct(response.data.products);
     };
     getProduct();
@@ -43,13 +52,8 @@ function Product() {
   const handleAddCart = async (product) => {
     dispatch(addToCart(product));
     dispatch(addPrice(product.price));
+    setStock(stock - 1);
     notify();
-  };
-
-  const notifyError = () => {
-    toast.error("Sorry, there's no more stock for this product.", {
-      position: toast.POSITION.BOTTOM_LEFT,
-    });
   };
 
   return (
@@ -79,7 +83,7 @@ function Product() {
                   <p>CATEGORY: {product.category}</p>
                   <p className="text-body-secondary ">STOCK: {product.stock}</p>
                   <hr className="mt-2" />
-                  {product.stock > 0
+                  {stock > 0
                     ? <div
                       className="d-flex justify-content-end mt-5 "
                       onClick={() => handleAddCart(product)}
@@ -91,14 +95,14 @@ function Product() {
                       </button>
                     </div>
                     : <div
-                    className="d-flex justify-content-end mt-5 "
-                    onClick={notifyError}>
-                    <button
-                      className="d-flex align-items-center px-5 py-3 main-btn">
-                      <BsCartFill />
-                      <span className="ms-2">ADD TO CART</span>
-                    </button>
-                  </div>
+                      className="d-flex justify-content-end mt-5 "
+                      onClick={notifyError}>
+                      <button
+                        className="d-flex align-items-center px-5 py-3 main-btn">
+                        <BsCartFill />
+                        <span className="ms-2">ADD TO CART</span>
+                      </button>
+                    </div>
                   }
                   <ToastContainer autoClose={3000} />
                 </div>

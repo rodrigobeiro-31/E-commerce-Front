@@ -1,24 +1,18 @@
 import { NavLink } from "react-router-dom";
 import { BsCartFill } from "react-icons/bs";
 import "../pages/Home.css";
-import "../products.css";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import "../pages/Products.css";
+import { useState } from "react";
 
-function ProductCard({ product, handleAddCart }) {
-    const notifyError = () => {
-        toast.error("Sorry, there's no more stock for this product.", {
-            position: toast.POSITION.BOTTOM_LEFT,
-        });
-    };
+function ProductCard({ product, handleAddCart, notifyError }) {
+    const [stock, setStock] = useState(product.stock);
 
     return (
         <div className="mainCard p-1 rounded-1">
             <div className="productsCard">
                 <NavLink
                     className="text-decoration-none productName"
-                    to={`/products/${product.slug}`}
-                >
+                    to={`/products/${product.slug}`}>
                     <img
                         src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                         className="card-img imgCard"
@@ -41,10 +35,13 @@ function ProductCard({ product, handleAddCart }) {
                         <p className="card-text priceText fw-semibold mt-2 mb-2">
                             $ {product.price}
                         </p>
-                        {product.stock > 0
+                        {stock > 0
                             ? <button
                                 className="addToCartButton1 px-3 py-2 d-flex align-items-center"
-                                onClick={() => handleAddCart(product)}
+                                onClick={() => {
+                                    handleAddCart(product);
+                                    setStock(stock - 1)
+                                }}
                             >
                                 <BsCartFill className="me-1" /> Add
                             </button>
@@ -58,7 +55,6 @@ function ProductCard({ product, handleAddCart }) {
                     </div>
                 </div>
             </div>
-            <ToastContainer autoClose={3000} />
         </div>
     )
 };

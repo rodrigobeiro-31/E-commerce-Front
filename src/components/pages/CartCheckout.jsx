@@ -121,7 +121,7 @@ function CartCheckout() {
                 </tbody>
               </table>
             </div>
-            <div className="col-3 card p-3">
+            <div className="col-3 card p-3 checkout-summary">
               <div className="card-body">
                 <h5 className="card-title mb-4">Order summary</h5>
                 <ul className="me-4">

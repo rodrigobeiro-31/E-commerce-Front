@@ -13,11 +13,13 @@ import { configureStore, combineReducers } from "@reduxjs/toolkit";
 import userReducer from "./userSlice";
 import orderPriceReducer from "./orderPriceSlice";
 import cartReducer from "./cartSlice";
+import stockReducer from "./stockSlice";
 
 const rootReducer = combineReducers({
   user: userReducer,
   cart: cartReducer,
   orderPrice: orderPriceReducer,
+  stock: stockReducer,
 });
 
 const persistConfig = {

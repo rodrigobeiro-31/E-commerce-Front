@@ -4,7 +4,7 @@ import { useEffect, useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
 import Image from "react-bootstrap/Image";
 import "./Home.css";
-import "../products.css";
+import "./Products.css";
 import { addToCart } from "../../redux/cartSlice";
 import { addPrice } from "../../redux/orderPriceSlice";
 import { ToastContainer, toast } from "react-toastify";
@@ -45,7 +45,7 @@ function Home() {
         <div className="container-fluid p-0 g-0">
           <img
             id="homeBanner1"
-            src="./imgs/home-banner-1.jpg"
+            src="./imgs/home-banner.jpg"
             alt="Coffee beans"
           />
           <div className="home-gd-overlay"></div>

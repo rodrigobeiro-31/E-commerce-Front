@@ -1,5 +1,5 @@
 import React from "react";
-import "../products.css";
+import "./Products.css";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { addToCart } from "../../redux/cartSlice";
@@ -12,12 +12,19 @@ import ProductCard from "../partials/ProductCard";
 function Products() {
   const [products, setProducts] = useState();
   const dispatch = useDispatch();
+
   const notify = () => {
     toast.success("Product added!", {
       position: toast.POSITION.BOTTOM_LEFT,
     });
   };
   const [filtered, setFiltered] = useState("All");
+
+  const notifyError = () => {
+    toast.error("Sorry, there's no more stock for this product.", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
 
   useEffect(() => {
     const getProducts = async () => {
@@ -62,7 +69,7 @@ function Products() {
             </div>
             <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
               {products.map((product, id) => (
-                <ProductCard key={id} product={product} handleAddCart={handleAddCart} />
+                <ProductCard key={id} product={product} handleAddCart={handleAddCart} notifyError={notifyError} />
               ))}
               <ToastContainer autoClose={3000} />
             </div>
