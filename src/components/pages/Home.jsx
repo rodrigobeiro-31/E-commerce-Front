@@ -15,9 +15,17 @@ import ProductCard from "../partials/ProductCard";
 
 function Home() {
   const [products, setProducts] = useState();
+  const cart = useSelector((state) => state.cart);
   const dispatch = useDispatch();
+
   const notify = () => {
     toast.success("Product added!", {
+      position: toast.POSITION.BOTTOM_LEFT,
+    });
+  };
+
+  const notifyError = () => {
+    toast.error("Sorry, there's no more stock for this product.", {
       position: toast.POSITION.BOTTOM_LEFT,
     });
   };
@@ -34,9 +42,19 @@ function Home() {
   }, []);
 
   const handleAddCart = async (product) => {
-    dispatch(addToCart(product));
-    dispatch(addPrice(product.price));
-    notify();
+    if (cart.length === 0) {
+      dispatch(addToCart(product));
+      dispatch(addPrice(product.price));
+      notify();
+    }
+    const control = cart.find((item) => item._id === product._id);
+    if (control.quantity < control.stock) {
+      dispatch(addToCart(product));
+      dispatch(addPrice(product.price));
+      notify();
+    } else {
+      notifyError();
+    }
   };
 
   return (
@@ -66,7 +84,11 @@ function Home() {
             <div className="container mt-5">
               <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
                 {products.map((product, id) => (
-                  <ProductCard key={id} product={product} handleAddCart={handleAddCart} />
+                  <ProductCard
+                    key={id}
+                    product={product}
+                    handleAddCart={handleAddCart}
+                  />
                 ))}
                 <ToastContainer autoClose={3000} />
               </div>
