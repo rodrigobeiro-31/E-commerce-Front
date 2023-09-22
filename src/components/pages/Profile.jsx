@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { LiaUserEditSolid } from "react-icons/lia";
 import { useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import axios from "axios";
 import "./Profile.css";
+import ModalOrder from "../partials/ModalOrder";
 
 function Profile() {
   const [firstname, setFirstname] = useState("");
@@ -11,9 +12,13 @@ function Profile() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [orders, setOrders] = useState("");
+  const [show, setShow] = useState(false);
+  const [selectedCart, setSelectedCart] = useState(null);
   const navigate = useNavigate();
   const user = useSelector((state) => state.user);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   const handleSubmit = async (e) => {
     e.preventDefault();
     await axios({
@@ -154,16 +159,34 @@ function Profile() {
                 <tr>
                   <th scope="col">Order ID</th>
                   <th scope="col">Date</th>
+                  <th scope="col">Products</th>
                   <th scope="col">Status</th>
                 </tr>
               </thead>
               <tbody>
+                {console.log(orders)}
                 {orders.length > 0 &&
-                  orders.map((order) => (
-                    <tr>
+                  orders.map((order, id) => (
+                    <tr key={id}>
                       <th scope="row">{order._id}</th>
                       <td>{order.createdAt}</td>
+                      <td>
+                        <NavLink
+                          className=""
+                          onClick={() => {
+                            handleShow();
+                            setSelectedCart(order.cart);
+                          }}
+                        >
+                          View products
+                        </NavLink>
+                      </td>
                       <td>{order.status}</td>
+                      <ModalOrder
+                        handleClose={handleClose}
+                        show={show}
+                        cart={selectedCart}
+                      />
                     </tr>
                   ))}
               </tbody>
