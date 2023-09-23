@@ -30,22 +30,17 @@ function Contact() {
     e.preventDefault();
     try {
       // Realiza la solicitud POST utilizando Axios
-      const response = await axios.post(
-        "http://localhost:3000/user/contact",
-        formData,
-        {
-          /* headers: {
-            Authorization: `Bearer ${token}`,
-          }, */
-        }
-      );
+      const response = await axios({
+        method: "post",
+        url: "http://localhost:3000/admin/contact",
+        data: formData,
+      });
 
       // Haz algo con la respuesta, como mostrarla en la consola
-      console.log(response.data);
       setFormData({
         firstname: "",
         lastname: "",
-        fone: "",
+        phone: "",
         direction: "",
         affaire: "",
         options: "",
@@ -76,7 +71,7 @@ function Contact() {
                       We will be responding to you shortly.
                     </p>
                   </div>
-                  <form action="https://formspree.io/f/xqkvygjd"  method="POST" className="row">
+                  <form onSubmit={sendForm} className="row">
                     <div className="col-6">
                       <label
                         htmlFor="firstName"
@@ -237,14 +232,14 @@ function Contact() {
                 </div>
                 <div className="row d-flex flex-wrap mt-5 locations-container">
                   <div className="col-6 mt-2">
-                    <h5 className="contact-text fw-bold">DOPPIO'S CENTRAL CAFE</h5>
+                    <h5 className="contact-text fw-bold">
+                      DOPPIO'S CENTRAL CAFE
+                    </h5>
                     <p className="contact-text">Requena 2054, Montevideo</p>
                   </div>
                   <div className="col-6 mt-2">
                     <h5 className="contact-text fw-bold">DOPPIO'S TAKEAWAY</h5>
-                    <p className="contact-text">
-                      Av Brasil 4321, Montevideo
-                    </p>
+                    <p className="contact-text">Av Brasil 4321, Montevideo</p>
                   </div>
                   <div className="col-6 mt-5">
                     <h5 className="contact-text fw-bold mb-3">PHONE NUMBERS</h5>
