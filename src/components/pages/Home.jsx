@@ -42,13 +42,13 @@ function Home() {
   }, []);
 
   const handleAddCart = async (product) => {
-    if (cart.length === 0) {
+    const control = cart.find((item) => item._id === product._id);
+
+    if (control && control.quantity < control.stock) {
       dispatch(addToCart(product));
       dispatch(addPrice(product.price));
       notify();
-    }
-    const control = cart.find((item) => item._id === product._id);
-    if (control.quantity < control.stock) {
+    } else if (!control) {
       dispatch(addToCart(product));
       dispatch(addPrice(product.price));
       notify();
