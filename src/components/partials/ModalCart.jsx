@@ -16,7 +16,7 @@ import {
   removeTotalPrice,
 } from "../../redux/orderPriceSlice";
 import { NavLink } from "react-router-dom";
-import './ModalCart.css';
+import "./ModalCart.css";
 
 function ModalCart({
   show,
@@ -59,26 +59,40 @@ function ModalCart({
               <div key={id} className="row">
                 <div className="row mb-2 d-flex justify-content-between align-items-center m-0 p-0">
                   <div className="col-5">
-                    <h6 className="fw-semibold text-dark m-0 cart-product-substring">{product.name}</h6>
+                    <h6 className="fw-semibold text-dark m-0 cart-product-substring">
+                      {product.name}
+                    </h6>
                     <p className="text-secondary m-0 p-0">{product.category}</p>
                   </div>
                   <div className="col-7 d-flex justify-content-between">
                     <div className="d-flex align-items-center m-0 p-0">
-                      <BsFillDashCircleFill className="btn m-0 p-0"
-                        onClick={() => handleRemoveFromCart(product)} />
-                      <p className="fw-normal text-black fs-5 m-0 mx-2 p-0">{product.quantity}</p>
-                      {product.stock > product.quantity 
-                      ? <BsFillPlusCircleFill className="btn m-0 p-0"
-                        onClick={() => handleAddCart(product)} />
-                      : <BsFillPlusCircleFill className="btn text-secondary m-0 p-0" disabled />
-                      }
+                      <BsFillDashCircleFill
+                        className="btn m-0 p-0"
+                        onClick={() => handleRemoveFromCart(product)}
+                      />
+                      <p className="fw-normal text-black fs-5 m-0 mx-2 p-0">
+                        {product.quantity}
+                      </p>
+                      {product.stock > product.quantity ? (
+                        <BsFillPlusCircleFill
+                          className="btn m-0 p-0"
+                          onClick={() => handleAddCart(product)}
+                        />
+                      ) : (
+                        <BsFillPlusCircleFill
+                          className="btn text-secondary m-0 p-0"
+                          disabled
+                        />
+                      )}
                     </div>
                     <div className="d-flex align-items-center m-0 p-0">
                       <h6 className="text-black m-0 p-0 me-2">
                         $ {product.totalPrice.toFixed(2)}
                       </h6>
-                      <BsTrash3Fill className="btn fs-5 m-0 p-0"
-                        onClick={() => handleRemoveProduct(product)} />
+                      <BsTrash3Fill
+                        className="btn fs-5 m-0 p-0"
+                        onClick={() => handleRemoveProduct(product)}
+                      />
                     </div>
                   </div>
                 </div>
@@ -86,11 +100,13 @@ function ModalCart({
             ))}
         </Offcanvas.Body>
         <div className="border-top cart-footer">
-          <div className="d-flex justify-content-between px-2">
+          <div className="d-flex justify-content-between px-3 mt-3">
             <p className="fw-bold">Order total</p>
-            <p className="fw-bold">US$ {orderPrice < 0 ? "0.00" : orderPrice.toFixed(2)}</p>
+            <p className="fw-bold">
+              US$ {orderPrice < 0 ? "0.00" : orderPrice.toFixed(2)}
+            </p>
           </div>
-          <div className="d-flex justify-content-between px-2">
+          <div className="d-flex justify-content-between px-3">
             <p className="fw-bold">Shipping</p>
             <p className="fw-bold">Free</p>
           </div>

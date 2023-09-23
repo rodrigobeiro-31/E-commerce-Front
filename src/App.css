@@ -74,7 +74,7 @@ input:focus {
 .project-btn {
   position: fixed;
   bottom: 50%;
-  left: -52px;
+  left: -58px;
   height: 2rem;
   width: auto;
   padding: 1rem;
@@ -97,7 +97,7 @@ input:focus {
   }
   to {
     opacity: 1;
-    left: -52px;
+    left: -58px;
   }
 }
 
@@ -107,8 +107,8 @@ input:focus {
 
 .project-link {
   color: white;
-  font-size: 0.8rem;
-  font-weight: 500;
+  font-size: 1rem;
+  font-weight: 800;
 }
 
 select {
@@ -132,6 +132,8 @@ textarea {
   font-weight: 700;
   font-size: 5rem;
   text-shadow: black 0px 10px 1rem;
+  color: white;
+  z-index: 10;
 }
 
 .main-container {
@@ -154,6 +156,6 @@ textarea {
   color: var(--lightBackground);
 }
 
-th{
-color: var(--mainBrown) !important;
+th {
+  color: var(--mainBrown) !important;
 }

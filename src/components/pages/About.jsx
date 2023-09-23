@@ -13,10 +13,19 @@ import {
 import { FaBootstrap } from "react-icons/fa";
 import { SiAdobephotoshop } from "react-icons/si";
 import { BsTrello } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import BackToTop from "../partials/BackToTop";
+import axios from "axios";
 
 function About() {
+  const navigate = useNavigate();
+  const handleDatabase = () => {
+    const response = axios({
+      method: "patch",
+      url: `${import.meta.env.VITE_API_URL}/database`,
+    });
+    navigate("/");
+  };
   return (
     <div>
       <div className="about-bg-img container-fluid d-flex justify-content-center align-items-center">
@@ -94,18 +103,32 @@ function About() {
           <div className="d-flex flex-column justify-content-center align-items-center">
             <h2 className="contact-title">MAIN WEB</h2>
             <span className="line-span"></span>
-            <img src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-1.png" alt="" className="about-img" />
+            <img
+              src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-1.png"
+              alt=""
+              className="about-img"
+            />
             <p className="contact-text my-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam
               recusandae aperiam facere asperiores fuga enim eaque iusto nemo ex
               eos quas, ut molestias accusantium beatae eum nulla obcaecati
               saepe?
             </p>
+            <p>
+              To reset the database click{" "}
+              <span className="click-here" onClick={handleDatabase}>
+                here
+              </span>
+            </p>
           </div>
           <div className="d-flex flex-column justify-content-center align-items-center mt-5">
             <h2 className="contact-title">ADMIN WEB</h2>
             <span className="line-span"></span>
-            <img src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.png" alt="" className="about-img" />
+            <img
+              src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.png"
+              alt=""
+              className="about-img"
+            />
             <p className="contact-text my-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum ipsam
               recusandae aperiam facere asperiores fuga enim eaque iusto nemo ex

@@ -70,8 +70,6 @@
   color: var(--darkBrown);
 }
 
-
-
 .about-img {
   width: 100%;
   max-width: 1200px;
@@ -83,4 +81,9 @@
 
 .about-img:hover {
   opacity: 0.9;
+}
+
+.click-here {
+  cursor: pointer;
+  text-decoration: underline;
 }
