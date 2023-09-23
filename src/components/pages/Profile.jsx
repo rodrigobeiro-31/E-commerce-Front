@@ -6,6 +6,7 @@ import axios from "axios";
 import "./Profile.css";
 import ModalOrder from "../partials/ModalOrder";
 import { format } from "date-fns";
+import { BiSolidUserCircle } from "react-icons/bi"
 
 function Profile() {
   const [firstname, setFirstname] = useState("");
@@ -69,10 +70,10 @@ function Profile() {
         </div>
         <div className="container">
           <div className="mb-5 m-5 p-5 text-white">
-            <h2 className="text-uppercase fw-bold contact-title">My account</h2>
+            <h2 className="text-uppercase fw-bold contact-title d-flex align-items-center"> <BiSolidUserCircle className="me-2 profile-icon"/> My account</h2>
             <span className="line-span"></span>
             <p className="fw-normal contact-text">
-              Welcome <span className="fw-bold span-name">{username}!</span>{" "}
+              Welcome <span className="fw-bold span-name">{firstname} {lastname}!</span>{" "}
               From your Doppios's Account Dashboard, you have the ability to
               edit your profile and track the status of your orders.
             </p>
@@ -80,8 +81,8 @@ function Profile() {
             <form onSubmit={handleSubmit} className="row g-3 mb-5">
               <div className="col-6">
                 <div className="input-group mb-3">
-                  <span className="input-group-text">
-                    <LiaUserEditSolid />
+                  <span className="input-group-text profile-form-btn">
+                    <LiaUserEditSolid  className="text-white"/>
                   </span>
                   <input
                     type="text"
@@ -96,8 +97,8 @@ function Profile() {
 
               <div className="col-6">
                 <div className="input-group mb-3">
-                  <span className="input-group-text">
-                    <LiaUserEditSolid />
+                  <span className="input-group-text profile-form-btn">
+                    <LiaUserEditSolid className="text-white"/>
                   </span>
                   <input
                     type="text"
@@ -111,8 +112,8 @@ function Profile() {
               </div>
               <div className="col-12">
                 <div className="input-group mb-3">
-                  <span className="input-group-text">
-                    <LiaUserEditSolid />
+                  <span className="input-group-text profile-form-btn">
+                    <LiaUserEditSolid className="text-white" />
                   </span>
                   <input
                     type="email"
@@ -127,9 +128,9 @@ function Profile() {
 
               <div className="col-6">
                 <div className="input-group mb-3">
-                  <span className="input-group-text">
+                  <span className="input-group-text profile-form-btn">
                     {" "}
-                    <LiaUserEditSolid />
+                    <LiaUserEditSolid className="text-white"/>
                   </span>
                   <input
                     type="password"
@@ -154,7 +155,7 @@ function Profile() {
               Order tracking
             </h2>
             <span className="line-span"></span>
-            <table class="table">
+            <table className="table">
               <thead>
                 <tr>
                   <th scope="col">Order ID</th>
@@ -164,7 +165,6 @@ function Profile() {
                 </tr>
               </thead>
               <tbody>
-                {console.log(orders)}
                 {orders.length > 0 &&
                   orders.map((order, id) => (
                     <tr key={id}>

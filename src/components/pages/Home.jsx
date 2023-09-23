@@ -62,17 +62,16 @@ function Home() {
       <>
         <div className="container-fluid p-0 g-0">
           <img
-            id="homeBanner1"
+            className="home-banner"
             src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-banner.jpg"
             alt="Coffee beans"
           />
           <div className="home-gd-overlay"></div>
           <div
-            id="homeTitle"
-            className="row d-flex justify-content-center m-0 p-0 mb-5"
+            className="row d-flex justify-content-center m-0 p-0 mb-5 home-title" //revisar
           >
             <img
-              id="homeLogo"
+              className="home-logo"
               src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-main-logo.png"
               alt="Doppio's"
             />
@@ -135,7 +134,8 @@ function Home() {
               />
             </div>
           </section>
-          <div className="container-fluid d-flex flex-column align-items-center ps-5 pe-5 mb-5 custom-background1 home-separator">
+
+          <div className="container-fluid d-flex flex-column align-items-center ps-5 pe-5 mb-5  home-separator">
             <h3 className="card-title fw-bold text-center contact-title">
               Our values
             </h3>
@@ -199,15 +199,28 @@ function Home() {
               </div>
             </div>
           </div>
+
           <Carousel>
             <Carousel.Item>
-              <Image src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-1.jpg" className="w-100" fluid />
+              <Image
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-1.jpg"
+                className="w-100"
+                fluid
+              />
             </Carousel.Item>
             <Carousel.Item>
-              <Image src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-2.jpg" className="w-100" fluid />
+              <Image
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-2.jpg"
+                className="w-100"
+                fluid
+              />
             </Carousel.Item>
             <Carousel.Item>
-              <Image src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-3.jpg" className="w-100" fluid />
+              <Image
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-3.jpg"
+                className="w-100"
+                fluid
+              />
             </Carousel.Item>
           </Carousel>
         </div>

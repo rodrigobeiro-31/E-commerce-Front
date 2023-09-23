@@ -23,13 +23,6 @@
   overflow: hidden;
 }
 
-.title {
-  font-family: var(--roboto-condensed);
-  font-weight: 700;
-  font-size: 5rem;
-  text-shadow: black 0px 10px 1rem;
-}
-
 .tech-icon {
   display: flex;
   flex-direction: column;
@@ -60,10 +53,6 @@
   object-fit: cover;
 }
 
-/* .custom-background {
-  background-color:var(--creamyWhite);
-} */
-
 .contact-container {
   background-color: var(--darkBrown);
 }
@@ -81,9 +70,7 @@
   color: var(--darkBrown);
 }
 
-.main-container2 {
-  background-color: white;
-}
+
 
 .about-img {
   width: 100%;

@@ -80,10 +80,10 @@ function Product() {
                   }}
                 />
               </div>
-              <div className="col-6 cardBody">
+              <div className="col-6 card-body-details">
                 <div className="card-body p-5">
                   <h3 className="text-uppercase fw-bold">{product.name}</h3>
-                  <p className="card-text mt-3 fs-2 priceText fst-italic">
+                  <p className="card-text mt-3 fs-2 price-text fst-italic">
                     Price: ${product.price}
                   </p>
                   <p className="card-text">{product.description}</p>

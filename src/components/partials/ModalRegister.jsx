@@ -1,6 +1,6 @@
 import Modal from "react-bootstrap/Modal";
-import "../ModalLoginRegister.css";
-import { Link, NavLink } from "react-router-dom";
+import "./ModalLoginRegister.css";
+import { NavLink } from "react-router-dom";
 import { useState } from "react";
 import axios from "axios";
 import { AiOutlineClose } from "react-icons/ai";

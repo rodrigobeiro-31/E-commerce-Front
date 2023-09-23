@@ -15,6 +15,7 @@
 
 body {
   background-color: var(--creamyWhite) !important;
+  font-family: var(--roboto-condensed) !important;
 }
 .main-btn {
   background-color: var(--mainBrown);
@@ -25,6 +26,7 @@ body {
   transition: var(--transition-default);
   border: 1px solid var(--mainBrown);
   text-decoration: none;
+  text-transform: uppercase;
 }
 
 .main-btn:hover {
@@ -124,4 +126,34 @@ textarea {
   box-shadow: none !important;
   border-color: var(--secondaryBrown) !important;
   color: var(--mainBrown) !important;
+}
+.title {
+  font-family: var(--roboto-condensed);
+  font-weight: 700;
+  font-size: 5rem;
+  text-shadow: black 0px 10px 1rem;
+}
+
+.main-container {
+  background-image: url("https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/grey-marble-bg.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.add-btn {
+  height: auto;
+
+  font-size: 13px;
+  background-color: var(--mainBrown);
+  color: var(--lightBackground);
+  cursor: pointer;
+  border: none;
+}
+.add-btn:hover {
+  background-color: var(--secondaryBrown);
+  color: var(--lightBackground);
+}
+
+th{
+color: var(--mainBrown) !important;
 }

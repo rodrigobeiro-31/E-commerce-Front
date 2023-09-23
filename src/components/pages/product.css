@@ -1,32 +1,13 @@
-.cardBody {
+.card-body-details {
   background-color: white;
-}
-
-a.addToCartButton {
-  font-size: 13px;
-  background-color: var(--mainBrown);
-  color: var(--lightBackground);
-  
-}
-.addToCartButton:hover {
-  background-color: var(--secondaryBrown);
-  color: var(--lightBackground);
-  cursor: pointer;
 }
 
 hr {
   color: var(--darkBrown);
 }
 
-.priceText {
+.price-text {
   color: var(--secondaryBrown);
-}
-
-.main-container {
-  background-image: url("https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/grey-marble-bg.jpg");
-  background-size: cover;
-  background-attachment: fixed;
-  height: 100%;
 }
 
 .data-container {
@@ -44,10 +25,10 @@ hr {
   background-color: var(--darkBrown);
 }
 
-.accordion-button::after{
-  background-image: url("https://www.freeiconspng.com/thumbs/white-arrow-png/white-down-arrow-png-2.png") !important; 
+.accordion-button::after {
+  background-image: url("https://www.freeiconspng.com/thumbs/white-arrow-png/white-down-arrow-png-2.png") !important;
 }
 
-.accordion-button:focus{
+.accordion-button:focus {
   box-shadow: none;
 }

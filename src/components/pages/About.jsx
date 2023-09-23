@@ -18,7 +18,7 @@ import BackToTop from "../partials/BackToTop";
 
 function About() {
   return (
-    <div className="main-container2">
+    <div>
       <div className="about-bg-img container-fluid d-flex justify-content-center align-items-center">
         <h2 className="text-white d-flex justify-content-center align-items-center title">
           ABOUT THIS PROJECT

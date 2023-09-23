@@ -1,4 +1,4 @@
-#homeBanner1 {
+.home-banner {
   width: 100%;
 }
 
@@ -17,13 +17,13 @@
   );
 }
 
-#homeTitle {
+.home-title {
   position: absolute;
   top: 9%;
   left: 0;
 }
 
-#homeLogo {
+.home-logo {
   max-width: 38%;
 }
 
@@ -39,16 +39,6 @@
 .custom-image {
   max-width: 5rem;
   height: auto;
-}
-
-.custom-background1 {
-  background-color: var(--creamyWhite);
-}
-
-.main-container {
-  background-image: url("https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/grey-marble-bg.jpg");
-  background-size: cover;
-  background-attachment: fixed;
 }
 
 .home-separator {

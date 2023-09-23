@@ -94,10 +94,10 @@ function ModalCart({
             <p className="fw-bold">Shipping</p>
             <p className="fw-bold">Free</p>
           </div>
-          <div className="p-2">
+          <div className="p-3 d-flex">
             {user ? (
               <NavLink
-                className="btn rounded-pill bg-black fw-medium text-white w-100"
+                className="main-btn text-center w-100"
                 aria-label="Check Out"
                 to="/checkout"
                 onClick={handleClose}
@@ -106,7 +106,7 @@ function ModalCart({
               </NavLink>
             ) : (
               <button
-                className="btn rounded-pill bg-black fw-medium text-white w-100"
+                className="main-btn  text-center w-100"
                 onClick={() =>
                   handleShowAll(
                     setShowLogin,
