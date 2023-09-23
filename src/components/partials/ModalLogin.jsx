@@ -7,6 +7,7 @@ import "../ModalLoginRegister.css";
 import { Link, NavLink } from "react-router-dom";
 import { AiOutlineClose } from "react-icons/ai";
 import "./ModalLogin.css";
+import ModalResetPass from "../admin/ModalResetPass";
 
 function ModalLogin({
   fullscreen,
@@ -84,10 +85,8 @@ function ModalLogin({
                     onChange={(e) => setPassword(e.target.value)}
                   />
                   <div className="form-text login-text">
-                    Forgot your password?{" "}
-                    <NavLink to="#" className="login-link">
-                      Reset your password!
-                    </NavLink>
+                    Forgot your password? Click here!
+                    <ModalResetPass />
                   </div>
                 </div>
 
