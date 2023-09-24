@@ -150,3 +150,14 @@ footer {
   font-weight: 700;
   text-transform: uppercase;
 }
+
+@media (max-width: 768px) {
+  .footer-socials {
+    display: grid;
+    grid-template-columns: 1fr;
+    justify-content: center !important;
+    align-items: center !important;
+    text-align: center;
+    gap: 2rem;
+  }
+}

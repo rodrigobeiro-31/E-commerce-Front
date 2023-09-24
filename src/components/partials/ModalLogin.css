@@ -79,3 +79,12 @@
   justify-content: center;
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .login-img-container {
+    display: none;
+  }
+  .register-img-container {
+    display: none;
+  }
+}

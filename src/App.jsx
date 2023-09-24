@@ -15,6 +15,8 @@ import CartCheckout from "./components/pages/CartCheckout";
 import Profile from "./components/pages/Profile";
 import Error from "./components/pages/Error";
 import OrderConfirmed from "./components/pages/OrderConfirmation";
+import BackToTop from "./components/partials/BackToTop";
+import ProjectBtn from "./components/partials/ProjectBtn";
 
 function App() {
   const location = useLocation();
@@ -36,10 +38,12 @@ function App() {
         <Route path="/admin" element={<ProductIn />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/checkout" element={<CartCheckout />} />
-        <Route path="/checkout/confirmed" element={<OrderConfirmed/>} />
+        <Route path="/checkout/confirmed" element={<OrderConfirmed />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
+      <BackToTop />
+      <ProjectBtn />
     </>
   );
 }

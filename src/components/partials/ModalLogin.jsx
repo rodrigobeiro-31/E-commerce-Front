@@ -45,7 +45,7 @@ function ModalLogin({
           className="position-absolute top-0 end-0 text-white pt-4 pe-4 fw-bold fs-4 z-1"
           onClick={() => handleClose()}
         >
-          <AiOutlineClose className="closeBtn" />{" "}
+          <AiOutlineClose className="close-btn" />{" "}
         </span>
         <Modal.Body className="modal-bg">
           <div className="login-container">
@@ -122,65 +122,3 @@ function ModalLogin({
 }
 
 export default ModalLogin;
-
-{
-  /* <div className="login-box p-4">
-            <p>Login</p>
-            <form method="post" onSubmit={handleSubmit}>
-              <div className="user-box">
-                <input
-                  type="email"
-                  name="email"
-                  id="email"
-                  className="form-control"
-                  autoComplete="off"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
-                <label htmlFor="email">Email</label>
-              </div>
-              <div className="user-box">
-                <input
-                  type="password"
-                  name="password"
-                  id="password"
-                  className="form-control"
-                  value={password}
-                  onChange={(e) => setPassword(e.target.value)}
-                />
-                <label htmlFor="password">Password</label>
-              </div>
-              <button className="btn-modal" type="submit">
-                <span></span>
-                <span></span>
-                <span></span>
-                <span></span>
-                Submit
-              </button>
-            </form>
-            <div className="col d-flex align-items-start">
-              <p className="mt-4 text-white">
-                Forgot your password?{" "}
-                <Link className="a2">Reset password!</Link>
-              </p>
-            </div>
-            <div className="col d-flex align-items-start">
-              <p className="text-white">
-                Don't have an account?{" "}
-                <Link
-                  onClick={() =>
-                    handleShowAll(
-                      setShowRegister,
-                      setFullscreenRegister,
-                      setShowLogin,
-                      setFullscreenLogin
-                    )
-                  }
-                  className="a2"
-                >
-                  Register here!
-                </Link>
-              </p>
-            </div>
-          </div> */
-}

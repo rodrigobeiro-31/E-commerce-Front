@@ -49,7 +49,7 @@ function ModalRegister({
           className="position-absolute top-0 end-0 text-white pt-4 pe-4 fw-bold fs-4 z-1"
           onClick={() => handleClose()}
         >
-          <AiOutlineClose className="closeBtn" />{" "}
+          <AiOutlineClose className="close-btn" />{" "}
         </span>
         <Modal.Body className="modal-bg">
           <div className="register-container">

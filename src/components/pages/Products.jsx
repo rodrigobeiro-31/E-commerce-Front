@@ -76,7 +76,7 @@ function Products() {
                 aria-label=".form-select-sm example"
                 onChange={(event) => setFiltered(event.target.value)}
               >
-                <option className="fw-semibold" value="All" selected>
+                <option className="fw-semibold" value="All">
                   All products
                 </option>
                 <option value="Cafe">Cafe</option>
