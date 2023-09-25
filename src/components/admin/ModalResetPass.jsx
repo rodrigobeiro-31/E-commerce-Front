@@ -19,7 +19,7 @@ export default function ModalResetPass() {
   const ResetPass = async () => {
     const response = await axios({
       method: "post",
-      url: `http://localhost:3000/mail`,
+      url: `${import.meta.env.VITE_API_URL}/mail`,
       data: { email },
     });
   };
