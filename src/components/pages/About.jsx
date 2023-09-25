@@ -38,6 +38,8 @@ function About() {
     {
       name: "Kathia Olaverry",
       age: 27,
+      image:
+        "https://as2.ftcdn.net/v2/jpg/02/79/66/93/1000_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
     },
     {
       name: "Jose Ignacio Siutto",
