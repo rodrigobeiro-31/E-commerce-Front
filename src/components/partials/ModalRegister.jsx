@@ -31,7 +31,7 @@ function ModalRegister({
 
     await axios({
       method: "post",
-      url: "http://localhost:3000/users/",
+      url: `${import.meta.env.VITE_API_URL}/users/`,
       data: { firstname, lastname, email, password },
     });
     handleShowAll(

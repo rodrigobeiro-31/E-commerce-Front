@@ -32,7 +32,7 @@ function Contact() {
       // Realiza la solicitud POST utilizando Axios
       const response = await axios({
         method: "post",
-        url: "http://localhost:3000/admin/contact",
+        url: `${import.meta.env.VITE_API_URL}/admin/contact`,
         data: formData,
       });
 

@@ -27,7 +27,7 @@ function ModalLogin({
     e.preventDefault();
     const response = await axios({
       method: "post",
-      url: `http://localhost:3000/tokens`,
+      url: `${import.meta.env.VITE_API_URL}/tokens`,
       data: { password, email },
     });
     if (response.data.token) {

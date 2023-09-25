@@ -31,7 +31,7 @@ function Products() {
     const getProducts = async () => {
       const response = await axios({
         method: "GET",
-        url: `http://localhost:3000/products/filter/${filtered}`,
+        url: `${import.meta.env.VITE_API_URL}/products/filter/${filtered}`,
         /* headers: {
           Authorization: "Bearer " + (user && user.token),
         }, */
