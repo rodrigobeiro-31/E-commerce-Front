@@ -83,12 +83,12 @@
   object-fit: cover;
   cursor: pointer;
   transition: var(--transition-default);
-  filter: grayscale(1);
+  overflow: hidden;
 }
 
 .about-img:hover {
+  scale: 1.05;
   opacity: 0.9;
-  filter: grayscale(0);
 }
 
 .click-here {
