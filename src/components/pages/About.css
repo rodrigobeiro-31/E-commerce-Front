@@ -51,6 +51,12 @@
   height: 10rem;
   border-radius: 50%;
   object-fit: cover;
+  filter: grayscale(1);
+  cursor: pointer;
+  transition: var(--transition-default);
+}
+.team-img:hover {
+  filter: grayscale(0);
 }
 
 .contact-container {
@@ -77,10 +83,12 @@
   object-fit: cover;
   cursor: pointer;
   transition: var(--transition-default);
+  filter: grayscale(1);
 }
 
 .about-img:hover {
   opacity: 0.9;
+  filter: grayscale(0);
 }
 
 .click-here {
