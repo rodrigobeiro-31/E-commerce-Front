@@ -16,10 +16,42 @@ import BackToTop from "../partials/BackToTop";
 import axios from "axios";
 import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
+import AboutModal from "../partials/AboutModal";
 
 function About() {
   const navigate = useNavigate();
   const [modalAbout, setModalAbout] = useState(false);
+  const [person, setPerson] = useState(null);
+  const team = [
+    {
+      name: "Alejo González",
+      age: 27,
+      image:
+        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+    },
+    {
+      name: "Rodrigo Beiro",
+      age: 27,
+      image:
+        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+    },
+    {
+      name: "Kathia Olaverry",
+      age: 27,
+    },
+    {
+      name: "Jose Ignacio Siutto",
+      age: 27,
+      image:
+        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+    },
+    {
+      name: "Leandro Matosas",
+      age: 27,
+      image:
+        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+    },
+  ];
 
   const handleDatabase = () => {
     const response = axios({
@@ -145,116 +177,43 @@ function About() {
               <h3 className="text-center mb-5 contact-title">Our team</h3>
               <span className="line-span"></span>
             </div>
-            <div className="col d-flex flex-column justify-content-center align-items-center text-center">
-              <img
-                src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
-                alt=""
-                className="team-img"
-              />
-              <h5 className="mt-3 contact-text">ALEJO GONZÁLEZ</h5>
-              <small>Full Stack Dev</small>
-              <div>
-                <Link to="linkedin" target="_blank">
-                  <BiLogoLinkedinSquare className="social-icons me-2" />
-                </Link>
-                <Link to="github" target="_blank">
-                  <BiLogoGithub className="social-icons" />
-                </Link>
+            {team.map((person) => (
+              <div
+                key={person.name}
+                className="col d-flex flex-column justify-content-center align-items-center text-center"
+              >
+                <img
+                  src={person.image}
+                  alt=""
+                  className="team-img"
+                  onClick={() => {
+                    setPerson(person);
+                    setModalAbout(true);
+                  }}
+                />
+                <h5 className="mt-3 contact-text text-uppercase fw-bold">
+                  {person.name}
+                </h5>
+                <small>Full Stack Dev</small>
+                <div>
+                  <Link to="linkedin" target="_blank">
+                    <BiLogoLinkedinSquare className="social-icons me-2" />
+                  </Link>
+                  <Link to="github" target="_blank">
+                    <BiLogoGithub className="social-icons" />
+                  </Link>
+                </div>
               </div>
-            </div>
-            <div className="col d-flex flex-column justify-content-center align-items-center text-center">
-              <img
-                src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
-                alt=""
-                className="team-img"
-              />
-              <h5 className="mt-3 contact-text">RODRIGO BEIRO</h5>
-              <small>Full Stack Dev</small>
-              <div>
-                <Link to="linkedin" target="_blank">
-                  <BiLogoLinkedinSquare className="social-icons me-2" />
-                </Link>
-                <Link to="github" target="_blank">
-                  <BiLogoGithub className="social-icons" />
-                </Link>
-              </div>
-            </div>
-            <div className="col d-flex flex-column justify-content-center align-items-center text-center">
-              <img
-                src="https://w7.pngwing.com/pngs/129/292/png-transparent-female-avatar-girl-face-woman-user-flat-classy-users-icon.png"
-                alt=""
-                className="team-img"
-              />
-              <h5 className="mt-3 contact-text">KATHIA OLAVERRY</h5>
-              <small>Full Stack Dev</small>
-              <div>
-                <Link to="linkedin" target="_blank">
-                  <BiLogoLinkedinSquare className="social-icons me-2" />
-                </Link>
-                <Link to="github" target="_blank">
-                  <BiLogoGithub className="social-icons" />
-                </Link>
-              </div>
-            </div>
-            <div className="col d-flex flex-column justify-content-center align-items-center text-center">
-              <img
-                src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
-                alt=""
-                className="team-img"
-              />
-              <h5 className="mt-3 contact-text">JOSÉ IGNACIO SIUTTO</h5>
-              <small>Full Stack Dev</small>
-              <div>
-                <Link to="linkedin" target="_blank">
-                  <BiLogoLinkedinSquare className="social-icons me-2" />
-                </Link>
-                <Link to="github" target="_blank">
-                  <BiLogoGithub className="social-icons" />
-                </Link>
-              </div>
-            </div>
-            <div className="col d-flex flex-column justify-content-center align-items-center text-center">
-              <img
-                role="button"
-                src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
-                alt=""
-                className="team-img"
-                onClick={() => setModalAbout(true)}
-              />
-              <h5 className="mt-3 contact-text">LEANDRO MATOSAS</h5>
-              <small>Full Stack Dev</small>
-              <div>
-                <Link to="linkedin" target="_blank">
-                  <BiLogoLinkedinSquare className="social-icons me-2" />
-                </Link>
-                <Link to="github" target="_blank">
-                  <BiLogoGithub className="social-icons" />
-                </Link>
-              </div>
-            </div>
+            ))}
           </section>
         </div>
         <BackToTop />
       </div>
-      <div
-        className={` ${modalAbout ? "modal-about" : "modal-about-inactive"} `}
-      >
-        <div className="about-card">
-          <AiOutlineClose
-            className="close-btn about-card-btn"
-            onClick={() => setModalAbout(false)}
-          />
-          <img
-            src="https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png"
-            alt=""
-            className="about-card-img"
-          />
-          <div className="about-card-details">
-            <h3 className="about-card-title">Leandro Matosas</h3>
-            <p>Full Stack Developer</p>
-          </div>
-        </div>
-      </div>
+      <AboutModal
+        setModalAbout={setModalAbout}
+        modalAbout={modalAbout}
+        person={person}
+      />
     </div>
   );
 }

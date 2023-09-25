@@ -79,7 +79,7 @@ input:focus {
   width: auto;
   padding: 1rem;
   background-color: var(--mainBrown);
-  border: none;
+  border: solid 1px var(--clr-brown-terciary);
   display: flex;
   align-items: center;
   justify-content: center;
