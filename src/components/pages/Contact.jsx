@@ -62,7 +62,7 @@ function Contact() {
         <div className="container mb-5 mt-5 text-white d-flex justify-content-center align-items-center">
           <div className="d-flex justify-content-center">
             <div className="row d-flex justify-contact-between gap-5 contact-container">
-              <div className="col-12 col-md-6">
+              <div className="col-11 col-md-5">
                 <div className="container">
                   <div>
                     <h2 className="fw-bold pt-4 contact-title">Contact us</h2>
@@ -187,7 +187,7 @@ function Contact() {
                   </form>
                 </div>
               </div>
-              <div className="col-10 col-md-6">
+              <div className="col-10 col-md-5">
                 <h2 className="fw-bold pt-4 contact-title">Locations</h2>
                 <span className="line-span"></span>
                 <div className="row d-flex justify-content-between">
