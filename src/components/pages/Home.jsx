@@ -143,7 +143,7 @@ function Home() {
             <div className="row d-flex px-5 mx-5">
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
+                  src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -156,7 +156,7 @@ function Home() {
               </div>
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
+                  src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -171,7 +171,7 @@ function Home() {
               </div>
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
+                  src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -186,7 +186,7 @@ function Home() {
               </div>
               <div className="col d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/coffee-bean-icon.png"
+                  src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />

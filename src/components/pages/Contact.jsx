@@ -40,7 +40,7 @@ function Contact() {
       setFormData({
         firstname: "",
         lastname: "",
-        phone: "",
+        fone: "",
         direction: "",
         affaire: "",
         options: "",

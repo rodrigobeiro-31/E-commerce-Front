@@ -71,13 +71,12 @@
 }
 
 .home-value {
-  color: var(--secondaryBrown);
+  color: var(--mainBrown);
   transition: 0.5s ease-in;
-  opacity: 50%;
+  opacity: 70%;
 }
 
 .home-value:hover {
   transform:scale(1.1);
   opacity: 100%;
-  color: var(--mainBrown);
 }
