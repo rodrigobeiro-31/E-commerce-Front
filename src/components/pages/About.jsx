@@ -11,7 +11,7 @@ import {
 } from "react-icons/bi";
 import { FaBootstrap } from "react-icons/fa";
 import { RxVercelLogo } from "react-icons/rx";
-import { SiAdobephotoshop } from "react-icons/si";
+import { SiAdobephotoshop, SiAdobeillustrator, SiSupabase } from "react-icons/si";
 import { BsTrello } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import BackToTop from "../partials/BackToTop";
@@ -136,9 +136,21 @@ function About() {
                   <small>Nodejs</small>
                 </div>
                 <div className="tech-icon">
+                  <SiSupabase className="icon" />
+                  <small>Supabase</small>
+                </div>
+                <div className="tech-icon">
                   <RxVercelLogo className="icon" />
                   <small>Vercel</small>
                 </div>
+                <div className="tech-icon">
+                  <SiAdobephotoshop className="icon" />
+                  <small>Photoshop</small>
+                </div>
+                <div className="tech-icon">
+                  <SiAdobeillustrator className="icon" />
+                  <small>Illustrator</small>
+                </div>         
               </div>
             </div>
           </section>
