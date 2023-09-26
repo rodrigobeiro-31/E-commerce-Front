@@ -135,6 +135,10 @@ function About() {
                   <BiLogoNodejs className="icon" />
                   <small>Nodejs</small>
                 </div>
+                <div className="tech-icon">
+                  <RxVercelLogo className="icon" />
+                  <small>Vercel</small>
+                </div>
               </div>
             </div>
           </section>
