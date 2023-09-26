@@ -10,6 +10,8 @@ import {
   BiLogoNodejs,
 } from "react-icons/bi";
 import { FaBootstrap } from "react-icons/fa";
+import { RxVercelLogo } from "react-icons/rx";
+import { SiAdobephotoshop } from "react-icons/si";
 import { BsTrello } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import BackToTop from "../partials/BackToTop";
