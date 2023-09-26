@@ -155,6 +155,8 @@ function Product() {
           </div>
 
           <div className="container mt-5">
+            {interestingProduct.length > 5 &&
+              setInterestingProduct(interestingProduct.slice(0, 5))}
             <div className="row d-flex justify-content-center flex-wrap m-0 gap-3 pb-5">
               {interestingProduct.map((product, id) => (
                 <ProductCard
