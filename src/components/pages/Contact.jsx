@@ -243,13 +243,20 @@ function Contact() {
                   </div>
                   <div className="col-12 col-md-6 mt-5">
                     <h5 className="contact-text fw-bold mb-3">PHONE NUMBERS</h5>
-                    <p className="contact-text m-0">099 999 999</p>
-                    <p className="contact-text m-0">2425 2345</p>
+                    <p className="contact-text m-0">
+                      <Link to="tel:+099999999">099 999 999</Link>
+                    </p>
+                    <p className="contact-text m-0">
+                      <Link to="tel:+2425 2345">2425 2345</Link>
+                    </p>
                   </div>
                   <div className="col-12 col-md-6 mt-5">
-                    <h5 className="contact-text fw-bold mb-3">EMAILS</h5>
-                    <p className="contact-text m-0">doppios@doppios.com</p>
-                    <p className="contact-text m-0">contact@doppios.com</p>
+                    <h5 className="contact-text fw-bold mb-3">EMAIL</h5>
+                    <p className="contact-text m-0">
+                      <Link to="mailto:info.doppios@gmail.com">
+                        info.doppios@gmail.com
+                      </Link>
+                    </p>
                   </div>
                 </div>
               </div>
