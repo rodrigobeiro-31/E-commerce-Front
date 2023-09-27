@@ -54,9 +54,11 @@ function About() {
       age: 24,
       image:
         "https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/profile_images/photo_Kathia.jpeg",
+      title: "Nutritionist | Full Stack Dev",
       linkedin: "https://www.linkedin.com/in/kathia-olaverry/",
       github: "https://github.com/Kathia01",
-      resume: "I'm a nutritionist turned full stack developer. I'm currently living in Montevideo and I'm very excited to start my new journey in the world of programming. This change has allowed me to put into practice my versatility and ability to adapt to new challenges.",
+      resume:
+        "I'm a nutritionist turned full stack developer. I'm currently living in Montevideo and I'm very excited to start my new journey in the world of programming. This change has allowed me to put into practice my versatility and ability to adapt to new challenges.",
     },
     {
       name: "José Ignacio Siutto",
@@ -71,12 +73,12 @@ function About() {
     {
       name: "Leandro Matosas",
       age: 27,
-      image:
-        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+      image: "/imgs/profile-lea.png",
       title: "Full Stack Dev.",
-      linkedin: "",
-      github: "",
-      resume: "",
+      linkedin: "https://www.linkedin.com/in/leandro-matosas/",
+      github: "https://github.com/leandromatc",
+      resume:
+        "Hello! I'm Leandro, thanks for all your support and contribution!",
     },
   ];
 
