@@ -5,7 +5,7 @@ import axios from "axios";
 import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Contact() {
   // const token = useSelector((state) => state.user.token);
@@ -245,18 +245,18 @@ function Contact() {
                   <div className="col-12 col-md-6 mt-5">
                     <h5 className="contact-text fw-bold mb-3">PHONE NUMBERS</h5>
                     <p className="contact-text m-0">
-                      <Link to="tel:+099999999">099 999 999</Link>
+                      <NavLink className={"contact-links"} to="tel:+099999999">099 999 999</NavLink>
                     </p>
                     <p className="contact-text m-0">
-                      <Link to="tel:+2425 2345">2425 2345</Link>
+                      <NavLink className={"contact-links"} to="tel:+2425 2345">2425 2345</NavLink>
                     </p>
                   </div>
                   <div className="col-12 col-md-6 mt-5">
                     <h5 className="contact-text fw-bold mb-3">EMAIL</h5>
                     <p className="contact-text m-0">
-                      <Link to="mailto:info.doppios@gmail.com">
+                      <NavLink className={"contact-links"} to="mailto:info.doppios@gmail.com">
                         info.doppios@gmail.com
-                      </Link>
+                      </NavLink>
                     </p>
                   </div>
                 </div>
