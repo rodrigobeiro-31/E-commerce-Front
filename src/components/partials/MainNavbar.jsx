@@ -64,7 +64,6 @@ function MainNavbar() {
     <nav>
       <div className="nav-logo-container">
         <Link to={"/"}>
-          <span className="nav-logo-name">Doppios.</span>
           <img
             src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-white-logo.png"
             alt="Doppios Logo"
