@@ -39,7 +39,7 @@ export default function ModalResetPass({ mail }) {
         <Modal.Body>
           <Form onSubmit={handleSubmit} />
           <Form.Group controlId="emailr">
-            <Form.Label>
+            <Form.Label className="mb-3">
               Write your email in the field below, and we will send you a
               notification to your email.
             </Form.Label>
@@ -48,13 +48,14 @@ export default function ModalResetPass({ mail }) {
               name="emailr"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email..."
             />
           </Form.Group>
         </Modal.Body>
 
         <Modal.Footer>
-          <Button variant="primary" onClick={handleSubmit}>
-            Send{" "}
+          <Button className="main-btn" onClick={handleSubmit}>
+            Send
           </Button>
         </Modal.Footer>
       </Modal>
