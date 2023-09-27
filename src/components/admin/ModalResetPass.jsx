@@ -33,7 +33,7 @@ export default function ModalResetPass() {
         keyboard={false}
       >
         <Modal.Header closeButton>
-          <Modal.Title>Reset de password</Modal.Title>
+          <Modal.Title>Reset password</Modal.Title>
         </Modal.Header>
 
         <Modal.Body>
