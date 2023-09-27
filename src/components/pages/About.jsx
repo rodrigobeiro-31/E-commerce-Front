@@ -160,7 +160,7 @@ function About() {
               <h2 className="contact-title">MAIN WEB</h2>
               <span className="line-span"></span>
               <img
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-1.png"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-1.avif"
                 alt=""
                 className="about-img"
               />
@@ -181,7 +181,7 @@ function About() {
               <h2 className="contact-title">ADMIN WEB</h2>
               <span className="line-span"></span>
               <img
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.png"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.avif"
                 alt=""
                 className="about-img"
               />
