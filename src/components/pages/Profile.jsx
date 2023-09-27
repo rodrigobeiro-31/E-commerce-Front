@@ -180,7 +180,7 @@ function Profile() {
                         </td>
                         <td>
                           <NavLink
-                            className=""
+                            className="contact-links"
                             onClick={() => {
                               handleShow();
                               setSelectedCart(order.cart);
