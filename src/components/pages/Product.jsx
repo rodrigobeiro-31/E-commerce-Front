@@ -70,7 +70,7 @@ function Product() {
         <div className="container-fluid main-container">
           <div className="container d-flex justify-content-center align-items-center mb-3 data-container">
             <div className="row g-0 mt-5">
-              <div className="col-sm-12 col-md-6">
+              <div className="col-sm-12 col-md-6 border d-flex justify-content-center align-items-center">
                 <img
                   src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                   style={{
