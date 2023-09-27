@@ -42,19 +42,17 @@ function MainNavbar() {
   }, []);
 
   useEffect(() => {
-    console.log(scrollData);
-    if (scrollData.y > 500) {
+    if (scrollData.y > 1000) {
       setShowNav(true);
     } else {
       setShowNav(false);
     }
-
-    if (scrollData.lastY > scrollData.y) {
+    if (scrollData.lastY >= scrollData.y) {
       setShowNav(true);
     } else {
       setShowNav(false);
     }
-  }, [scrollData]);
+  }, [scrollData, showNav]);
 
   //Handle for register and login
   const handleShowAll = (
@@ -96,7 +94,7 @@ function MainNavbar() {
   }, []);
 
   return (
-    <nav className={showNav ? "" : "hide-nav"}>
+    <nav className={showNav ? "nav-bar" : "hide-nav"}>
       <div className="nav-logo-container">
         <Link to={"/"}>
           <img
