@@ -63,9 +63,6 @@ function About() {
     {
       name: "José Ignacio Siutto",
       age: 44,
-      image:
-        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
-      age: 27,
       image: "/imgs/profile-jose.jpg",
       title: "Full Stack Dev.",
       linkedin: "www.linkedin.com/in/josé-ignacio-siutto-arin-a924a473",
