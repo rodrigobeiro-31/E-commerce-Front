@@ -307,13 +307,14 @@ function About() {
             <div className="d-flex flex-column justify-content-center align-items-center mt-5">
               <h2 className="contact-title">ADMIN WEB</h2>
               <span className="line-span"></span>
-              <Link to="https://doppios-admin.vercel.app/">
+              <Link to="https://doppios-admin.vercel.app/" target="_blank">
                 <img
                   src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.avif"
                   alt=""
                   className="about-img"
                 />
               </Link>
+              <p className="mt-3">Click the image to go to the Admin web!</p>
             </div>
           </section>
           <section className="about-section-two justify-content-center align-items-center my-5 row">
