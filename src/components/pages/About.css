@@ -23,6 +23,10 @@
   overflow: hidden;
 }
 
+.about-brand-img {
+  max-width: 30rem;
+}
+
 .tech-icon {
   display: flex;
   flex-direction: column;

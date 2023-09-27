@@ -16,7 +16,6 @@ import { BsTrello, BsFillArrowDownCircleFill } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import BackToTop from "../partials/BackToTop";
 import axios from "axios";
-import { AiOutlineClose } from "react-icons/ai";
 import { useState } from "react";
 import AboutModal from "../partials/AboutModal";
 
@@ -27,33 +26,52 @@ function About() {
   const team = [
     {
       name: "Alejo González",
-      age: 27,
-      image:
-        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+      age: 23,
+      image: "/imgs/profile-alejo.jpg",
+      title: "BA in Communication | Illustrator | Full Stack Dev.",
+      linkedin: "https://www.linkedin.com/in/alejo-gonzalez-gentile/?locale=en_US",
+      github: "https://github.com/AlejoGonzalez99/",
+      resume: "BA in Communication from Universidad ORT Uruguay and Full Stack Developer Jr. ",
     },
     {
       name: "Rodrigo Beiro",
       age: 27,
       image:
         "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+      title: "Full Stack Dev.",
+      linkedin: "",
+      github: "",
+      resume: "",
     },
     {
       name: "Kathia Olaverry",
       age: 27,
       image:
         "https://as2.ftcdn.net/v2/jpg/02/79/66/93/1000_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
+      title: "Full Stack Dev.",
+      linkedin: "",
+      github: "",
+      resume: "",
     },
     {
-      name: "Jose Ignacio Siutto",
+      name: "José Ignacio Siutto",
       age: 27,
       image:
         "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+      title: "Full Stack Dev.",
+      linkedin: "",
+      github: "",
+      resume: "",
     },
     {
       name: "Leandro Matosas",
       age: 27,
       image:
         "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
+      title: "Full Stack Dev.",
+      linkedin: "",
+      github: "",
+      resume: "",
     },
   ];
 
@@ -75,6 +93,40 @@ function About() {
           <div className="about-gd-overlay"></div>
         </div>
         <div className="container-fluid">
+          <section className="about-section-two justify-content-center align-items-center my-5 row">
+            <div className="d-flex flex-column justify-content-center align-items-center mb-4">
+              <h3 className="text-center mb-5 contact-title">Our team</h3>
+              <span className="line-span"></span>
+            </div>
+            {team.map((person) => (
+              <div
+                key={person.name}
+                className="col d-flex flex-column justify-content-center align-items-center text-center"
+              >
+                <img
+                  src={person.image}
+                  alt=""
+                  className="team-img"
+                  onClick={() => {
+                    setPerson(person);
+                    setModalAbout(true);
+                  }}
+                />
+                <h5 className="mt-3 contact-text text-uppercase fw-bold">
+                  {person.name}
+                </h5>
+                <small>{person.title}</small>
+                <div>
+                  <Link to={person.linkedin} target="_blank">
+                    <BiLogoLinkedinSquare className="social-icons me-2" />
+                  </Link>
+                  <Link to={person.github} target="_blank">
+                    <BiLogoGithub className="social-icons" />
+                  </Link>
+                </div>
+              </div>
+            ))}
+          </section>
           <section className="about-section-one justify-content-center align-items-center row">
             <div className="d-flex flex-column justfiy-content-center align-items-center mb-2 col-lg-8 col-md-10 col-12 p-5 ">
               <h5 className=" my-5">The current webpage was built as a final course project for the Full Stack Developing Bootcamp by Hack Academy in September 2023. It is the result of more than 120 hours of coding, decision making and designing as a team. Everything from its functionalities and structure to the brand identity and product selection was created from scratch. </h5>
@@ -98,6 +150,7 @@ function About() {
                 Brand identity
               </h3>
               <span className="line-span"></span>
+              <img className="my-5 about-brand-img" src="/imgs/doppios-main-logo.png" alt="Doppio's Logo" />
               <p className="contact-text">After inclining ourselves for a cafe and bakery business, most style decisions were made as a team. We researched the Uruguayan and foreign markets, searched for inspirations, and identify mistakes in regards of developing an attractive and original brand.</p>
               <p className="mb-5 contact-text">Both the visual identity and name of Doppio’s Cafe & Bakery was created to quickly identify the purpose of the store. The cartoonish logo combined with a focus on the products imagery and a brown color palette, inspires a classic yet trendy feel to the webpage. </p>
               <h3 className="my-5 fw-bold contact-title">
@@ -170,87 +223,51 @@ function About() {
                   <small>Illustrator</small>
                 </div>
               </div>
-              <h5>Disclaimer</h5>
-              <p>Every image used in this site is license free and was taken both from Unsplash and Freepik websites, except for the brand logo which was created originally by the team.</p>
-              <p>Doppio’s Coffee & Bakery is a fictional brand created for the solely purpose of this project. So are the contact information and places mentioned at any time.</p>
-              <p>Any similarities with real brands or people are merely coincidental.
-              This page serves no commercial purposes.</p>
-              <p>September 2023.</p>
-              <p>Montevideo, Uruguay.</p>
-
             </div>
           </section>
           <section>
             <div className="d-flex flex-column justify-content-center align-items-center">
-              <h2 className="contact-title">MAIN WEB</h2>
+              <h2 className="contact-title">USER WEB</h2>
               <span className="line-span"></span>
-              <img
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-1.avif"
-                alt=""
-                className="about-img"
-              />
-              <p className="contact-text my-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                ipsam recusandae aperiam facere asperiores fuga enim eaque iusto
-                nemo ex eos quas, ut molestias accusantium beatae eum nulla
-                obcaecati saepe?
-              </p>
-              <p>
-                To reset the database click{" "}
-                <span className="click-here" onClick={handleDatabase}>
-                  here
-                </span>
-              </p>
+              <Link to="/">
+                <img
+                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-1.avif"
+                  alt=""
+                  className="about-img"
+                />
+              </Link>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center mt-5">
               <h2 className="contact-title">ADMIN WEB</h2>
               <span className="line-span"></span>
-              <img
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.avif"
-                alt=""
-                className="about-img"
-              />
-              <p className="contact-text my-4">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum
-                ipsam recusandae aperiam facere asperiores fuga enim eaque iusto
-                nemo ex eos quas, ut molestias accusantium beatae eum nulla
-                obcaecati saepe?
-              </p>
+              <Link to="/admin">
+                <img
+                  src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.avif"
+                  alt=""
+                  className="about-img"
+                />
+              </Link>
             </div>
           </section>
           <section className="about-section-two justify-content-center align-items-center my-5 row">
-            <div className="d-flex flex-column justify-content-center align-items-center mb-4">
-              <h3 className="text-center mb-5 contact-title">Our team</h3>
+            <div className="d-flex flex-column justfiy-content-center  mb-2 col-lg-8 col-md-10 col-12 p-5 ">
+            <h3 className="mb-5 fw-bold contact-title">
+                DISCLAIMER
+              </h3>
               <span className="line-span"></span>
+              <p>Every image used in this site is license free and was taken both from Unsplash and Freepik websites, except for the brand logo which was created originally by the team.</p>
+              <p>Doppio’s Coffee & Bakery is a fictional brand created for the solely purpose of this project. So are the contact information and places mentioned at any time.</p>
+              <p>Any similarities with real brands or people are merely coincidental.</p>
+              <p>This page serves no commercial purposes.</p>
+              <p className="text-end">September 2023.</p>
+              <p className="text-end">Montevideo, Uruguay.</p>
             </div>
-            {team.map((person) => (
-              <div
-                key={person.name}
-                className="col d-flex flex-column justify-content-center align-items-center text-center"
-              >
-                <img
-                  src={person.image}
-                  alt=""
-                  className="team-img"
-                  onClick={() => {
-                    setPerson(person);
-                    setModalAbout(true);
-                  }}
-                />
-                <h5 className="mt-3 contact-text text-uppercase fw-bold">
-                  {person.name}
-                </h5>
-                <small>Full Stack Dev</small>
-                <div>
-                  <Link to="linkedin" target="_blank">
-                    <BiLogoLinkedinSquare className="social-icons me-2" />
-                  </Link>
-                  <Link to="github" target="_blank">
-                    <BiLogoGithub className="social-icons" />
-                  </Link>
-                </div>
-              </div>
-            ))}
+            <p>
+              To reset the database click{" "}
+              <span className="click-here" onClick={handleDatabase}>
+                here
+              </span>
+            </p>
           </section>
         </div>
         <BackToTop />
