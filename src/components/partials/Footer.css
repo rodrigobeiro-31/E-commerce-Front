@@ -160,4 +160,7 @@ footer {
     text-align: center;
     gap: 2rem;
   }
+  .section-container {
+    padding: 0 3rem;
+  }
 }
