@@ -2,10 +2,10 @@ import React from "react";
 import { useState } from "react";
 import "./Contact.css";
 import axios from "axios";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { useSelector } from "react-redux";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 function Contact() {
   // const token = useSelector((state) => state.user.token);
@@ -55,9 +55,10 @@ function Contact() {
     <>
       <div className="container-fluid p-0">
         <div className="container-fluid d-flex align-items-center flex-column justify-content-center m-0 p-0 contact-banner">
-          <h2 className="text-white d-flex justify-content-center align-items-center title">
+          <h2 className="text-white title">
             CONTACT
           </h2>
+          <h3 className="mt-5 pt-5 fw-bold text-center slide-down">Slide down <BsFillArrowDownCircleFill /></h3>
         </div>
         <div className="container mb-5 mt-5 text-white d-flex justify-content-center align-items-center">
           <div className="d-flex justify-content-center">
@@ -244,18 +245,18 @@ function Contact() {
                   <div className="col-12 col-md-6 mt-5">
                     <h5 className="contact-text fw-bold mb-3">PHONE NUMBERS</h5>
                     <p className="contact-text m-0">
-                      <Link to="tel:+099999999">099 999 999</Link>
+                      <NavLink className={"contact-links"} to="tel:+099999999">099 999 999</NavLink>
                     </p>
                     <p className="contact-text m-0">
-                      <Link to="tel:+2425 2345">2425 2345</Link>
+                      <NavLink className={"contact-links"} to="tel:+2425 2345">2425 2345</NavLink>
                     </p>
                   </div>
                   <div className="col-12 col-md-6 mt-5">
                     <h5 className="contact-text fw-bold mb-3">EMAIL</h5>
                     <p className="contact-text m-0">
-                      <Link to="mailto:info.doppios@gmail.com">
+                      <NavLink className={"contact-links"} to="mailto:info.doppios@gmail.com">
                         info.doppios@gmail.com
-                      </Link>
+                      </NavLink>
                     </p>
                   </div>
                 </div>

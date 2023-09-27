@@ -16,6 +16,7 @@ import Error from "./components/pages/Error";
 import OrderConfirmed from "./components/pages/OrderConfirmation";
 import BackToTop from "./components/partials/BackToTop";
 import ProjectBtn from "./components/partials/ProjectBtn";
+import MainNavbar from "./components/partials/MainNavbar";
 
 function App() {
   const location = useLocation();
@@ -25,7 +26,7 @@ function App() {
 
   return (
     <>
-      <Header />
+      <MainNavbar />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<ModalRegister />} />

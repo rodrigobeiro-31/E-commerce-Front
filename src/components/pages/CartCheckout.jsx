@@ -77,14 +77,15 @@ function CartCheckout() {
     <>
       <div className="checkout-container pb-5">
         <div className="checkout-bg-img container-fluid d-flex justify-content-center align-items-center">
-          <div className="checkout-gd-overlay"> </div>
-          <h2 className="d-flex justify-content-center align-items-center mb-3 title">
+          <div className="checkout-gd-overlay d-flex justify-content-center align-items-center "> </div>
+          <h2 className="mb-3 title">
             CHECKOUT
           </h2>
         </div>
         <div className="container p-5">
           <div className="row d-flex justify-content-center mt-4 gap-3">
-            <div className="col-8 card p-3">
+            <div className="col-12 col-md-6 card p-3">
+              <div className="table resposive">
               <table className="table align-middle horizontal-align-middle">
                 <thead>
                   <tr>
@@ -102,7 +103,8 @@ function CartCheckout() {
                           src={`https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/products/${product.image}?t=2023-09-19T13%3A20%3A01.474Z`}
                           alt={product.name}
                         />
-                        {product.name}
+                         {product.name.substring(0, 15)}...
+                     
                       </td>
                       <td>
                         <div className="d-flex align-items-center m-0 p-0">
@@ -144,8 +146,9 @@ function CartCheckout() {
                   ))}
                 </tbody>
               </table>
+              </div>
             </div>
-            <div className="col-3 card p-3 checkout-summary">
+            <div className="col-12 col-md-5 card p-3 checkout-summary">
               <div className="card-body">
                 <h5 className="card-title mb-4">Order summary</h5>
                 <ul className="me-4">
@@ -190,6 +193,8 @@ function CartCheckout() {
           </div>
         </div>
       </div>
+
+
     </>
   );
 }

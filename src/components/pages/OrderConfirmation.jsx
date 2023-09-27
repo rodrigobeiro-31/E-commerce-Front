@@ -15,10 +15,10 @@ function OrderConfirmed() {
 
   return (
     <div className="container-fluid g-0 m-0 p-0">
-      <div className="confirmation-container d-flex justify-content-center">
+      <div className=" confirmation-container d-flex justify-content-center">
         <h3 className="fw-bold title">Order confirmed!</h3>
       </div>
-      <div className="d-flex flex-column justify-content-center align-items-center p-5">
+      <div className=" col-12 col-md-12 d-flex flex-column justify-content-center align-items-center p-5">
         <img
           className="confirmation-logo"
           src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-black-logo.png"

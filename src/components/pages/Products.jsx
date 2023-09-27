@@ -8,6 +8,7 @@ import { addPrice } from "../../redux/orderPriceSlice";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import ProductCard from "../partials/ProductCard";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 
 function Products() {
   const [products, setProducts] = useState();
@@ -62,9 +63,10 @@ function Products() {
       <>
         <div className="container-fluid main-container p-0">
           <div className="container-fluid d-flex align-items-center flex-column justify-content-center image-container m-0 p-0">
-            <h2 className="text-white d-flex justify-content-center align-items-center title">
+            <h2 className="text-white text-center title">
               PRODUCTS
             </h2>
+            <h3 className="mt-5 pt-5 fw-bold text-center slide-down">Slide down <BsFillArrowDownCircleFill /></h3>
           </div>
           <div className="container mt-5">
             <div className="row d-flex justify-content-end pe-2 me-5">

@@ -22,6 +22,7 @@
 }
 
 .nav-link {
+  margin: 0 1rem !important;
   color: white;
   font-weight: bold;
   text-transform: uppercase;

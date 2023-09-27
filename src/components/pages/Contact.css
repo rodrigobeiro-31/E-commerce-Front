@@ -1,5 +1,5 @@
 .contact-banner {
-  background-image: url("https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/contact-banner.jpg");
+  background-image: url("https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/contact-banner.avif");
   background-size: cover;
   margin: 0;
   padding: 0;
@@ -69,4 +69,12 @@
 .span-line {
   width: 100%;
   border-bottom: 0.2px solid var(--mainBrown);
+}
+
+.contact-links{
+  color: var(--mainBrown);
+}
+
+.contact-links:hover{
+  color: var(--secondaryBrown);
 }

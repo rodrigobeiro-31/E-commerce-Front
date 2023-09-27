@@ -6,7 +6,8 @@ import axios from "axios";
 import "./Profile.css";
 import ModalOrder from "../partials/ModalOrder";
 import { format } from "date-fns";
-import { BiSolidUserCircle } from "react-icons/bi";
+import { BiSolidUserCircle } from "react-icons/bi"
+import { BsFillArrowDownCircleFill } from "react-icons/bs"
 
 function Profile() {
   const [firstname, setFirstname] = useState("");
@@ -63,15 +64,15 @@ function Profile() {
   return (
     email && (
       <div className="container-fluid d-flex flex-column p-0">
-        <div className="container-fluid d-flex align-items-center justify-content-center m-0 p-0 profile-banner">
-          <h2 className="text-white text-center title">PROFILE</h2>
-        </div>
-        <div className="container">
-          <div className="mb-5 mt-5 p-3 text-white">
-            <h2 className="text-uppercase fw-bold contact-title">
-              {" "}
-              <BiSolidUserCircle className="me-2 profile-icon" /> My account
-            </h2>
+    <div className="container-fluid d-flex align-items-center justify-content-center m-0 p-0 profile-banner">
+        <h2 className="text-white text-center title">
+            PROFILE
+        </h2>
+        <h3 className="mt-5 pt-5 fw-bold text-center slide-down">Slide down <BsFillArrowDownCircleFill /></h3>
+    </div>
+    <div className="container">
+        <div className="mb-5 mt-5 p-3 text-white">
+            <h2 className="text-uppercase fw-bold contact-title"> <BiSolidUserCircle className="me-2 profile-icon"/> My account</h2>
             <span className="line-span"></span>
             <p className="fw-normal contact-text">
               Welcome{" "}
@@ -179,7 +180,7 @@ function Profile() {
                         </td>
                         <td>
                           <NavLink
-                            className=""
+                            className="contact-links"
                             onClick={() => {
                               handleShow();
                               setSelectedCart(order.cart);

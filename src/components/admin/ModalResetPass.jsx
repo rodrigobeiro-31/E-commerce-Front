@@ -3,9 +3,9 @@ import { MdLockReset } from "react-icons/md";
 import { Modal, Button, Form } from "react-bootstrap";
 import axios from "axios";
 
-export default function ModalResetPass() {
+export default function ModalResetPass({ mail }) {
   const [showModal, setShowModal] = useState(false);
-  const [email, setEmail] = useState("");
+  const [email, setEmail] = useState(mail);
 
   const handleClose = () => setShowModal(false);
   const handleShow = () => setShowModal(true);
@@ -38,26 +38,23 @@ export default function ModalResetPass() {
 
         <Modal.Body>
           <Form onSubmit={handleSubmit} />
-          <Form.Group controlId="resetEmail">
+          <Form.Group controlId="emailr">
             <Form.Label>
               Write your email in the field below, and we will send you a
               notification to your email.
             </Form.Label>
             <Form.Control
               type="text"
-              name="email"
-              className="form-control"
+              name="emailr"
               value={email}
-              onChange={(e) =>
-                setEmail(e.target.value !== email ? e.target.value : email)
-              }
+              onChange={(e) => setEmail(e.target.value)}
             />
           </Form.Group>
         </Modal.Body>
 
         <Modal.Footer>
           <Button variant="primary" onClick={handleSubmit}>
-            Submit{" "}
+            Send{" "}
           </Button>
         </Modal.Footer>
       </Modal>
