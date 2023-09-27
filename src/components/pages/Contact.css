@@ -70,3 +70,11 @@
   width: 100%;
   border-bottom: 0.2px solid var(--mainBrown);
 }
+
+.contact-links{
+  color: var(--mainBrown);
+}
+
+.contact-links:hover{
+  color: var(--secondaryBrown);
+}

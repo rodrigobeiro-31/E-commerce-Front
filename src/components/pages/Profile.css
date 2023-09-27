@@ -22,3 +22,8 @@
   background-color: var(--mainBrown);
   border-radius: 0%;
 }
+
+.order-modal-title{
+  color: var(--mainBrown);
+  text-transform: uppercase;
+}
