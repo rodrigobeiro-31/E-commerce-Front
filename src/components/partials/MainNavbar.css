@@ -97,9 +97,6 @@ nav {
     margin: 0;
     padding: 0;
   }
-  .nav-links-mobile.hide-nav {
-    display: none;
-  }
   .mobile-menu-icon {
     display: block;
   }
