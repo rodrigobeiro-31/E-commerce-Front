@@ -22,14 +22,39 @@ function MainNavbar() {
   const [scroll, setScroll] = useState(false);
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
-
-  useEffect(() => {
-    window.addEventListener("scroll", () => {
-      setScroll(window.scrollY > 10);
-    });
-  }, []);
+  const [scrollData, setScrollData] = useState({ y: 0, lastY: 0 });
+  const [showNav, setShowNav] = useState(true);
 
   const [mobile, setMobile] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrollData((prevState) => {
+        return {
+          y: window.scrollY,
+          lastY: prevState.y,
+        };
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    console.log(scrollData);
+    if (scrollData.y > 500) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+
+    if (scrollData.lastY > scrollData.y) {
+      setShowNav(true);
+    } else {
+      setShowNav(false);
+    }
+  }, [scrollData]);
 
   //Handle for register and login
   const handleShowAll = (
@@ -60,9 +85,19 @@ function MainNavbar() {
   const handleLogOut = () => {
     dispatch(logout());
   };
+
+  const handleWidth = () => {
+    if (window.screen.width > 768) setMobile(false);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", handleWidth);
+    return () => window.removeEventListener("resize", handleWidth);
+  }, []);
+
   return (
-    <nav>
-      <div className="nav-logo">
+    <nav className={showNav ? "" : "hide-nav"}>
+      <div className="nav-logo-container">
         <Link to={"/"}>
           <img
             src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-white-logo.png"
