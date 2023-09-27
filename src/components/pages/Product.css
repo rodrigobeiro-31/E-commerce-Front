@@ -11,7 +11,7 @@ hr {
 }
 
 .data-container {
-  padding-top: calc(55.33px - 2rem);
+  padding-top: 4.5rem;
 }
 
 .accordion-button:not(.collapsed) {
