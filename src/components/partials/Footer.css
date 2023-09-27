@@ -151,6 +151,11 @@ footer {
   text-transform: uppercase;
 }
 
+@media (max-width: 1200px) {
+  .section-container {
+    padding: 0 4rem;
+  }
+}
 @media (max-width: 768px) {
   .footer-socials {
     display: grid;
