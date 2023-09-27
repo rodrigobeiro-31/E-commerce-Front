@@ -77,27 +77,44 @@ function About() {
         <div className="container-fluid">
           <section className="about-section-one justify-content-center align-items-center row">
             <div className="d-flex flex-column justfiy-content-center align-items-center mb-2 col-lg-8 col-md-10 col-12 p-5 ">
+              <h5 className=" my-5">The current webpage was built as a final course project for the Full Stack Developing Bootcamp by Hack Academy in September 2023. It is the result of more than 120 hours of coding, decision making and designing as a team. Everything from its functionalities and structure to the brand identity and product selection was created from scratch. </h5>
               <h3 className="mb-5 fw-bold contact-title">
-                Technologies and tools used
+                Organization
               </h3>
               <span className="line-span"></span>
               <p className="contact-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                velit suscipit unde dolores odio maxime quibusdam dicta quod, ut
-                laborum aut tenetur explicabo temporibus voluptatum molestias
-                quisquam fugit cupiditate! Nobis?
+                Working in a team of five with a three-week deadline demanded us to develop a well-organized system to avoid wasting time and generating conflicts in the code. Even though we worked most of the time simultaneously on a Discord channel, we used Trello as a platform where each team member could assign itself tasks and see what the others were working on.
               </p>
               <p className="contact-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                velit suscipit unde dolores odio maxime quibusdam dicta quod, ut
-                laborum aut tenetur explicabo temporibus voluptatum molestias
-                quisquam fugit cupiditate! Nobis?
+                We structured the code in three Github repositories for the Backend, the Admin Frontend, and the User Frontend codes. We then determined a series of goals for each one of the three weeks:
+              </p>
+              <ul>
+                <li>First week: setting up the models and seeders for the site’s database, structuring the views for each page, defining key style elements for the brand, and connecting routes.</li>
+                <li>Second week: programming the admin page with CRUD functionalities for users, orders, and products, defining authentication and authorization functions, creating a working Cart.</li>
+                <li>Third week: Finishing touches and deploying the database and site.</li>
+              </ul>
+              <p className="mb-5 contact-text">Both working together and individually, we divided tasks considering all team member’s strengths and weaknesses as well as the learning opportunities that appeared throughout the process.</p>
+              <h3 className="my-5 fw-bold contact-title">
+                Brand identity
+              </h3>
+              <span className="line-span"></span>
+              <p className="contact-text">After inclining ourselves for a cafe and bakery business, most style decisions were made as a team. We researched the Uruguayan and foreign markets, searched for inspirations, and identify mistakes in regards of developing an attractive and original brand.</p>
+              <p className="mb-5 contact-text">Both the visual identity and name of Doppio’s Cafe & Bakery was created to quickly identify the purpose of the store. The cartoonish logo combined with a focus on the products imagery and a brown color palette, inspires a classic yet trendy feel to the webpage. </p>
+              <h3 className="my-5 fw-bold contact-title">
+                Technologies and tools
+              </h3>
+              <span className="line-span"></span>
+              <p className="contact-text">
+                This site was developed using the React library for JavaScript as well as Node.js, Redux and elements of vanilla HTML and CSS. Other Node libraries were used for specific purposes such as Express, Formidable, Dotenv, Bcrypt, React Bootstrap, among others.
               </p>
               <p className="contact-text">
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. A
-                velit suscipit unde dolores odio maxime quibusdam dicta quod, ut
-                laborum aut tenetur explicabo temporibus voluptatum molestias
-                quisquam fugit cupiditate! Nobis?
+                The data for this e-commerce was stored in MongoDB considering the advantages of employing a non-relational database for this project.  We made this decision valuing the flexibility of this type of database, which makes them easier to adjust or make changes. It also presented some advantages when using MongoDB Atlas, since it was a faster a simpler way of storing data in the cloud. Multimedia elements such as images and icons were stored using Supabase.
+              </p>
+              <p className="contact-text">
+                The brand logo and icons were designed with Procreate and Adobe Illustrator. Adobe Photoshop was used for editing the products images as well as fixing and adjusting other elements when creating the visual identity of Doppio’s.
+              </p>
+              <p className="contact-text">
+                Tools and programs such as Discord, Trello and Excalidraw were used for organizing and holding group working sessions throughout the process.
               </p>
               <div className="d-flex gap-5 justify-content-center align-self-center flex-wrap m-0">
                 <div className="tech-icon">
@@ -151,8 +168,16 @@ function About() {
                 <div className="tech-icon">
                   <SiAdobeillustrator className="icon" />
                   <small>Illustrator</small>
-                </div>         
+                </div>
               </div>
+              <h5>Disclaimer</h5>
+              <p>Every image used in this site is license free and was taken both from Unsplash and Freepik websites, except for the brand logo which was created originally by the team.</p>
+              <p>Doppio’s Coffee & Bakery is a fictional brand created for the solely purpose of this project. So are the contact information and places mentioned at any time.</p>
+              <p>Any similarities with real brands or people are merely coincidental.
+              This page serves no commercial purposes.</p>
+              <p>September 2023.</p>
+              <p>Montevideo, Uruguay.</p>
+
             </div>
           </section>
           <section>
