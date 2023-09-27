@@ -106,7 +106,7 @@ function Home() {
               {" "}
               <h3 className="card-title fw-bold">About Doppio's</h3>
               <span className="line-span align-self-center mb-5"></span>
-              <p className="contact-text mb-4">
+              <p className="contact-text mb-4 about-text">
                 At Doppio's Coffee & Bakery, we blend the rich tradition of
                 artisanal coffee crafting with the comforting aroma of freshly
                 baked bread to create an inviting haven for coffee enthusiasts
@@ -115,7 +115,7 @@ function Home() {
                 "double." Just as a doppio espresso is a double shot of pure
                 espresso, we aim to double your satisfaction with every visit.
               </p>
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 With a passion for quality and a dedication to delighting your
                 senses, our coffee is sourced from the finest beans and expertly
                 roasted to perfection, ensuring each sip is a symphony of
@@ -133,7 +133,7 @@ function Home() {
             </div>
           </section>
 
-          <div className="container-fluid d-flex flex-column align-items-center ps-5 pe-5 mb-5  home-separator">
+          <div className="container-fluid d-flex flex-column align-items-center ps-5 pe-5 mb-5 home-separator">
             <h3 className="card-title fw-bold text-center contact-title">
               Our values
             </h3>
@@ -146,7 +146,7 @@ function Home() {
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
                 <h5 className="text-center mt-3 fw-semibold">Artisanal</h5>
-                <p className="text-center fw-light">
+                <p className="text-center fw-light about-text">
                   Indulge in the artisanal excellence of our handcrafted bakery
                   and café, where every creation is a true work of culinary
                   artistry.
@@ -161,7 +161,7 @@ function Home() {
                 <h5 className="text-center mt-3 fw-semibold">
                   Natural products
                 </h5>
-                <p className="text-center fw-light">
+                <p className="text-center fw-light about-text">
                   Experience the goodness of our all-natural products, carefully
                   crafted with Mother Nature's finest ingredients for a
                   wholesome and delightful culinary journey.
@@ -176,7 +176,7 @@ function Home() {
                 <h5 className="text-center mt-3 fw-semibold">
                   Family business
                 </h5>
-                <p className="text-center fw-light">
+                <p className="text-center fw-light about-text">
                   For generations, our family business has been the heart of our
                   bakery and boutique café, where each creation carries with it
                   the love and tradition passed down from parents to children.
@@ -188,8 +188,8 @@ function Home() {
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
-                <h5 className="text-center mt-3 fw-semibold">Sustainable</h5>
-                <p className="text-center fw-light">
+                <h5 className="text-center mt-3 fw-semibold ">Sustainable</h5>
+                <p className="text-center fw-light about-text">
                   Committed to a sustainable future, we take pride in crafting
                   our products with eco-friendly practices and ingredients that
                   prioritize the well-being of our planet and your health.

@@ -79,8 +79,8 @@
 
 .home-value {
   color: var(--mainBrown);
-  transition: 0.5s ease-in;
-  opacity: 70%;
+  transition: 0.3s ease-in;
+  opacity: 85%;
 }
 
 .home-value:hover {
