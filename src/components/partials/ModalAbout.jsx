@@ -14,7 +14,7 @@ function AboutModal({ modalAbout, setModalAbout, person }) {
           <img src={person.image} alt="" className="about-card-img" />
           <div className="about-card-details">
             <h3 className="about-card-title">{person.name}</h3>
-            <p>Full Stack Developer</p>
+            <p>{person.resume}</p>
           </div>
         </div>
       </div>
