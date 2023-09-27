@@ -49,13 +49,12 @@ function About() {
     },
     {
       name: "Kathia Olaverry",
-      age: 27,
+      age: 24,
       image:
-        "https://as2.ftcdn.net/v2/jpg/02/79/66/93/1000_F_279669366_Lk12QalYQKMczLEa4ySjhaLtx1M2u7e6.jpg",
-      title: "Full Stack Dev.",
-      linkedin: "",
-      github: "",
-      resume: "",
+        "https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/profile_images/photo_Kathia.jpeg",
+      linkedin: "https://www.linkedin.com/in/kathia-olaverry/",
+      github: "https://github.com/Kathia01",
+      resume: "I'm a nutritionist turned full stack developer. I'm currently living in Montevideo and I'm very excited to start my new journey in the world of programming. This change has allowed me to put into practice my versatility and ability to adapt to new challenges.",
     },
     {
       name: "José Ignacio Siutto",
