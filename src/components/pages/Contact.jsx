@@ -40,7 +40,7 @@ function Contact() {
       setFormData({
         firstname: "",
         lastname: "",
-        phone: "",
+        fone: "",
         direction: "",
         affaire: "",
         options: "",
@@ -63,7 +63,7 @@ function Contact() {
         <div className="container mb-5 mt-5 text-white d-flex justify-content-center align-items-center">
           <div className="d-flex justify-content-center">
             <div className="row d-flex justify-contact-between gap-5 contact-container">
-              <div className="col-6">
+              <div className="col-11 col-md-5">
                 <div className="container">
                   <div>
                     <h2 className="fw-bold pt-4 contact-title">Contact us</h2>
@@ -73,7 +73,7 @@ function Contact() {
                     </p>
                   </div>
                   <form onSubmit={sendForm} className="row">
-                    <div className="col-6">
+                    <div className="col-11 col-md-6">
                       <label
                         htmlFor="firstName"
                         className="form-label contact-text"
@@ -89,7 +89,7 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-6">
+                    <div className="col-11 col-md-6">
                       <label
                         htmlFor="lastname"
                         className="form-label contact-text"
@@ -106,12 +106,12 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-6">
+                    <div className="col-11 col-md-6">
                       <label
                         htmlFor="ilastName"
                         className="form-label contact-text"
                       >
-                        Phone number :
+                        Phone number:
                       </label>
                       <input
                         type="text"
@@ -123,7 +123,7 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-md-6">
+                    <div className="col-11 col-md-6">
                       <label
                         htmlFor="direction"
                         className="form-label contact-text"
@@ -140,7 +140,7 @@ function Contact() {
                         onChange={handleChange}
                       />
                     </div>
-                    <div className="col-12">
+                    <div className="col-11">
                       <label htmlFor="fone" className="form-label contact-text">
                         Affair :
                       </label>
@@ -155,7 +155,7 @@ function Contact() {
                       />
                     </div>
 
-                    <div className="col-md-6">
+                    <div className="col-11 col-md-6">
                       <label
                         htmlFor="options"
                         className="form-label contact-text"
@@ -177,7 +177,7 @@ function Contact() {
                         <option>Other</option>
                       </select>
                     </div>
-                    <div className="col-6 d-flex justify-content-end text-center pt-1">
+                    <div className="col-11 col-md-6 d-flex justify-content-end text-center pt-1">
                       <button
                         type="submit"
                         className="px-5 text-center main-btn btn-contact"
@@ -188,7 +188,7 @@ function Contact() {
                   </form>
                 </div>
               </div>
-              <div className="col-5">
+              <div className="col-10 col-md-5">
                 <h2 className="fw-bold pt-4 contact-title">Locations</h2>
                 <span className="line-span"></span>
                 <div className="row d-flex justify-content-between">
@@ -232,25 +232,32 @@ function Contact() {
                   </ul>
                 </div>
                 <div className="row d-flex flex-wrap mt-5 locations-container">
-                  <div className="col-6 mt-2">
+                  <div className="col-11 col-md-6 mt-2">
                     <h5 className="contact-text fw-bold">
                       DOPPIO'S CENTRAL CAFE
                     </h5>
                     <p className="contact-text">Requena 2054, Montevideo</p>
                   </div>
-                  <div className="col-6 mt-2">
+                  <div className="col-12 col-md-6 mt-2">
                     <h5 className="contact-text fw-bold">DOPPIO'S TAKEAWAY</h5>
                     <p className="contact-text">Av Brasil 4321, Montevideo</p>
                   </div>
-                  <div className="col-6 mt-5">
+                  <div className="col-12 col-md-6 mt-5">
                     <h5 className="contact-text fw-bold mb-3">PHONE NUMBERS</h5>
-                    <p className="contact-text m-0">099 999 999</p>
-                    <p className="contact-text m-0">2425 2345</p>
+                    <p className="contact-text m-0">
+                      <Link to="tel:+099999999">099 999 999</Link>
+                    </p>
+                    <p className="contact-text m-0">
+                      <Link to="tel:+2425 2345">2425 2345</Link>
+                    </p>
                   </div>
-                  <div className="col-6 mt-5">
-                    <h5 className="contact-text fw-bold mb-3">EMAILS</h5>
-                    <p className="contact-text m-0">doppios@doppios.com</p>
-                    <p className="contact-text m-0">contact@doppios.com</p>
+                  <div className="col-12 col-md-6 mt-5">
+                    <h5 className="contact-text fw-bold mb-3">EMAIL</h5>
+                    <p className="contact-text m-0">
+                      <Link to="mailto:info.doppios@gmail.com">
+                        info.doppios@gmail.com
+                      </Link>
+                    </p>
                   </div>
                 </div>
               </div>

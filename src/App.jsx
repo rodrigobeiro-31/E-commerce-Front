@@ -9,7 +9,6 @@ import Header from "./components/partials/Header";
 import Products from "./components/pages/Products";
 import About from "./components/pages/About";
 import Product from "./components/pages/Product";
-import ProductIn from "./components/admin/inProduct";
 import { useEffect } from "react";
 import CartCheckout from "./components/pages/CartCheckout";
 import Profile from "./components/pages/Profile";
@@ -35,7 +34,6 @@ function App() {
         <Route path="/products/:slug" element={<Product />} />
         <Route path="/about-us" element={<About />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/admin" element={<ProductIn />} />
         <Route path="/profile/:id" element={<Profile />} />
         <Route path="/checkout" element={<CartCheckout />} />
         <Route path="/checkout/confirmed" element={<OrderConfirmed />} />
