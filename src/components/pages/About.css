@@ -149,7 +149,7 @@
   font-weight: 800;
   color: var(--darkBrown);
   animation-name: text;
-  animation-duration: 5s;
+  animation-duration: 2s;
   opacity: 100;
 }
 
@@ -172,6 +172,9 @@
 }
 
 @media (max-width: 768px) {
+  .about-brand-img {
+    max-width: 20rem;
+  }
   .about-card {
     display: flex !important;
     flex-direction: column !important;

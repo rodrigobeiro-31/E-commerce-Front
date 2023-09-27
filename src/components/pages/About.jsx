@@ -104,7 +104,7 @@ function About() {
             {team.map((person) => (
               <div
                 key={person.name}
-                className="col d-flex flex-column justify-content-center align-items-center text-center"
+                className="col d-flex flex-column justify-content-center align-items-center text-center my-3"
               >
                 <img
                   src={person.image}
@@ -299,7 +299,7 @@ function About() {
             <div className="d-flex flex-column justify-content-center align-items-center mt-5">
               <h2 className="contact-title">ADMIN WEB</h2>
               <span className="line-span"></span>
-              <Link to="/admin">
+              <Link to="https://doppios-admin.vercel.app/">
                 <img
                   src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-2.avif"
                   alt=""
