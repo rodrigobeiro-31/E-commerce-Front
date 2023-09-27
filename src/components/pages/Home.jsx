@@ -97,7 +97,7 @@ function Home() {
           >
             <div className="home-img-container">
               <img
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-about-img.jpg"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-about-img.avif"
                 alt="coffee-shop"
                 className="img-home"
               />
