@@ -31,7 +31,7 @@ function About() {
       title: "BA in Communication | Illustrator | Full Stack Dev.",
       linkedin: "https://www.linkedin.com/in/alejo-gonzalez-gentile/?locale=en_US",
       github: "https://github.com/AlejoGonzalez99/",
-      resume: "BA in Communication from Universidad ORT Uruguay and Full Stack Developer Jr. ",
+      resume: "BA in Communication from Universidad ORT Uruguay, Full Stack Developer Jr. formed at Hack Academy and independent illustrator. Experience as a journalistic producer, podcast scripter and web designer in pojects for brands such as Itaú Bank, Club Atlético Aguada, Asociación Española and El País newspaper.",
     },
     {
       name: "Rodrigo Beiro",
