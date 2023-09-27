@@ -136,17 +136,17 @@ function About() {
           </section>
           <section className="about-section-one justify-content-center align-items-center row">
             <div className="d-flex flex-column justfiy-content-center align-items-center mb-2 col-lg-8 col-md-10 col-12 p-5 ">
-              <h5 className=" my-5">
+              <p className="main-about-text">
                 The current webpage was built as a final course project for the
                 Full Stack Developing Bootcamp by Hack Academy in September
                 2023. It is the result of more than 120 hours of coding,
                 decision making and designing as a team. Everything from its
                 functionalities and structure to the brand identity and product
                 selection was created from scratch.{" "}
-              </h5>
+              </p>
               <h3 className="mb-5 fw-bold contact-title">Organization</h3>
               <span className="line-span"></span>
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 Working in a team of five with a three-week deadline demanded us
                 to develop a well-organized system to avoid wasting time and
                 generating conflicts in the code. Even though we worked most of
@@ -154,13 +154,13 @@ function About() {
                 a platform where each team member could assign itself tasks and
                 see what the others were working on.
               </p>
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 We structured the code in three Github repositories for the
                 Backend, the Admin Frontend, and the User Frontend codes. We
                 then determined a series of goals for each one of the three
                 weeks:
               </p>
-              <ul>
+              <ul className="about-text">
                 <li>
                   First week: setting up the models and seeders for the site’s
                   database, structuring the views for each page, defining key
@@ -177,7 +177,7 @@ function About() {
                   site.
                 </li>
               </ul>
-              <p className="mb-5 contact-text">
+              <p className="mb-5 contact-text about-text">
                 Both working together and individually, we divided tasks
                 considering all team member’s strengths and weaknesses as well
                 as the learning opportunities that appeared throughout the
@@ -192,14 +192,14 @@ function About() {
                 src="/imgs/doppios-main-logo.png"
                 alt="Doppio's Logo"
               />
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 After inclining ourselves for a cafe and bakery business, most
                 style decisions were made as a team. We researched the Uruguayan
                 and foreign markets, searched for inspirations, and identify
                 mistakes in regards of developing an attractive and original
                 brand.
               </p>
-              <p className="mb-5 contact-text">
+              <p className="mb-5 contact-text about-text">
                 Both the visual identity and name of Doppio’s Cafe & Bakery was
                 created to quickly identify the purpose of the store. The
                 cartoonish logo combined with a focus on the products imagery
@@ -210,14 +210,14 @@ function About() {
                 Technologies and tools
               </h3>
               <span className="line-span"></span>
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 This site was developed using the React library for JavaScript
                 as well as Node.js, Redux and elements of vanilla HTML and CSS.
                 Other Node libraries were used for specific purposes such as
                 Express, Formidable, Dotenv, Bcrypt, React Bootstrap, among
                 others.
               </p>
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 The data for this e-commerce was stored in MongoDB considering
                 the advantages of employing a non-relational database for this
                 project. We made this decision valuing the flexibility of this
@@ -227,13 +227,13 @@ function About() {
                 the cloud. Multimedia elements such as images and icons were
                 stored using Supabase.
               </p>
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 The brand logo and icons were designed with Procreate and Adobe
                 Illustrator. Adobe Photoshop was used for editing the products
                 images as well as fixing and adjusting other elements when
                 creating the visual identity of Doppio’s.
               </p>
-              <p className="contact-text">
+              <p className="contact-text about-text">
                 Tools and programs such as Discord, Trello and Excalidraw were
                 used for organizing and holding group working sessions
                 throughout the process.
@@ -323,23 +323,25 @@ function About() {
             <div className="d-flex flex-column justfiy-content-center  mb-2 col-lg-8 col-md-10 col-12 p-5 ">
               <h3 className="mb-5 fw-bold contact-title">DISCLAIMER</h3>
               <span className="line-span"></span>
-              <p>
+              <p className="about-text">
                 Every image used in this site is license free and was taken both
                 from Unsplash and Freepik websites, except for the brand logo
                 which was created originally by the team.
               </p>
-              <p>
+              <p className="about-text">
                 Doppio’s Coffee & Bakery is a fictional brand created for the
                 solely purpose of this project. So are the contact information
                 and places mentioned at any time.
               </p>
-              <p>
+              <p className="about-text">
                 Any similarities with real brands or people are merely
                 coincidental.
               </p>
-              <p>This page serves no commercial purposes.</p>
-              <p className="text-end">September 2023.</p>
-              <p className="text-end">Montevideo, Uruguay.</p>
+              <p className="about-text">
+                This page serves no commercial purposes.
+              </p>
+              <p className="text-end about-text">September 2023.</p>
+              <p className="text-end about-text">Montevideo, Uruguay.</p>
             </div>
           </section>
         </div>

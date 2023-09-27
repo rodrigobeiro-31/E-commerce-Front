@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Roboto+Condensed:wght@300;400;700&display=swap");
+
 .about-bg-img {
   position: relative;
   width: 100%;
@@ -5,6 +7,17 @@
   background-image: url("https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/about-banner.avif");
   background-size: cover;
   background-position: center;
+}
+
+.main-about-text {
+  font-family: "Inter", sans-serif;
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 4rem;
+}
+
+.about-text {
+  font-family: "Inter", sans-serif;
 }
 
 .about-gd-overlay {
