@@ -138,8 +138,8 @@ function Home() {
               Our values
             </h3>
             <span className="line-span mb-2"></span>
-            <div className="row d-flex px-5 mx-5">
-              <div className="col d-flex flex-column align-items-center p-3 home-value">
+            <div className="row d-flex align-items-center px-1 px-md-5 mx-1 mx-md-5">
+              <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"
@@ -152,7 +152,7 @@ function Home() {
                   artistry.
                 </p>
               </div>
-              <div className="col d-flex flex-column align-items-center p-3 home-value">
+              <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"
@@ -167,7 +167,7 @@ function Home() {
                   wholesome and delightful culinary journey.
                 </p>
               </div>
-              <div className="col d-flex flex-column align-items-center p-3 home-value">
+              <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"
@@ -182,7 +182,7 @@ function Home() {
                   the love and tradition passed down from parents to children.
                 </p>
               </div>
-              <div className="col d-flex flex-column align-items-center p-3 home-value">
+              <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
                   src="/imgs/coffee-bean-icon-brown.png"
                   alt="label"

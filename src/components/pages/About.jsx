@@ -35,7 +35,7 @@ function About() {
       title: "BA in Communication | Illustrator | Full Stack Dev.",
       linkedin: "https://www.linkedin.com/in/alejo-gonzalez-gentile/?locale=en_US",
       github: "https://github.com/AlejoGonzalez99/",
-      resume: "BA in Communication from Universidad ORT Uruguay, Full Stack Developer Jr. formed at Hack Academy and independent illustrator. Experience as a journalistic producer, podcast scripter and web designer in pojects for brands such as Itaú Bank, Club Atlético Aguada, Asociación Española and El País newspaper.",
+      resume: "BA in Communication at Universidad ORT Uruguay, Full Stack Developer Jr. formed at Hack Academy and independent illustrator. Experience as a journalistic producer, podcast scripter and web designer in pojects for brands such as Itaú Bank, Club Atlético Aguada, Asociación Española and El País newspaper.",
     },
     {
       name: "Rodrigo Beiro",
@@ -105,7 +105,7 @@ function About() {
             {team.map((person) => (
               <div
                 key={person.name}
-                className="col d-flex flex-column justify-content-center align-items-center text-center"
+                className="col d-flex flex-column justify-content-center align-items-center text-center my-3"
               >
                 <img
                   src={person.image}
@@ -182,6 +182,7 @@ function About() {
               </p>
               <h3 className="my-5 fw-bold contact-title">Brand identity</h3>
               <span className="line-span"></span>
+              <img className="my-5 about-brand-img" src="/imgs/doppios-main-logo.png" alt="Doppio's Logo" />
               <p className="contact-text">
                 After inclining ourselves for a cafe and bakery business, most
                 style decisions were made as a team. We researched the Uruguayan
@@ -282,23 +283,6 @@ function About() {
                   <small>Illustrator</small>
                 </div>
               </div>
-              <h5>Disclaimer</h5>
-              <p>
-                Every image used in this site is license free and was taken both
-                from Unsplash and Freepik websites, except for the brand logo
-                which was created originally by the team.
-              </p>
-              <p>
-                Doppio’s Coffee & Bakery is a fictional brand created for the
-                solely purpose of this project. So are the contact information
-                and places mentioned at any time.
-              </p>
-              <p>
-                Any similarities with real brands or people are merely
-                coincidental. This page serves no commercial purposes.
-              </p>
-              <p>September 2023.</p>
-              <p>Montevideo, Uruguay.</p>
             </div>
           </section>
           <section>
@@ -338,34 +322,6 @@ function About() {
               <p className="text-end">September 2023.</p>
               <p className="text-end">Montevideo, Uruguay.</p>
             </div>
-            {team.map((person) => (
-              <div
-                key={person.name}
-                className="col d-flex flex-column justify-content-center align-items-center text-center my-3"
-              >
-                <img
-                  src={person.image}
-                  alt=""
-                  className="team-img"
-                  onClick={() => {
-                    setPerson(person);
-                    setModalAbout(true);
-                  }}
-                />
-                <h5 className="mt-3 contact-text text-uppercase fw-bold">
-                  {person.name}
-                </h5>
-                <small>Full Stack Dev</small>
-                <div>
-                  <Link to="linkedin" target="_blank">
-                    <BiLogoLinkedinSquare className="social-icons me-2" />
-                  </Link>
-                  <Link to="github" target="_blank">
-                    <BiLogoGithub className="social-icons" />
-                  </Link>
-                </div>
-              </div>
-            ))}
           </section>
         </div>
         <BackToTop />
