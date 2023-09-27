@@ -62,7 +62,7 @@ function MainNavbar() {
   };
   return (
     <nav>
-      <div className="nav-logo">
+      <div className="nav-logo-container">
         <Link to={"/"}>
           <img
             src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-white-logo.png"

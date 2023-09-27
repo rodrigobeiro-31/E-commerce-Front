@@ -22,8 +22,12 @@ nav {
 }
 
 .nav-logo {
-  width: 4rem;
-  height: 4rem;
+  width: 3rem;
+  height: 3rem;
+}
+
+.nav-logo-name {
+  text-decoration: none;
 }
 
 .nav-link {
@@ -69,10 +73,6 @@ nav {
 }
 
 @media (max-width: 768px) {
-  .nav-logo {
-    width: 3rem;
-    height: 3rem;
-  }
   .nav-links {
     display: none !important;
   }
