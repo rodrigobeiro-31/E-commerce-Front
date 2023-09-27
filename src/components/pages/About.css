@@ -149,7 +149,7 @@
   font-weight: 800;
   color: var(--darkBrown);
   animation-name: text;
-  animation-duration: 5s;
+  animation-duration: 2s;
   opacity: 100;
 }
 
