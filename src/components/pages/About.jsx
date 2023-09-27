@@ -183,7 +183,9 @@ function About() {
                 as the learning opportunities that appeared throughout the
                 process.
               </p>
-              <h3 className="my-5 fw-bold contact-title">Brand identity</h3>
+              <h3 className="my-5 fw-bold contact-title text-center">
+                Brand identity
+              </h3>
               <span className="line-span"></span>
               <img
                 className="my-5 about-brand-img"
