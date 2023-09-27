@@ -33,19 +33,21 @@ function About() {
       age: 23,
       image: "/imgs/profile-alejo.jpg",
       title: "BA in Communication | Illustrator | Full Stack Dev.",
-      linkedin: "https://www.linkedin.com/in/alejo-gonzalez-gentile/?locale=en_US",
+      linkedin:
+        "https://www.linkedin.com/in/alejo-gonzalez-gentile/?locale=en_US",
       github: "https://github.com/AlejoGonzalez99/",
-      resume: "BA in Communication at Universidad ORT Uruguay, Full Stack Developer Jr. formed at Hack Academy and independent illustrator. Experience as a journalistic producer, podcast scripter and web designer in pojects for brands such as Itaú Bank, Club Atlético Aguada, Asociación Española and El País newspaper.",
+      resume:
+        "BA in Communication at Universidad ORT Uruguay, Full Stack Developer Jr. formed at Hack Academy and independent illustrator. Experience as a journalistic producer, podcast scripter and web designer in pojects for brands such as Itaú Bank, Club Atlético Aguada, Asociación Española and El País newspaper.",
     },
     {
       name: "Rodrigo Beiro",
-      age: 27,
-      image:
-        "https://w7.pngwing.com/pngs/340/946/png-transparent-avatar-user-computer-icons-software-developer-avatar-child-face-heroes-thumbnail.png",
-      title: "Full Stack Dev.",
-      linkedin: "",
-      github: "",
-      resume: "",
+      age: 25,
+      image: "/imgs/profile-rodrigo.png",
+      title: "Accountant | Full Stack Dev.",
+      linkedin: "https://www.linkedin.com/in/rodrigo-beiro/",
+      github: "https://github.com/rodrigobeiro-31",
+      resume:
+        "Bachelor's degree in Accounting from Universidad Católica del Uruguay, Full Stack Developer Jr. certified by Hack Academy, and experience as a tax analyst at KPMG, specializing in tax-related matters. Previous accounting roles involved accounting activities at Granja Pocha.",
     },
     {
       name: "Kathia Olaverry",
@@ -182,7 +184,11 @@ function About() {
               </p>
               <h3 className="my-5 fw-bold contact-title">Brand identity</h3>
               <span className="line-span"></span>
-              <img className="my-5 about-brand-img" src="/imgs/doppios-main-logo.png" alt="Doppio's Logo" />
+              <img
+                className="my-5 about-brand-img"
+                src="/imgs/doppios-main-logo.png"
+                alt="Doppio's Logo"
+              />
               <p className="contact-text">
                 After inclining ourselves for a cafe and bakery business, most
                 style decisions were made as a team. We researched the Uruguayan
@@ -311,13 +317,22 @@ function About() {
           </section>
           <section className="about-section-two justify-content-center align-items-center my-5 row">
             <div className="d-flex flex-column justfiy-content-center  mb-2 col-lg-8 col-md-10 col-12 p-5 ">
-            <h3 className="mb-5 fw-bold contact-title">
-                DISCLAIMER
-              </h3>
+              <h3 className="mb-5 fw-bold contact-title">DISCLAIMER</h3>
               <span className="line-span"></span>
-              <p>Every image used in this site is license free and was taken both from Unsplash and Freepik websites, except for the brand logo which was created originally by the team.</p>
-              <p>Doppio’s Coffee & Bakery is a fictional brand created for the solely purpose of this project. So are the contact information and places mentioned at any time.</p>
-              <p>Any similarities with real brands or people are merely coincidental.</p>
+              <p>
+                Every image used in this site is license free and was taken both
+                from Unsplash and Freepik websites, except for the brand logo
+                which was created originally by the team.
+              </p>
+              <p>
+                Doppio’s Coffee & Bakery is a fictional brand created for the
+                solely purpose of this project. So are the contact information
+                and places mentioned at any time.
+              </p>
+              <p>
+                Any similarities with real brands or people are merely
+                coincidental.
+              </p>
               <p>This page serves no commercial purposes.</p>
               <p className="text-end">September 2023.</p>
               <p className="text-end">Montevideo, Uruguay.</p>
