@@ -52,6 +52,10 @@ function MainNavbar() {
     } else {
       setShowNav(false);
     }
+
+    if (scrollData.y === 0) {
+      setShowNav(true);
+    }
   }, [scrollData, showNav]);
 
   //Handle for register and login
