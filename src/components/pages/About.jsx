@@ -65,7 +65,7 @@ function About() {
       age: 44,
       image: "/imgs/profile-jose.jpg",
       title: "Full Stack Dev.",
-      linkedin: "www.linkedin.com/in/josé-ignacio-siutto-arin-a924a473",
+      linkedin: "www.linkedin.com/in/josé-ignacio-siutto",
       github: "https://github.com/virulaiser",
       resume:
         "With more than two decades of experience in the world of Agronomy and Animal Production, I have had the privilege of working in the department of Florida, where I developed a solid track record in the management and improvement of agricultural activities. My passion for agriculture and agribusiness has led me to constantly grow in my responsibilities, and I am committed to innovation and efficiency in this field.My path in the agricultural world led me to explore new frontiers, and in parallel to my career, I decided to enter the fascinating world of technology. I have studied Robotics and IoT technologies, Artificial Intelligence (AI) and Full Stack development. This fusion of knowledge has allowed me to unite two exciting worlds: agriculture and technology.",
