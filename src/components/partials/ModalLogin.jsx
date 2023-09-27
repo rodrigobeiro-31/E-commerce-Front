@@ -86,7 +86,7 @@ function ModalLogin({
                   />
                   <div className="form-text login-text">
                     Forgot your password? Click here!
-                    <ModalResetPass />
+                    <ModalResetPass mail={email} />
                   </div>
                 </div>
 
