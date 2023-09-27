@@ -197,7 +197,6 @@ function Home() {
               </div>
             </div>
           </div>
-
           <Carousel>
             <Carousel.Item>
               <Image
