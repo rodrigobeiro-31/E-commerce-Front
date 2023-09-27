@@ -7,6 +7,7 @@ import "./Profile.css";
 import ModalOrder from "../partials/ModalOrder";
 import { format } from "date-fns";
 import { BiSolidUserCircle } from "react-icons/bi"
+import { BsFillArrowDownCircleFill } from "react-icons/bs"
 
 function Profile() {
   const [firstname, setFirstname] = useState("");
@@ -68,6 +69,7 @@ function Profile() {
         <h2 className="text-white text-center title">
             PROFILE
         </h2>
+        <h3 className="mt-5 pt-5 fw-bold text-center slide-down">Slide down <BsFillArrowDownCircleFill /></h3>
     </div>
     <div className="container">
         <div className="mb-5 mt-5 p-3 text-white">

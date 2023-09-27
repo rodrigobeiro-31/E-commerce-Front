@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import "./Contact.css";
 import axios from "axios";
-import { BsFillTelephoneFill } from "react-icons/bs";
+import { BsFillArrowDownCircleFill } from "react-icons/bs";
 import { AiOutlineMail } from "react-icons/ai";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
@@ -55,9 +55,10 @@ function Contact() {
     <>
       <div className="container-fluid p-0">
         <div className="container-fluid d-flex align-items-center flex-column justify-content-center m-0 p-0 contact-banner">
-          <h2 className="text-white d-flex justify-content-center align-items-center title">
+          <h2 className="text-white title">
             CONTACT
           </h2>
+          <h3 className="mt-5 pt-5 fw-bold text-center slide-down">Slide down <BsFillArrowDownCircleFill /></h3>
         </div>
         <div className="container mb-5 mt-5 text-white d-flex justify-content-center align-items-center">
           <div className="d-flex justify-content-center">

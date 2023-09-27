@@ -77,8 +77,8 @@ function CartCheckout() {
     <>
       <div className="checkout-container pb-5">
         <div className="checkout-bg-img container-fluid d-flex justify-content-center align-items-center">
-          <div className="checkout-gd-overlay"> </div>
-          <h2 className="d-flex justify-content-center align-items-center mb-3 title">
+          <div className="checkout-gd-overlay d-flex justify-content-center align-items-center "> </div>
+          <h2 className="mb-3 title">
             CHECKOUT
           </h2>
         </div>

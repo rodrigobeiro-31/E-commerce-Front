@@ -12,7 +12,7 @@ import {
 import { FaBootstrap } from "react-icons/fa";
 import { RxVercelLogo } from "react-icons/rx";
 import { SiAdobephotoshop, SiAdobeillustrator, SiSupabase } from "react-icons/si";
-import { BsTrello } from "react-icons/bs";
+import { BsTrello, BsFillArrowDownCircleFill } from "react-icons/bs";
 import { Link, useNavigate } from "react-router-dom";
 import BackToTop from "../partials/BackToTop";
 import axios from "axios";
@@ -67,10 +67,11 @@ function About() {
   return (
     <div>
       <div className={modalAbout ? "bg-blur" : ""}>
-        <div className="about-bg-img container-fluid d-flex justify-content-center align-items-center">
-          <h2 className="text-white d-flex justify-content-center align-items-center title">
+        <div className="about-bg-img container-fluid d-flex flex-column justify-content-center align-items-center">
+          <h2 className="text-white text-center title">
             ABOUT THIS PROJECT
           </h2>
+          <h3 className="mt-5 pt-5 fw-bold text-center slide-down">Slide down <BsFillArrowDownCircleFill /></h3>
           <div className="about-gd-overlay"></div>
         </div>
         <div className="container-fluid">
