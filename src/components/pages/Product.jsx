@@ -86,7 +86,7 @@ function Product() {
                   <p className="card-text mt-3 fs-2 price-text fst-italic">
                     Price: ${product.price}
                   </p>
-                  <p className="card-text">{product.description}</p>
+                  <p className="card-text about-text">{product.description}</p>
                   <hr className="mt-5" />
                   <p>CATEGORY: {product.category}</p>
                   <p className="text-body-secondary ">STOCK: {product.stock}</p>
@@ -113,7 +113,7 @@ function Product() {
                 <Accordion.Header>
                   Ordering and shipping information
                 </Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body className="about-text">
                   In our store, customer satisfaction is our priority. Placing
                   an order is easy and convenient. Simply select your favorite
                   products, provide your shipping details and choose your
@@ -126,7 +126,7 @@ function Product() {
               </Accordion.Item>
               <Accordion.Item eventKey="1">
                 <Accordion.Header>Payment methods</Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body className="about-text">
                   We want your shopping experience to be comfortable and safe.
                   We offer a variety of payment methods to suit your needs. You
                   can pay with credit or debit card. We also accept bank
@@ -138,7 +138,7 @@ function Product() {
               </Accordion.Item>
               <Accordion.Item eventKey="2">
                 <Accordion.Header>Legal warning</Accordion.Header>
-                <Accordion.Body>
+                <Accordion.Body className="about-text">
                   This website is designed to provide information about our
                   products and allow you to make purchases online. Us We strive
                   to maintain the accuracy and timeliness of the information,

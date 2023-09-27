@@ -46,11 +46,11 @@ nav {
 
 .nav-link:not(.active):hover {
   opacity: 0.9;
-  color: var(--clr-brown-terciary) !important;
+  color: var(--secondaryBrown) !important;
 }
 
 .nav-link.active {
-  color: var(--clr-brown-terciary) !important;
+  color: var(--secondaryBrown) !important;
   font-weight: bold;
 }
 
