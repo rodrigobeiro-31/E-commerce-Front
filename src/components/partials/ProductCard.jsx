@@ -29,7 +29,7 @@ function ProductCard({ product, handleAddCart }) {
           </NavLink>
 
           <div className="d-flex justify-content-between align-items-center mt-1">
-            <p className="card-text price-text fw-semibold mt-2 mb-2">
+            <p className="card-text price-text fs-4 fw-semibold mt-2 mb-2">
               $ {product.price}
             </p>
             <button

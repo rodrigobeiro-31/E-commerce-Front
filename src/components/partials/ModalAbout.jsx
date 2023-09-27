@@ -12,8 +12,8 @@ function AboutModal({ modalAbout, setModalAbout, person }) {
             onClick={() => setModalAbout(false)}
           />
           <img src={person.image} alt="" className="about-card-img" />
-          <div className="about-card-details">
-            <h3 className="about-card-title">{person.name}</h3>
+          <div className="p-5 about-card-details">
+            <h3 className="mb-3 about-card-title">{person.name}</h3>
             <p>{person.resume}</p>
           </div>
         </div>
