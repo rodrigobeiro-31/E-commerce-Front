@@ -105,7 +105,7 @@ function About() {
             {team.map((person) => (
               <div
                 key={person.name}
-                className="col d-flex flex-column justify-content-center align-items-center text-center"
+                className="col d-flex flex-column justify-content-center align-items-center text-center my-3"
               >
                 <img
                   src={person.image}

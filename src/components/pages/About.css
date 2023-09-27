@@ -172,6 +172,9 @@
 }
 
 @media (max-width: 768px) {
+  .about-brand-img {
+    max-width: 20rem;
+  }
   .about-card {
     display: flex !important;
     flex-direction: column !important;
