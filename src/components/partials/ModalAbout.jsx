@@ -1,7 +1,6 @@
 import { AiOutlineClose } from "react-icons/ai";
 
 function AboutModal({ modalAbout, setModalAbout, person }) {
-  console.log(person);
   return (
     person && (
       <div

@@ -166,3 +166,14 @@
   right: 0.5rem;
   top: 0.5rem;
 }
+
+@media (max-width: 768px) {
+  .about-card {
+    display: flex !important;
+    flex-direction: column !important;
+    height: 80%;
+  }
+  .about-card-img {
+    width: 100%;
+  }
+}
