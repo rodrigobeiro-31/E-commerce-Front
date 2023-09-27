@@ -179,8 +179,12 @@
     display: flex !important;
     flex-direction: column !important;
     height: 80%;
+    width: 90%;
   }
   .about-card-img {
     width: 100%;
+  }
+  .about-card-details {
+    padding: 1rem 0;
   }
 }
