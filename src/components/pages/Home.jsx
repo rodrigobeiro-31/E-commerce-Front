@@ -64,15 +64,15 @@ function Home() {
         <div className="container-fluid p-0 g-0">
           <div className="home-banner"></div>
           <div className="home-gd-overlay"></div>
-          <div
-            className="row d-flex justify-content-center m-0 p-0 mb-5 home-title"
-          >
+          <div className="row d-flex justify-content-center m-0 p-0 mb-5 home-title">
             <img
               className="home-logo"
               src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/doppios-main-logo.png"
               alt="Doppio's"
             />
-            <h3 className="mt-5 pt-5 fw-bold text-center home-slide-down">Slide down <BsFillArrowDownCircleFill /></h3>
+            <h3 className="mt-5 pt-5 fw-bold text-center home-slide-down">
+              Slide down <BsFillArrowDownCircleFill />
+            </h3>
           </div>
           <div className="container-fluid main-container p-0 m-0">
             <h3 className="mb-4 fw-bold text-center p-3 week-picks-banner">
@@ -201,21 +201,21 @@ function Home() {
           <Carousel>
             <Carousel.Item>
               <Image
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-1.jpg"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-1.avif"
                 className="w-100"
                 fluid
               />
             </Carousel.Item>
             <Carousel.Item>
               <Image
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-2.jpg"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-2.avif"
                 className="w-100"
                 fluid
               />
             </Carousel.Item>
             <Carousel.Item>
               <Image
-                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-3.jpg"
+                src="https://mcbzesritumxqjtbullp.supabase.co/storage/v1/object/public/resources/home-carousel-3.avif"
                 className="w-100"
                 fluid
               />
