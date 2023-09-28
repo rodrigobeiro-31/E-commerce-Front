@@ -42,7 +42,7 @@ function About() {
     {
       name: "Rodrigo Beiro",
       age: 25,
-      image: "/imgs/profile-rodrigo.png",
+      image: "/imgs/profile-rodrigobeiro.jpeg",
       title: "Accountant | Full Stack Dev.",
       linkedin: "https://www.linkedin.com/in/rodrigo-beiro/",
       github: "https://github.com/rodrigobeiro-31",
