@@ -138,10 +138,10 @@ function Home() {
               Our values
             </h3>
             <span className="line-span mb-2"></span>
-            <div className="row d-flex align-items-center px-1 px-md-5 mx-1 mx-md-5">
+            <div className="row d-flex align-items-top px-1 px-md-5 mx-1 mx-md-5">
               <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon-brown.png"
+                  src="/imgs/home-about-icon2.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -154,9 +154,9 @@ function Home() {
               </div>
               <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon-brown.png"
+                  src="/imgs/home-about-icon1.png"
                   alt="label"
-                  className="img-fluid mt-3 opacity-75 custom-image"
+                  className="img-fluid mt-5 pt-2 opacity-75 custom-image"
                 />
                 <h5 className="text-center mt-3 fw-semibold">
                   Natural products
@@ -169,7 +169,7 @@ function Home() {
               </div>
               <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon-brown.png"
+                  src="/imgs/home-about-icon3.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
@@ -184,7 +184,7 @@ function Home() {
               </div>
               <div className="col-12 col-md-3 d-flex flex-column align-items-center p-3 home-value">
                 <img
-                  src="/imgs/coffee-bean-icon-brown.png"
+                  src="/imgs/home-about-icon4.png"
                   alt="label"
                   className="img-fluid mt-3 opacity-75 custom-image"
                 />
