@@ -17,7 +17,7 @@ import {
   SiSupabase,
 } from "react-icons/si";
 import { BsTrello, BsFillArrowDownCircleFill } from "react-icons/bs";
-import { Link, useNavigate } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import BackToTop from "../partials/BackToTop";
 import axios from "axios";
 import { useState } from "react";
@@ -89,6 +89,7 @@ function About() {
     });
     navigate("/");
   };
+
   return (
     <div>
       <div className={modalAbout ? "bg-blur" : ""}>
@@ -305,6 +306,7 @@ function About() {
                   className="about-img"
                 />
               </Link>
+              <p className="mt-3">Click the image to go to the Home page!</p>
             </div>
             <div className="d-flex flex-column justify-content-center align-items-center mt-5">
               <h2 className="contact-title">ADMIN WEB</h2>
@@ -342,6 +344,9 @@ function About() {
               </p>
               <p className="text-end about-text">September 2023.</p>
               <p className="text-end about-text">Montevideo, Uruguay.</p>
+            </div>
+            <div className="d-flex flex-column justfiy-content-center  mb-2 col-lg-8 col-md-10 col-12 p-5 ">
+              <p className="about-text">Click <NavLink className="about-link" onClick={handleDatabase}>here</NavLink> to reset the database.</p>
             </div>
           </section>
         </div>

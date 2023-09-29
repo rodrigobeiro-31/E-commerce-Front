@@ -167,6 +167,10 @@
   opacity: 100;
 }
 
+.about-link {
+  color: var(--mainBrown);
+}
+
 @keyframes text {
   from {
     margin-right: 5rem;
